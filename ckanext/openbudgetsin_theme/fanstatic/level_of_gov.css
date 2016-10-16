@@ -1,0 +1,19 @@
+.media-image {
+    width: 8em;
+    height: 7em;
+}
+.no-padding {
+    padding-right: 0;
+    margin-right: 0;
+}
+.no-padding-left {
+    padding-left: 0;
+    margin-left: 0;
+}
+.media-head {
+    display: inline;
+}
+.item-container {
+    position: relative;
+    margin-bottom: 3em;
+}
