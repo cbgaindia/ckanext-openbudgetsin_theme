@@ -2,7 +2,7 @@
 
 {% block styles %}
   {{ super() }}
-  <link rel="stylesheet" href="/openbudget_theme.css" />
+  {% resource 'openbudgetsin_theme/openbudgetsin_theme.css' %}
 {% endblock %}
 
 {%- block page -%}
@@ -52,7 +52,7 @@
             </div>
           {% endblock %}
 
-          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
+          <div class="row-fluid wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
 
             {#
             The pre_primary block can be used to add content to before the
