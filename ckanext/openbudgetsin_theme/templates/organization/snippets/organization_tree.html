@@ -21,7 +21,8 @@ Example:
 {% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
 
 {% block item %}
-<div class="row item-container">
+<li class="media-item" style="margin: 0 0 1em 0;">
+  <div class="row-fluid">
   {% block item_inner scoped %}
 
     {% set longname = h.group_tree_get_longname(node.name) %} 
@@ -32,13 +33,13 @@ Example:
   
     {% if node.children %}
 
-      <div class="span2 no-padding">
+      <div class="span2">
         <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image">
       </div>
     
       <div class="span10">
-        <div class="row">
-          <div class="span12 no-padding-left">
+        <div class="row-fluid">
+          <div class="span12">
               <h4 class="media-head">
                   {% link_for display_text, controller='organization', action='read', id=node.name %}
                </h4>
@@ -54,7 +55,7 @@ Example:
           </div>
         </div>
 
-        <div class="row">
+        <div class="row-fluid">
           <div class="span12 no-padding-left">
           {% if node.description %}
             <p>{{ h.markdown_extract(node.description) }}</p>
@@ -64,29 +65,39 @@ Example:
 
         {% set j = 0 %} 
         {% for i in range(2) %}
-        <div class="row">
-          {% for child in node.children[j:j+2] %}
-          <div class="span3 no-padding-left">
+        <div class="row-fluid">
+          {% if i == 1 %}
+            {% set n = j+2 %} 
+          {% else %}
+            {% set n = j+3 %} 
+          {% endif %}
+
+          {% for child in node.children[j:n] %}
+          <div class="span4 no-padding">
             {% set child_node = child %}
             {% if child_node %}
               {% link_for child_node.title, controller='organization', action='read', id=child_node.name %}
             {% endif %}
           </div>
+
           {% endfor %}
-          {% set j = j+2 %} 
+
+          {% if i == 1 %}
+          <div class="span4 no-padding pull-right">
+            {% link_for "see more...", controller='organization', action='read', id=node.name %}
+          </div>
+          {% endif %}
+
+          {% set j = j+3 %} 
         </div>
         {% endfor %}
-
-        <div class="row">
-            <span class="pull-right">
-              {% link_for "see more...", controller='organization', action='read', id=node.name %}
-            </span>
-        </div>
 
       </div>
 
     {% endif %}
     
   {% endblock %}
-</div>
+
+  </div>
+</li>
 {% endblock %}

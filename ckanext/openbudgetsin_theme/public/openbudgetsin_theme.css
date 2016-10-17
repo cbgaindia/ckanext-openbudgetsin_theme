@@ -1,3 +1,7 @@
 .container {
-    width: 90%;
+    margin: 0.5em 2.1em;
+    width: 95%;
+}
+.wrapper {
+    background-color: rgba(198, 198, 198, 0.7);
 }

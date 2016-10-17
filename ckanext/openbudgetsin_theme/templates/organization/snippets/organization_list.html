@@ -7,7 +7,11 @@ Example:
     {% snippet "organization/snippets/organization_list.html" %}
 
 #}
-<div class="container">
+
+{% resource 'openbudgetsin_theme/level_of_gov.css' %}
+
+{% block primary_content_inner %}
+<ul class="media-grid" data-module="media-grid">
      {% if  c.q %}
      	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
      {% else %}
@@ -17,4 +21,5 @@ Example:
      {% for node in top_nodes recursive %}
        {% snippet 'organization/snippets/organization_tree.html', node=node, use_longnames=True %}
      {% endfor %}
-</div>
+</ul>
+{% endblock %}
