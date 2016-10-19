@@ -80,7 +80,12 @@ setup(
     entry_points='''
         [ckan.plugins]
         openbudgetsin_theme=ckanext.openbudgetsin_theme.plugin:Openbudgetsin_ThemePlugin
-	[babel.extractors]
+        featuredviews=ckanext.openbudgetsin_theme.plugin:FeaturedviewsPlugin
+
+        [paste.paster_command]
+        featured=ckanext.featuredviews.commands:FeaturedCommands
+
+    [babel.extractors]
 	ckan = ckan.lib.extract:extract_ckan
     ''',
 
