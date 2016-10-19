@@ -1,21 +1,18 @@
 {% ckan_extends %}
-  {% block main_content %}
-    {% block toolbar %}
-      {{ super() }}
-    {% endblock %}
-  
-    {% block viscontainer %}
 
-        {% set view = h.get_canonical_resource_view(pkg.id) %}
-        {% if view %}
-            {% snippet 'package/snippets/resource_view.html',
-                resource_view = view['resource_view'],
-                resource = view['resource'],
-                package = pkg
-            %}
-        {% endif %}
+{%- block pre_primary %}
+  {% block viscontainer %}
 
-        
-    {% endblock %}
+    {% set view = h.get_canonical_resource_view(pkg.id) %}
+    {% if view %}
+        {% snippet 'package/snippets/resource_view.html',
+            resource_view = view['resource_view'],
+            resource = view['resource'],
+            package = pkg
+        %}
+    {% endif %}
+
+  {% endblock %}
   {{ super() }}
 {% endblock %}
+
