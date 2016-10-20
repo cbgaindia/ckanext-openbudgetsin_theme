@@ -3,11 +3,14 @@ body{
 }
 
 /* page.html */
-.container {
+#content {
     width: 90%;
 }
 [role=main]  {
 	background: #F6FFE0;
+    padding-top:5px;
+    margin-bottom: 5px;
+
 }
 
 .toolbar .breadcrumb {
@@ -23,24 +26,89 @@ body{
 
 /* Package Foldeer Templates */
 
+
+/* read.html */
+.viscontainer{
+   
+}
+.inner-content-container{
+    padding:40px;
+}
+.infocard-small{
+    
+    margin: 0px auto;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.19), 0 1px 2px rgba(0,0,0,0.23);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 40px 40px 40px;
+    margin-top:20px;
+    position: relative;
+}
+
+
+.module {
+    margin: 3px 0px 20px;
+}
+
+.manage-button{
+    float:right;.
+        margin: 20px;
+}
+
+#datapreview-row{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+    padding: 20px;
+    padding-top:0px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(246,255,224,1);
+}
+
+.dataset-detail-container{
+    border-radius: 5px;
+    background:rgba(214, 214, 214, 0.56); 
+    padding-top: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+}
+
+.dataset-header{
+    font-family:"Gotham Bold";
+    font-size: 36px;
+     padding-left: 10px;
+
+}
 /* Snippets */
 /* resource_view.html */
 .resource-view {
     margin-top: 0px;
 }
+.m-top {
+    margin-top: 5px;
+}
+
+/* resource_item.html */
+.download-button{
+    margin:4px 0px 0px 5px;
+}
 
 
 
 /* Basic Elements */
+.row {
+    margin-left: 0px;
+}
+
+/*infocard element */
 .infocard {
     margin: 0px auto;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
     background: #fff;
-    border-radius: 2px;
-
-
-  position: relative;
+    border-radius: 5px;
+    padding: 20px 40px 40px 40px;
+    margin-top: -5px;
+    position: relative;
 
 }
 
@@ -189,209 +257,7 @@ body{
     }
 }
 
-.infocard .dataTables_wrapper {
-    overflow-y: auto;
-    max-height: 90%
-}
 
-.infocard .info-table {
-    clear: none;
-    font-size: 12px;
-    font-weight: 400
-}
-
-.infocard .info-table thead {
-    display: none
-}
-
-.infocard .info-table td {
-    vertical-align: top;
-    text-align: center
-}
-
-.infocard .info-table td:last-of-type {
-    font-size: 14px;
-    font-weight: 700
-}
-
-@media (max-width:979px) and (min-width:768px) {
-    .infocard .info-table td {
-        padding: 5px
-    }
-}
-
-.infocard .info-table tr:hover {
-    background-color: rgba(136, 136, 136, 0.2)
-}
-
-.infocard .info-table .odd {
-    background-color: rgba(136, 136, 136, 0.1)
-}
-
-.infocard .info-before,
-.infocard .info-after {
-    margin-right: 0px;
-    margin-top: 20px;
-    text-align: center
-}
-
-.infocard .info-before .values .value,
-.infocard .info-after .values .value {
-    margin: 0px
-}
-
-.infocard .info-after .values {
-    font-size: 65px;
-    font-weight: 700
-}
-
-.infocard .info-before {
-    opacity: 0.8
-}
-
-.infocard .info-before .desc {
-    font-size: 12px
-}
-
-.infocard .chart-box {
-    position: relative;
-    width: 100%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent
-}
-
-.infocard .chart-box:after {
-    display: block;
-    clear: both
-}
-
-.infocard .chart {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: visible
-}
-
-.infocard .chart .axis path,
-.infocard .chart .axis line {
-    fill: none;
-    shape-rendering: crispEdges
-}
-
-.infocard .chart .axis .tick line {
-    stroke: #888888;
-    stroke-width: 1px;
-    stroke-opacity: 0.5
-}
-
-.infocard .chart text {
-    font-size: 10px;
-    font-weight: 400;
-    fill: #222222
-}
-
-.infocard .chart .label polyline {
-    stroke: #222222;
-    stroke-width: 1px;
-    fill: none
-}
-
-@media (min-width:768px) and (max-width:979px) {
-    .infocard .chart .label {
-        display: none
-    }
-}
-
-@media (max-width:480px) {
-    .infocard .chart .label {
-        display: none
-    }
-}
-
-.infocard .chart .area {
-    opacity: 0
-}
-
-.infocard .chart .line {
-    stroke-width: 3px;
-    fill: none
-}
-
-.infocard .chart .event-rect {
-    opacity: 0
-}
-
-.infocard .chart .guide {
-    stroke: #888888;
-    stroke-width: 2px
-}
-
-.infocard .chart .point {
-    stroke-width: 1.5px;
-    fill: none
-}
-
-.infocard .chart .reference-line {
-    stroke: #f2f2f2;
-    stroke-width: 1.5px
-}
-
-.infocard .chart .reference-area {
-    fill: #888888;
-    opacity: 0.1
-}
-
-.infocard .chart .reference-text {
-    text-anchor: end;
-    fill: #888888;
-    opacity: 0.6
-}
-
-.infocard .chart-bar .x.axis .tick:not(:first-of-type) line {
-    stroke-dasharray: 2, 5
-}
-
-.infocard .chart-line .y.axis .tick:not(:first-of-type) line,
-.infocard .chart-timeseries .y.axis .tick:not(:first-of-type) line,
-.infocard .chart-stacked .y.axis .tick:not(:first-of-type) line,
-.infocard .chart-column .y.axis .tick:not(:first-of-type) line {
-    stroke-dasharray: 2, 5
-}
-
-.infocard .popover {
-    font-size: 10px;
-    width: auto;
-    white-space: nowrap
-}
-
-.infocard .popover .popover-title {
-    text-align: center
-}
-
-.infocard .popover .popover-title,
-.infocard .popover .popover-content {
-    font-size: 10px;
-    padding: 3px 10px
-}
-
-.infocard .popover .popover-title i,
-.infocard .popover .popover-content i {
-    margin-right: 5px
-}
-
-.infocard .popover .popover-title .total,
-.infocard .popover .popover-content .total {
-    text-align: center
-}
-
-.infocard .popover .popover-title .total span,
-.infocard .popover .popover-content .total span {
-    font-weight: 700
-}
-
-.infocard .popover .popover-content {
-    color: #222222
+.fa-download:before {
+    content: "\f019";
 }
