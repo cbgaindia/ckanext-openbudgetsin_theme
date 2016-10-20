@@ -1,16 +1,8 @@
-{#
-Display a hierarchical tree of organizations
-
-
-Example:
-
-    {% snippet "organization/snippets/organization_list.html" %}
-
-#}
+{% ckan_extends %}
 
 {% resource 'openbudgetsin_theme/level_of_gov.css' %}
 
-{% block primary_content_inner %}
+{% block organization_list %}
 <ul class="media-grid" data-module="media-grid">
      {% if  c.q %}
      	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
@@ -18,8 +10,8 @@ Example:
      	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
      {% endif %}
 
-     {% for node in top_nodes recursive %}
-       {% snippet 'organization/snippets/organization_tree.html', node=node, use_longnames=True %}
+     {% for node in top_nodes %}
+       {% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=True %}
      {% endfor %}
 </ul>
 {% endblock %}

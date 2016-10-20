@@ -80,8 +80,10 @@ setup(
     entry_points='''
         [ckan.plugins]
         openbudgetsin_theme=ckanext.openbudgetsin_theme.plugin:Openbudgetsin_ThemePlugin
-	[babel.extractors]
-	ckan = ckan.lib.extract:extract_ckan
+        hierarchy_display=ckanext.openbudgetsin_theme.plugin:HierarchyDisplay
+        hierarchy_form=ckanext.openbudgetsin_theme.plugin:HierarchyForm
+    [babel.extractors]
+    ckan = ckan.lib.extract:extract_ckan
     ''',
 
     # If you are changing from the default layout of your extension, you may
