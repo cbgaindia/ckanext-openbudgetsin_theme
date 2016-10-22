@@ -5,7 +5,42 @@
     {{ super() }}
   {% endblock %}
   <div class="infocard">
-    <div class="viscontainer">
+    <div class="row-fluid">
+      <div class="span9 ">
+        <h1 class="dataset-header">
+        {% block page_heading %}
+          {{ pkg.title or pkg.name }}
+          {% if pkg.state.startswith('draft') %}
+            [{{ _('Draft') }}]
+          {% endif %}
+          {% if pkg.state == 'deleted' %}
+            [{{ _('Deleted') }}]
+          {% endif %}
+        {% endblock %}
+        </h1>
+      </div>
+      <div class="span3 button-container">
+        <div class="manage-button">
+        
+        {% block content_action %}
+          {% if h.check_access('package_update', {'id':pkg.id }) %}
+            {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
+          {% endif %}
+        {% endblock %}
+        </div>
+      <div class="embed-button">
+      {% block embedbutton %}
+          {% set view = h.get_canonical_resource_view(pkg.id) %}
+          {% snippet 'package/snippets/embed_button.html',
+                resource_view = view['resource_view'],
+                resource = view['resource'],
+                package = pkg
+            %}
+      {% endblock %}
+      </div>
+      </div>
+    </div>
+    <div class="viscontainer" id="datapreview-row">
       
       {% block viscontainer %}
 
@@ -36,32 +71,45 @@
                 {{ _('Private') }}
               </span>
             {% endif %} 
-            <div class="row">
-              <div class="span10">
-                <h1 class="dataset-header">
-                {% block page_heading %}
-                  {{ pkg.title or pkg.name }}
-                  {% if pkg.state.startswith('draft') %}
-                    [{{ _('Draft') }}]
-                  {% endif %}
-                  {% if pkg.state == 'deleted' %}
-                    [{{ _('Deleted') }}]
-                  {% endif %}
-                {% endblock %}
-              </h1>
-              </div>
-              <div class="span2 manage-button">
-              {% block content_action %}
-                {% if h.check_access('package_update', {'id':pkg.id }) %}
-                  {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
-                {% endif %}
-              {% endblock %}
-              </div>
-            </div>
-            <hr>
+            
             <div class ="container-fluid"> 
               <div class ="row-fluid">
-                <div class="span3">
+               
+                <div class="span9 well inner-content-container">
+                <div class="row">
+                  <div class="span4">
+                  Dataset Description
+                  <hr class="section-hr">
+                  </div>
+                </div>
+                {% block package_notes %}
+                  {% if pkg.notes %}
+                    <div class="notes embedded-content">
+                      {{ h.render_markdown(pkg.notes) }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+                {# FIXME why is this here? seems wrong #}
+                <span class="insert-comment-thread"></span>
+              {% endblock %}
+              <div class="infocard-small">
+
+              {% block package_resources %}
+                {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
+              {% endblock %}
+              </div>
+              {% block package_tags %}
+                {% snippet "package/snippets/tags.html", tags=pkg.tags %}
+              {% endblock %}
+
+              {% block package_additional_info %}
+                {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
+              {% endblock %}
+
+            {% endblock %}
+            
+                </div>
+                 <div class="span3">
                 {% block secondary_content %}
 
                   {% block secondary_help_content %}{% endblock %}
@@ -87,34 +135,6 @@
                   {% endblock %}
 
                   {% endblock %}
-                </div>
-                <div class="span9 well inner-content-container">
-                
-                {% block package_notes %}
-                  {% if pkg.notes %}
-                    <div class="notes embedded-content">
-                      {{ h.render_markdown(pkg.notes) }}
-                    </div>
-                  {% endif %}
-                {% endblock %}
-                {# FIXME why is this here? seems wrong #}
-                <span class="insert-comment-thread"></span>
-              {% endblock %}
-              <div class="infocard-small">
-              {% block package_resources %}
-                {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
-              {% endblock %}
-              </div>
-              {% block package_tags %}
-                {% snippet "package/snippets/tags.html", tags=pkg.tags %}
-              {% endblock %}
-
-              {% block package_additional_info %}
-                {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
-              {% endblock %}
-
-            {% endblock %}
-            
                 </div>
               </div>
             </div>

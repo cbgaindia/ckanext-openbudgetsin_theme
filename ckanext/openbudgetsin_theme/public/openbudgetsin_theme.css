@@ -7,7 +7,7 @@ body{
     width: 90%;
 }
 [role=main]  {
-	background: #F6FFE0;
+	background: rgba(246,255,224,1);
     padding-top:5px;
     margin-bottom: 5px;
 
@@ -21,14 +21,21 @@ body{
 	min-height: 60px;
     color: #F6FFE0;
     background: #00202F;
+    padding-top: 5px;
 }
 
 
-/* Package Foldeer Templates */
+/* Package Folder Templates */
 
 
 /* read.html */
 .viscontainer{
+        padding: 30px 40px 50px 40px;
+         box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+    
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
    
 }
 .inner-content-container{
@@ -52,22 +59,19 @@ body{
 }
 
 .manage-button{
-    float:right;.
-        margin: 20px;
+    float:right;
+        margin-left: 10px;
 }
 
-#datapreview-row{
-    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
-    padding: 20px;
-    padding-top:0px;
-    margin-top: 20px;
-    border-radius: 5px;
-    background-color: rgba(246,255,224,1);
+.button-container{
+       margin-top:-8px;
 }
 
+.ckanext-datapreview {
+    padding-top:0px;}
 .dataset-detail-container{
     border-radius: 5px;
-    background:rgba(214, 214, 214, 0.56); 
+    background:#fdfdfd;
     padding-top: 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
 }
@@ -92,7 +96,11 @@ body{
     margin:4px 0px 0px 5px;
 }
 
+/* embed_button.html */
+.top-header-rightcol{
+        margin-top: -8px;
 
+}
 
 /* Basic Elements */
 .row {
@@ -104,10 +112,10 @@ body{
     margin: 0px auto;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
-    background: #fff;
+    background: rgb(233, 234, 229);
     border-radius: 5px;
-    padding: 20px 40px 40px 40px;
-    margin-top: -5px;
+    padding: 40px 50px ;
+
     position: relative;
 
 }
@@ -257,7 +265,41 @@ body{
     }
 }
 
+/* toolbar */
+.toolbar{
+    margin: 10px 0px 15px 0px;
+    padding:0px;
+}
 
-.fa-download:before {
-    content: "\f019";
+/* Headers */
+h1, h2, h3, h4 {
+    line-height: 0;
+}
+/* Resource list*/
+.resource-list{
+margin-top: 20px;
+}
+
+
+/* Module Heading */
+.module:first-child .module-heading , .module-heading {
+    border-top-width: 2px;
+}
+
+.additional-info{
+    margin-top: 40px;
+
+}
+
+.tag{
+    border-radius: 2px;
+}
+
+.section-hr{
+        margin: 5px 0px;
+            border-top: 1px solid #cccccc;
+}
+
+.additional-info-header{
+    padding:15px 0px;
 }

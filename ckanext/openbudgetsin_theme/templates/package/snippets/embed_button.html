@@ -1,0 +1,12 @@
+{% block embedbutton %}
+<div class="top-header-rightcol">
+                  <a class="btn pull-right"
+                     href="#embed-{{ resource_view['id'] }}"
+                     data-module="resource-view-embed"
+                     data-module-id="{{ resource_view['id'] }}"
+                     data-module-url="{{ h.url('resource_view', id=package['name'], resource_id=resource['id'], view_id=resource_view['id'], qualified=True) }}">
+                    <i class="icon-code"></i>
+                    {{ _("Embed") }}
+                  </a>
+                </div>
+{% endblock %}
