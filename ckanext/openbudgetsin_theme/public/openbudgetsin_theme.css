@@ -1,0 +1,316 @@
+body{
+	font-family:"Gotham Book","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+/* page.html */
+#content {
+    width: 90%;
+}
+[role=main]  {
+	background: #F6FFE0;
+    padding-top:5px;
+    margin-bottom: 5px;
+
+}
+
+.toolbar .breadcrumb {
+	font-size: 16px;
+}
+
+[role=main] .primary {
+    float: left;
+    padding: 0.5em;
+    width: 68.1em;
+    background-color: #b5c48f;
+    background-color: #E7FFE0;
+    height: 40em;
+}
+
+[role=main] .secondary {
+    padding: 2em 1em;
+    background-color: #b5c48f;
+    background-color: #E7FFE0;
+    height: 37em;
+}
+
+.sidebar {
+    background-color: #E9E9E9;
+    border: 1px solid #FFF;
+}
+
+/* Header Customisations - header.html*/
+.masthead {
+	min-height: 60px;
+    color: #F6FFE0;
+    background: #00202F;
+}
+
+
+/* Package Folder Templates */
+
+
+/* read.html */
+.viscontainer{
+   
+}
+.inner-content-container{
+    padding:40px;
+}
+.infocard-small{
+    
+    margin: 0px auto;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.19), 0 1px 2px rgba(0,0,0,0.23);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 40px 40px 40px;
+    margin-top:20px;
+    position: relative;
+}
+
+
+.module {
+    margin: 3px 0px 20px;
+}
+
+.manage-button{
+    float:right;.
+        margin: 20px;
+}
+
+#datapreview-row{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+    padding: 20px;
+    padding-top:0px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(246,255,224,1);
+}
+
+.dataset-detail-container{
+    border-radius: 5px;
+    background:rgba(214, 214, 214, 0.56); 
+    padding-top: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 1px 3px rgba(0,0,0,0.23);
+}
+
+.dataset-header{
+    font-family:"Gotham Bold";
+    font-size: 36px;
+     padding-left: 10px;
+
+}
+/* Snippets */
+/* resource_view.html */
+.resource-view {
+    margin-top: 0px;
+}
+.m-top {
+    margin-top: 5px;
+}
+
+/* resource_item.html */
+.download-button{
+    margin:4px 0px 0px 5px;
+}
+
+
+
+/* Basic Elements */
+.row {
+    margin-left: 0px;
+}
+
+/*infocard element */
+.infocard {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 40px 40px 40px;
+    margin-top: -5px;
+    position: relative;
+
+}
+
+.infocard:before {
+    float: left;
+    height: 280px
+}
+
+.infocard header h5 {
+    margin: 0px;
+    padding: 5px 20px;
+    border-bottom: 1px whitesmoke solid
+}
+
+.infocard .content {
+    position: relative;
+    width: 100%;
+    display: block
+}
+
+.infocard .content:after {
+    display: block;
+    clear: both
+}
+
+.infocard .content .content-message {
+    position: absolute;
+    width: 100%;
+    font-size: 12px;
+    color: #888888;
+    text-align: center;
+    top: 50%
+}
+
+.infocard .content .content-message .content-error {
+    display: none
+}
+
+.infocard .content .content-message .content-loading {
+    display: none
+}
+
+.infocard .content .content-box {
+    box-sizing: border-box;
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    height: 100%
+}
+
+.infocard .content .content-box:before {
+    content: "";
+    float: left;
+    height: 100%
+}
+
+.infocard .content .content-box .footnotes {
+    text-align: right;
+    font-size: 11px;
+    height: 20px;
+    color: #888888
+}
+
+.infocard .content .content-box .info-value {
+    position: relative;
+    overflow: auto;
+    margin-bottom: 10px
+}
+
+.infocard .content .content-box .info-value .values {
+    margin-top: 5px;
+    font-size: 48px;
+    text-align: right;
+    color: #5580aa
+}
+
+@media (max-width:979px) and (min-width:768px) {
+    .infocard .content .content-box .info-value .values {
+        font-size: 43.2px
+    }
+}
+
+@media (max-width:767px) {
+    .infocard .content .content-box .info-value .values {
+        font-size: 38.4px
+    }
+}
+
+.infocard .content .content-box .info-value .values .value {
+    display: inline-block
+}
+
+.infocard .content .content-box .info-value .values .value:not(:first-child) {
+    margin-left: 3%
+}
+
+.infocard .content .content-box .info-value .values .value .prefix {
+    font-size: 60%
+}
+
+.infocard .content .content-box .info-value .values .value .value-label {
+    font-size: 70%
+}
+
+.infocard .content .content-box .info-value .values-small {
+    font-size: 24px
+}
+
+@media (max-width:979px) and (min-width:768px) {
+    .infocard .content .content-box .info-value .values-small {
+        font-size: 21.6px
+    }
+}
+
+@media (max-width:767px) {
+    .infocard .content .content-box .info-value .values-small {
+        font-size: 19.2px
+    }
+}
+
+.infocard .content .content-box .info-value .values-xsmall {
+    font-size: 20px
+}
+
+@media (max-width:979px) and (min-width:768px) {
+    .infocard .content .content-box .info-value .values-xsmall {
+        font-size: 18px
+    }
+}
+
+@media (max-width:767px) {
+    .infocard .content .content-box .info-value .values-xsmall {
+        font-size: 16px
+    }
+}
+
+.infocard .content .content-box .info-value .desc {
+    text-align: right;
+    font-size: 12px
+}
+
+@media (max-width:767px) {
+    .infocard .info-value-hidden {
+        display: none;
+        height: 0px
+    }
+}
+
+
+.fa-download:before {
+    content: "\f019";
+}
+
+
+/* organization_item.html */
+
+.media-image {
+    width: 8em;
+    height: 8em;
+}
+.media-head {
+    display: inline;
+}
+.media-item {
+    width: 96.5%;
+}
+.media-grid {
+    margin-left: 0.1em;
+    margin-right: -0.5em;
+    padding-bottom: 0;
+    background-color: inherit;
+    border: none;
+}
+.media-head > a, .child-node > a{
+    color: #4F4E53;
+    font-weight: bold;
+}
+.child-node {
+    font-size: 0.83em;
+}
+.count {
+    font-size: 1.2em;
+}
