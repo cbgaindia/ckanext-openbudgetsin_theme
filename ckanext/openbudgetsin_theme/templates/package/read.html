@@ -31,30 +31,34 @@
       <div class="embed-button">
       {% block embedbutton %}
           {% set view = h.get_canonical_resource_view(pkg.id) %}
+          {% if view %}
           {% snippet 'package/snippets/embed_button.html',
                 resource_view = view['resource_view'],
                 resource = view['resource'],
                 package = pkg
             %}
+          {% endif %}
       {% endblock %}
       </div>
       </div>
     </div>
-    <div class="viscontainer" id="datapreview-row">
+    
       
       {% block viscontainer %}
 
         {% set view = h.get_canonical_resource_view(pkg.id) %}
         {% if view %}
+        <div class="viscontainer" id="datapreview-row">
             {% snippet 'package/snippets/resource_view.html',
                 resource_view = view['resource_view'],
                 resource = view['resource'],
                 package = pkg
             %}
+        </div>
         {% endif %}
 
       {% endblock %}
-      </div>
+      
       {% if h.get_canonical_resource_view(pkg.id) %}
       <hr>
       {% else %}
