@@ -85,6 +85,8 @@ class HierarchyDisplay(plugins.SingletonPlugin):
                 'group_tree_highlight': helpers.group_tree_highlight,
                 'get_allowable_parent_groups': helpers.get_allowable_parent_groups,
                 'is_include_children_selected': helpers.is_include_children_selected,
+                'get_package_count': helpers.get_package_count,
+                'get_description': helpers.get_description,
                 }
 
     # IPackageController

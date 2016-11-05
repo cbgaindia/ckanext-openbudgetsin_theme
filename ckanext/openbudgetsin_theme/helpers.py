@@ -92,9 +92,34 @@ def get_allowable_parent_groups(group_id):
             group_type='organization')
     return allowable_parent_groups
 
+
 def is_include_children_selected(fields):
     include_children_selected = False
     if request.params.get('include_children'):
         include_children_selected = True
     return include_children_selected
 
+
+def get_package_count(organizations):
+    '''
+    finds the total number of datasets for all child nodes of an organization.
+    '''
+
+    total_package_count = 0
+
+    if isinstance(organizations, list):
+        for child in organizations:
+            group = model.Group.get(child['id'])
+            packages = group.packages()
+            if packages:
+                total_package_count += len(packages)
+
+    return total_package_count
+
+
+def get_description(organization):
+    '''
+    Returns the description of the organization.
+    '''
+    group = model.Group.get(organization['id'])
+    return group.description
