@@ -11,6 +11,7 @@ Example:
 
 #}
 
+<link rel="stylesheet" href="/level_of_gov.css" />
 
 {% set type = node.type or 'organization' %}
 {% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
@@ -32,7 +33,7 @@ Example:
         <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image">
     </div>
     
-      <div class="span10">
+    <div class="span10">
         <div class="row-fluid">
           <div class="span12">
               <h3 class="media-head">
