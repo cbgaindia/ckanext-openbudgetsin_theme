@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="/sectors.css" />
+{% endblock %}
+
+{% block banner %}
+  {% set created = h.get_date(package, 'created') %}
+  {% set updated = h.get_date(package, 'updated') %}
+
+  <p class="heading-meta">
+    Updated on {{ updated }} | Created on {{ created }}
+  </p>
+{% endblock %}
