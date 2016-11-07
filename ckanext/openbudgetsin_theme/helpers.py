@@ -19,7 +19,7 @@ def get_date(package, output_required=None):
     elif output_required == "updated":
         # get the latest datetime for the modification datetime; passing current datetime
         # for default.
-        return_datetime = get_latest(resources, datetime.now())
+        return_datetime = get_latest(resources)
 
     else:
         logging.error("No required datetime found")
@@ -47,11 +47,14 @@ def get_oldest(resources, package_created):
     return package_created
 
 
-def get_latest(resources, package_modified):
+def get_latest(resources):
     '''
     Get latest of the modification datetimes.
     '''
-    for resource in resources:
+    package_modified_str = resources[0]['last_modified']
+    package_modified = datetime.strptime(package_modified_str, "%Y-%m-%dT%H:%M:%S.%f")
+
+    for resource in resources[1:]:
         date_string = resource['last_modified']
         this_resource_modified = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f")
 
