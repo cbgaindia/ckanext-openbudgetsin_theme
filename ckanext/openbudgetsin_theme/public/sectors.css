@@ -1,8 +1,18 @@
 .heading-meta
 {
-    color: grey;
+    color: #9a9e9f;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 .dataset-item {
-    background-color: grey;
+    background-color: white;
+    padding: 20px;
+}
+.sector-label {
+    border-radius: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
 }
