@@ -1,0 +1,37 @@
+{% ckan_extends %}
+
+{% block image %}
+<div class="image sector-image">
+  <a href="{{ group.url }}">
+    <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" width="100%" height="115" alt="{{ group.name }}" />
+  </a>
+</div>
+{% endblock %}
+
+{% block heading %}
+<h1 class="heading sector-heading">
+  {{ group.display_name }}
+  {% if group.state == 'deleted' %}
+    [{{ _('Deleted') }}]
+  {% endif %}
+</h1>
+{% endblock %}
+
+{% block nums %}
+<div class="nums sector-nums">
+  <dl>
+    <dt>{{ _('Followers') }}</dt>
+    <dd>{{ h.SI_number_span(group.num_followers) }}</dd>
+  </dl>
+  <dl>
+    <dt>{{ _('Datasets') }}</dt>
+    <dd>{{ h.SI_number_span(group.package_count) }}</dd>
+  </dl>
+</div>
+
+<hr>
+
+{% endblock %}
+
+{% block follow %}
+{% endblock %}
