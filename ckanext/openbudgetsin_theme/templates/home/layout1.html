@@ -1,29 +1,37 @@
 <div role="main" class="hero">
-    <div class="container">
-        {% block search %}
-        {% snippet 'home/snippets/search.html' %}
+  <div class="container">
+    <div class="row row1">
+      <div class="span6 col1">
+        {% block promoted %}
+          {% snippet 'home/snippets/promoted.html' %}
         {% endblock %}
+      </div>
+      <div class="span6 col2">
+        {% block search %}
+          {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+      </div>
     </div>
+  </div>
 </div>
 <div role="main">
-    <div class="container">
-        {% for feature_row in h.get_homepage_resource_views() | batch(2) %}
-          <div class="row-fluid">
-              {% for feature in feature_row %}
-              <div class="span6">
-                  <div class="well">
-                      <h2 style="margin-bottom:0; position: absolute;">
-                          {{ h.link_to(h.truncate(feature['package']['title'], 30), h.url_for(controller='package', action='read', id=feature['package']['name'])) }}
-                      </h2>
-                      {% snippet 'package/snippets/resource_view.html',
-                          resource_view = feature['resource_view'],
-                          resource = feature['resource'],
-                          package = feature['package']
-                      %}
-                  </div>
-              </div>
-              {% endfor %}
-          </div>
-        {% endfor %}
+  <div class="container">
+    <div class="row row2">
+      <div class="span6 col1">
+        {# Note: this featured_group block is used as an example in the theming
+           tutorial in the docs! If you change this code, be sure to check
+           whether you need to update the docs. #}
+        {# Start template block example. #}
+        {% block featured_group %}
+          {% snippet 'home/snippets/featured_group.html' %}
+        {% endblock %}
+        {# End template block example. #}
+      </div>
+      <div class="span6 col2">
+        {% block featured_organization %}
+          {% snippet 'home/snippets/featured_organization.html' %}
+        {% endblock %}
+      </div>
     </div>
+  </div>
 </div>

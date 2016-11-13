@@ -5,7 +5,9 @@
     {{ super() }}
   {% endblock %}
   <div class="infocard">
-    <div class="row-fluid">
+  <div class="dataset-header-row">
+    <div class="row-fluid" >
+    
       <div class="span9 ">
         <h1 class="dataset-header">
         {% block page_heading %}
@@ -42,6 +44,7 @@
       </div>
       </div>
     </div>
+    </div>
     
       
       {% block viscontainer %}
@@ -58,13 +61,13 @@
         {% endif %}
 
       {% endblock %}
-      
+      {#
       {% if h.get_canonical_resource_view(pkg.id) %}
       <hr>
       {% else %}
-      {% endif %}
+      {% endif %}#}
       <div class ="dataset-detail-container">
-        <div class ="container-fluid"> 
+        <div class ="container-fluid datasetview-maincontent"> 
 
         {% block primary_content_inner %}
          
@@ -76,16 +79,47 @@
               </span>
             {% endif %} 
             
-            <div class ="container-fluid"> 
+            
               <div class ="row-fluid">
-               
-                <div class="span9 well inner-content-container">
+               <div class="span3 datasetview-sidecontent">
+                {% block secondary_content %}
+
+                  {% block secondary_help_content %}{% endblock %}
+
+                  {#{% block package_info %}
+                    {% snippet 'package/snippets/info.html', pkg=pkg %}
+                  {% endblock %}
+                  #}
+                  <div class="organisation-container">
+                  {% block package_organization %}
+                    {% if pkg.organization %}
+                      {% set org = h.get_organization(pkg.organization.name) %}
+                      {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+                    {% endif %}
+                  {% endblock %}
+                  
+                  {% block package_social %}
+                    {% snippet "snippets/social.html" %}
+                  {% endblock %}
+
+                  {% block package_license %}
+                    {% snippet "snippets/license.html", pkg_dict=pkg %}
+                  {% endblock %}
+                  </div>
+
+                  {% endblock %}
+                </div>
+                <div class="span9  inner-content-container">
+                <div class="dataset-description-container">
                 <div class="row">
                   <div class="span4">
+                    <h3>
                   Dataset Description
+                    </h3>
                   <hr class="section-hr">
                   </div>
                 </div>
+                
                 {% block package_notes %}
                   {% if pkg.notes %}
                     <div class="notes embedded-content">
@@ -93,10 +127,11 @@
                     </div>
                   {% endif %}
                 {% endblock %}
+                </div>
                 {# FIXME why is this here? seems wrong #}
                 <span class="insert-comment-thread"></span>
               {% endblock %}
-              <div class="infocard-small">
+              <div class="">
 
               {% block package_resources %}
                 {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
@@ -113,35 +148,9 @@
             {% endblock %}
             
                 </div>
-                 <div class="span3">
-                {% block secondary_content %}
-
-                  {% block secondary_help_content %}{% endblock %}
-
-                  {#{% block package_info %}
-                    {% snippet 'package/snippets/info.html', pkg=pkg %}
-                  {% endblock %}
-                  #}
-                  <div class="organisation-container">
-                  {% block package_organization %}
-                    {% if pkg.organization %}
-                      {% set org = h.get_organization(pkg.organization.name) %}
-                      {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
-                    {% endif %}
-                  {% endblock %}
-                  </div>
-                  {% block package_social %}
-                    {% snippet "snippets/social.html" %}
-                  {% endblock %}
-
-                  {% block package_license %}
-                    {% snippet "snippets/license.html", pkg_dict=pkg %}
-                  {% endblock %}
-
-                  {% endblock %}
-                </div>
+                 
               </div>
-            </div>
+           
             
           </div>
         </div>

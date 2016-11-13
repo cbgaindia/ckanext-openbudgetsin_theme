@@ -1,0 +1,66 @@
+
+  <div class="banner-container">
+    <div class="row-fluid" >
+      <div class="span8 offset2">
+            {% block search %}
+              {% snippet 'home/snippets/search.html' %}
+            {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  <div class="newinfo-container">
+    <div class="row-fluid">
+    </div>
+  </div>
+  <div class="datasetclusters-container">
+    <div class="organizationclusters-container">
+      <div class="row-fluid">
+        <div class="levelgov-cont-header">
+          <h2>Level of Government</h2>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span8 offset2 levelgov-cont-descr">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="container-fluid organization-icons">
+          <div class="span3 ">
+            {% block featured_organization %}
+              {% snippet 'home/snippets/featured_organization.html' %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sectorsclusters-container">
+    <div class="row-fluid">
+        <div class="sectors-cont-header">
+          <h2>Sectors</h2>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span8 offset2 sectors-cont-descr">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="container-fluid organization-icons">
+          <div class="span4 ">
+            {% block featured_group %}
+            {% snippet 'home/snippets/featured_group.html' %}
+          {% endblock %}
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+

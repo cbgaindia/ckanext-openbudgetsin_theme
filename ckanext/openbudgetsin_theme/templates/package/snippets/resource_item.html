@@ -4,7 +4,7 @@
 
 <li class="resource-item" data-id="{{ res.id }}">
   <div class="row">
-  <div class="span8">
+  <div class="span7">
   {% block resource_item_title %}
   <a class="heading" href="{{ url }}" title="{{ res.name or res.description }}">
     {{ h.resource_display_name(res) | truncate(50) }}<span class="format-label" property="dc:format" data-format="{{ res.format.lower() or 'data' }}">{{ res.format }}</span>
@@ -19,24 +19,26 @@
     </p>
   {% endblock %}
   </div>
-  <div class="span1">
-  {% if res.url and h.is_url(res.url) %}
+  <div class="span5 ">
+    <div class="btn-group">
      
-        <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
-          {% if res.has_views %}
-            <button class="btn download-button"><i class="icon-download-alt  icon-large"></i></button>
-            
-          {% else %}
-            <button class="btn download-button"><i class="icon-external-link"></i></button>
-            
-          {% endif %}
-        </a>
-      {% endif %}
-  </div>
-  <div class="span3">
+    {% if res.url and h.is_url(res.url) %}
+       
+          <a href="{{ res.url }}" download="{{ res.url }}" class="resource-url-analytics" target="_blank">
+            {% if res.has_views %}
+              <button class="btn download-button"><i class="icon-download-alt  icon-large"></i> Download </button>
+              
+            {% else %}
+              <button class="btn download-button"><i class="icon-external-link"></i></button>
+              
+            {% endif %}
+          </a>
+        {% endif %}
+    
+ </div>
   {% block resource_item_explore %}
   {% if not url_is_edit %}
-  <div class="dropdown btn-group">
+  <div class="dropdown btn-group ">
     <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
       <i class="icon-share-alt"></i>
       {{ _('Explore') }}
@@ -81,7 +83,9 @@
     </ul>
   </div>
   {% endif %}
+  
   </div>
+  
 
   {% endblock %}
   </div>

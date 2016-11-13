@@ -1,7 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 body {
-    font-family: "Gotham Book", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    background: none;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    
 }
 
+
+/* Home Page */
+
+.banner-container {
+    min-height: 400px;
+    background: url("Banner_8_11-06.png");
+}
+
+.searchbar-container {
+    margin-top: 290px;
+}
+
+.organizationclusters-container {
+    padding: 30px 80px;     
+    background: #E9EAE5 url("../../../base/images/bg.png");
+    box-shadow: inset 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+}
+
+.sectorsclusters-container {
+    padding: 30px 80px;
+      
+}
+
+.levelgov-cont-header, .sectors-cont-header {
+    text-align: center;
+}
+
+.levelgov-cont-descr, .sectors-cont-descr {
+    text-align: center;
+        padding: 5px 20px 20px 20px;
+}
 
 /* Basic Elements */
 
@@ -16,10 +50,12 @@ body {
     margin: 0px auto;
     margin-bottom: 20px;
     /*box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);*/
-    background: rgb(233, 234, 229);
+    background: white;
     border-radius: 5px;
-    padding: 10px 50px 50px 50px;
+    /*padding: 10px 50px 50px 50px;*/
     position: relative;
+    /*padding: 0px 30px 30px 30px;*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
 .infocard:before {
@@ -187,19 +223,35 @@ h4 {}
 /* Resource list*/
 
 .resource-list {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
+.resource-item{
+    margin-left: 20px;
+}
 
 /* Module Heading */
 
 .module:first-child .module-heading,
 .module-heading {
-    border-top-width: 2px;
+    
+}
+
+.module-heading {
+    position:relative;     
+    border-top-width: none;
+    /* border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.10);
+     
+    -webkit-box-shadow:0 1px 0px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 0px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    */
+
 }
 
 .additional-info {
-    margin-top: 40px;
+ 
 }
 
 .tag {
@@ -208,22 +260,35 @@ h4 {}
 
 .section-hr {
     margin: 5px 0px;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid rgba(204, 204, 204, 0.51);;
 }
 
 .additional-info-header {
-    padding: 15px 0px;
+   
 }
 
 
 /* page.html */
+.secondary {
+    margin-left: 0;
+}
+.primary{
+    padding-left: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.21);
+}
+.row-fluid .secondary {
+    width: 25%;
+}
+.row-fluid .primary {
+    width: 75%;
+}
 
 #content {
-    width: 90%;
+    width: 80%;
 }
 
 [role=main] {
-    background: rgba(246, 255, 224, 1);
+    background: rgb(233, 234, 229) url("../../../base/images/bg.png");
     padding-top: 5px;
     margin-bottom: 5px;
 }
@@ -254,17 +319,39 @@ h4 {}
 
 
 /* read.html */
-
+.dataset-description-container{
+    padding-bottom: 20px;
+}
+.datasetview-maincontent{
+    padding:0px;
+}
+.datasetview-sidecontent{
+    padding: 20px 0px 20px 20px;
+}
 .viscontainer {
-    padding: 30px 40px 50px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: #fdfdfd;
+    padding: 20px 40px 20px 40px;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    */border-radius: 5px;
+    background: none;
+    /* width: 95%; */
+    /* margin: 0px auto; */
+    margin-top: 0px;
+}
+.dataset-header-row{
+       
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    /* padding: 0px 20px 0px 20px; */
+    background: #004563;
+    color: rgba(255, 255, 255, 0.98);
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 20px 10px 20px;
+
+
 }
 
 .inner-content-container {
-    padding: 40px;
+    padding: 20px 40px;
+        background: rgb(253, 253, 253);
 }
 
 .infocard-small {
@@ -276,6 +363,7 @@ h4 {}
     padding: 20px 40px 40px 40px;
     margin-top: 20px;
     position: relative;
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .module {
@@ -296,15 +384,19 @@ h4 {}
 }
 
 .dataset-detail-container {
-    border-radius: 5px;
-    background: #fdfdfd;
-    padding-top: 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    border-radius: 0px 0px 5px 5px;
+    background: none;
+
+    background: rgba(197, 197, 197, 0.51);
+
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+*/
 }
 
 .dataset-header {
-    font-family: "Gotham Bold";
-    font-size: 30px;
+    /*font-family: "Gotham Bold";*/
+    font-size:25px;
     padding-left: 10px;
 }
 
@@ -321,7 +413,11 @@ h4 {}
 .m-top {
     margin-top: 5px;
 }
-
+/* tags.html */
+.tags-section{
+        margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 /* resource_item.html */
 
@@ -329,9 +425,76 @@ h4 {}
     margin: 4px 0px 0px 5px;
 }
 
+.resource-item .btn-group {
+    position: relative;
+    top:0px;
+}
+
 
 /* embed_button.html */
 
 .top-header-rightcol {
     margin-top: -8px;
+}
+.wrapper{
+    background-image: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+.dataset-side-content 
+{
+border-bottom: 1px solid rgba(48,49,44,0.2);
+
+border-right: 1px solid rgba(48,49,44,0.2);
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+    color: black;
+    background-color: rgba(248, 202, 77, 0.95);;
+}
+
+
+a {
+    color: #000000;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    /*background: rgba(255,0,0,0.8);*/ 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    
+}
+
+.notes{
+    margin: 10px;
+}
+
+.table-container{
+    padding: 20px 10px;
+}
+
+
+
+
+.site-footer {
+    background: #00202F url("../../../base/images/bg.png");
 }

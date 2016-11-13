@@ -1,0 +1,7 @@
+{% set organizations = h.get_featured_organizations() %}
+
+{% for organization in organizations %}
+  <div class="item-container">
+    {% snippet 'snippets/organization_item_icons.html', organization=organization, truncate=50, truncate_title=35 %}
+  </div>
+{% endfor %}
