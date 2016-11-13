@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {#
 Displays a single of dataset.
 
@@ -75,4 +76,23 @@ Example:
       {% endblock %}
     {% endblock %}
   </li>
+{#
+{% ckan_extends %}
+
+{% block banner %}
+  {% set created = h.get_date(package, 'created') %}
+  {% set updated = h.get_date(package, 'updated') %}
+
+  <p class="heading-meta">
+    Updated on {{ updated }} | Created on {{ created }}
+  </p>
+{% endblock %}
+
+{% block resources_inner %}
+  {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+  <li>
+    <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label sector-label" data-format="{{ resource.lower() }}">{{ resource }}</a>
+  </li>
+  {% endfor %}
+#}
 {% endblock %}

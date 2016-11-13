@@ -21,9 +21,12 @@ log = logging.getLogger(__name__)
 # This plugin is designed to work only these versions of CKAN
 plugins.toolkit.check_ckan_version(min_version='2.0')
 
+from ckanext.openbudgetsin_theme import helpers
+
 
 class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.ITemplateHelpers, inherit=True)
 
     # IConfigurer
 
@@ -31,6 +34,7 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'openbudgetsin_theme')
+
 
 
 
@@ -261,3 +265,9 @@ def _get_homepage_views():
         })
 
     return homepage_views
+
+    # ITemplateHelpers
+    def get_helpers(self):
+        return {
+            'get_date': helpers.get_date,
+        }
