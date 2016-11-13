@@ -1,0 +1,99 @@
+{#
+Displays a tree of organizations
+
+node    - organization
+
+Example:
+
+{% for node in h.group_tree(type_='organization') %}
+{% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=False %}
+{% endfor %}
+
+#}
+
+<link rel="stylesheet" href="/level_of_gov.css" />
+
+{% set type = node.type or 'organization' %}
+{% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
+
+{% block item %}
+<li class="media-item" style="margin: 0 0 1em 0;">
+<div class="row-fluid">
+    {% block item_inner scoped %}
+
+    {% set longname = h.group_tree_get_longname(node.name) %} 
+    {% set display_text = node.title %} 
+    {% if use_longnames and longname%}
+      {% set display_text = longname + " (" + display_text + ")" %}
+    {% endif %} 
+
+    {% if node.children %}
+
+    <div class="span2">
+        <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image">
+    </div>
+    
+    <div class="span10">
+        <div class="row-fluid">
+          <div class="span12">
+              <h3 class="media-head">
+                  {% link_for display_text, controller='organization', action='read', id=node.name %}
+               </h3>
+
+               <span style="margin: 0 10px;">|</span>
+
+            {% if node.children %}
+              <strong class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</strong>
+            {% else %}
+              <span class="count">{{ _('0 Datasets found') }}</span>
+            {% endif %}
+
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span12">
+            <p>{{ h.markdown_extract(h.get_description(node)) }}</p>
+          </div>
+        </div>
+
+        {% set j = 0 %} 
+        {% for i in range(2) %}
+        <div class="row-fluid">
+          {% if i == 1 %}
+            {% set n = j+2 %} 
+          {% else %}
+            {% set n = j+3 %} 
+          {% endif %}
+
+          {% for child in node.children[j:n] %}
+          <div class="span4">
+            {% set child_node = child %}
+            {% if child_node %}
+            <span class="child-node">
+                {% link_for child_node.title, controller='organization', action='read', id=child_node.name %}
+            </span>
+            {% endif %}
+          </div>
+
+          {% endfor %}
+
+          {% if i == 1 %}
+          <div class="span4 pull-right">
+            {% link_for "MORE...", controller='organization', action='read', id=node.name %}
+          </div>
+          {% endif %}
+
+          {% set j = j+3 %} 
+        </div>
+        {% endfor %}
+
+      </div>
+
+    {% endif %}
+    
+  {% endblock %}
+
+  </div>
+</li>
+{% endblock %}
