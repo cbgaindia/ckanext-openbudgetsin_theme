@@ -9,7 +9,7 @@ import ckan.plugins.toolkit as toolkit
 import ckan.lib.dictization.model_dictize as md
 from ckan.lib.dictization import table_dictize
 # from ckan.lib.dictization import table_dictize
-
+from ckanext.openbudgetsin_theme import helpers
 
 from ckan.common import c
 from ckan.lib.plugins import DefaultOrganizationForm
@@ -21,7 +21,7 @@ log = logging.getLogger(__name__)
 # This plugin is designed to work only these versions of CKAN
 plugins.toolkit.check_ckan_version(min_version='2.0')
 
-from ckanext.openbudgetsin_theme import helpers
+
 
 
 class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
@@ -35,8 +35,12 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'openbudgetsin_theme')
 
-
-
+    # ITemplateHelpers
+    def get_helpers(self):
+        return {
+            'get_date': helpers.get_date,
+        }
+        
 
 def custom_convert_from_extras(key, data, errors, context):
 
@@ -266,8 +270,4 @@ def _get_homepage_views():
 
     return homepage_views
 
-    # ITemplateHelpers
-    def get_helpers(self):
-        return {
-            'get_date': helpers.get_date,
-        }
+    
