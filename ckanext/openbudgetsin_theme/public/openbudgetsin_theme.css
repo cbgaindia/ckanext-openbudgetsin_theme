@@ -2,7 +2,6 @@
 body {
     background: none;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-    
 }
 
 
@@ -18,24 +17,26 @@ body {
 }
 
 .organizationclusters-container {
-    padding: 30px 80px;     
+    padding: 30px 80px;
     background: #E9EAE5 url("../../../base/images/bg.png");
     box-shadow: inset 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
 }
 
 .sectorsclusters-container {
     padding: 30px 80px;
-      
 }
 
-.levelgov-cont-header, .sectors-cont-header {
+.levelgov-cont-header,
+.sectors-cont-header {
     text-align: center;
 }
 
-.levelgov-cont-descr, .sectors-cont-descr {
+.levelgov-cont-descr,
+.sectors-cont-descr {
     text-align: center;
-        padding: 5px 20px 20px 20px;
+    padding: 5px 20px 20px 20px;
 }
+
 
 /* Basic Elements */
 
@@ -226,19 +227,18 @@ h4 {}
     margin-top: 10px;
 }
 
-.resource-item{
+.resource-item {
     margin-left: 20px;
 }
+
 
 /* Module Heading */
 
 .module:first-child .module-heading,
-.module-heading {
-    
-}
+.module-heading {}
 
 .module-heading {
-    position:relative;     
+    position: relative;
     border-top-width: none;
     /* border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.10);
@@ -247,12 +247,9 @@ h4 {}
     -moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
     box-shadow:0 1px 0px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
     */
-
 }
 
-.additional-info {
- 
-}
+.additional-info {}
 
 .tag {
     border-radius: 2px;
@@ -260,25 +257,28 @@ h4 {}
 
 .section-hr {
     margin: 5px 0px;
-    border-top: 1px solid rgba(204, 204, 204, 0.51);;
+    border-top: 1px solid rgba(204, 204, 204, 0.51);
+    ;
 }
 
-.additional-info-header {
-   
-}
+.additional-info-header {}
 
 
 /* page.html */
+
 .secondary {
     margin-left: 0;
 }
-.primary{
+
+.primary {
     padding-left: 20px;
     border-left: 1px solid rgba(0, 0, 0, 0.21);
 }
+
 .row-fluid .secondary {
     width: 25%;
 }
+
 .row-fluid .primary {
     width: 75%;
 }
@@ -319,39 +319,42 @@ h4 {}
 
 
 /* read.html */
-.dataset-description-container{
+
+.dataset-description-container {
     padding-bottom: 20px;
 }
-.datasetview-maincontent{
-    padding:0px;
+
+.datasetview-maincontent {
+    padding: 0px;
 }
-.datasetview-sidecontent{
+
+.datasetview-sidecontent {
     padding: 20px 0px 20px 20px;
 }
+
 .viscontainer {
     padding: 20px 40px 20px 40px;
     /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
-    */border-radius: 5px;
+    */
+    border-radius: 5px;
     background: none;
     /* width: 95%; */
     /* margin: 0px auto; */
     margin-top: 0px;
 }
-.dataset-header-row{
-       
-    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+.dataset-header-row {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
     /* padding: 0px 20px 0px 20px; */
     background: #004563;
     color: rgba(255, 255, 255, 0.98);
     border-radius: 5px 5px 0px 0px;
     padding: 10px 20px 10px 20px;
-
-
 }
 
 .inner-content-container {
     padding: 20px 40px;
-        background: rgb(253, 253, 253);
+    background: rgb(253, 253, 253);
 }
 
 .infocard-small {
@@ -386,9 +389,7 @@ h4 {}
 .dataset-detail-container {
     border-radius: 0px 0px 5px 5px;
     background: none;
-
     background: rgba(197, 197, 197, 0.51);
-
     border-top: 1px solid rgba(0, 0, 0, 0.07);
     /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
 */
@@ -396,7 +397,7 @@ h4 {}
 
 .dataset-header {
     /*font-family: "Gotham Bold";*/
-    font-size:25px;
+    font-size: 25px;
     padding-left: 10px;
 }
 
@@ -413,11 +414,15 @@ h4 {}
 .m-top {
     margin-top: 5px;
 }
+
+
 /* tags.html */
-.tags-section{
-        margin-top: 20px;
+
+.tags-section {
+    margin-top: 20px;
     margin-bottom: 30px;
 }
+
 
 /* resource_item.html */
 
@@ -427,7 +432,7 @@ h4 {}
 
 .resource-item .btn-group {
     position: relative;
-    top:0px;
+    top: 0px;
 }
 
 
@@ -436,65 +441,96 @@ h4 {}
 .top-header-rightcol {
     margin-top: -8px;
 }
-.wrapper{
+
+.wrapper {
     background-image: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
-.dataset-side-content 
-{
-border-bottom: 1px solid rgba(48,49,44,0.2);
 
-border-right: 1px solid rgba(48,49,44,0.2);
+.dataset-side-content {
+    border-bottom: 1px solid rgba(48, 49, 44, 0.2);
+    border-right: 1px solid rgba(48, 49, 44, 0.2);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
-.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+.masthead .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li.active a {
     color: black;
-    background-color: rgba(248, 202, 77, 0.95);;
+    background-color: rgba(248, 202, 77, 0.95);
+    ;
 }
-
 
 a {
     color: #000000;
 }
 
-
 ::-webkit-scrollbar {
     width: 8px;
 }
- 
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
- 
+
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    /*background: rgba(255,0,0,0.8);*/ 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    
+    /*background: rgba(255,0,0,0.8);*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.notes{
+::-webkit-scrollbar-thumb:window-inactive {}
+
+.notes {
     margin: 10px;
 }
 
-.table-container{
+.table-container {
     padding: 20px 10px;
+}
+
+.site-footer {
+    background: #00202F url("../../../base/images/bg.png");
+}
+
+.dataset-description {
+    margin-top: 2px;
+    padding: 0px 10px;
+}
+
+.dataset-resources {
+    margin-top: 5px;
+    margin-left: 10px !important;
+}
+
+.dataset-heading {
+    font-size: 17px;
 }
 
 
 
 
-.site-footer {
-    background: #00202F url("../../../base/images/bg.png");
+
+
+
+
+.nav-tabs.nav-stacked > li > a {
+  
+    color: #555555;
+}
+
+.nav-tabs.nav-stacked > li.elem.active {
+    font-weight: bold;
 }
