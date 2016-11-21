@@ -1,11 +1,11 @@
 {% block header_wrapper %}
 
 <header class="navbar navbar-static-top masthead">
-  {% block header_debug %}
+  {#{% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
     {% endif %}
-  {% endblock %}
+  {% endblock %}#}
   <div class="container">
     <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
       <span class="icon-bar"></span>

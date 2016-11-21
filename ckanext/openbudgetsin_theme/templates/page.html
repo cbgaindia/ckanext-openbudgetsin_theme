@@ -18,7 +18,7 @@
   {# The content block allows you to replace the content of the page if needed #}
   {%- block content %}
     {% block maintag %}<div role="main">{% endblock %}
-      <div id="content" class="container">
+      <div id="" class="container outer-main-container">
         {% block main_content %}
           {% block flash %}
             <div class="flash-messages">
@@ -33,7 +33,7 @@
           {% endblock %}
 
           {% block toolbar %}
-            <div class="toolbar">
+            <div class="toolbar hidden-phone">
               {% block breadcrumb %}
                 {% if self.breadcrumb_content() | trim %}
                   <ol class="breadcrumb">
@@ -96,7 +96,7 @@
             {% endblock %}
 
             {% block secondary %}
-              <aside class="secondary span3">
+              <aside class="secondary span3 ">
                 {#
                 The secondary_content block can be used to add content to the
                 sidebar of the page. This is the main block that is likely to be

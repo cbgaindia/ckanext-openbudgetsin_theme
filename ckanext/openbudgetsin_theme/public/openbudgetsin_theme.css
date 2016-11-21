@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
-body {
-    background: none;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-}
+
 
 
 /* Home Page */
@@ -45,9 +42,9 @@ body {
 }
 
 
-/*infocard element */
+/*main-outer-container element */
 
-.infocard {
+.main-outer-container {
     margin: 0px auto;
     margin-bottom: 20px;
     /*box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);*/
@@ -59,29 +56,29 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
-.infocard:before {
+.main-outer-container:before {
     float: left;
     height: 280px
 }
 
-.infocard header h5 {
+.main-outer-container header h5 {
     margin: 0px;
     padding: 5px 20px;
     border-bottom: 1px whitesmoke solid
 }
 
-.infocard .content {
+.main-outer-container .content {
     position: relative;
     width: 100%;
     display: block
 }
 
-.infocard .content:after {
+.main-outer-container .content:after {
     display: block;
     clear: both
 }
 
-.infocard .content .content-message {
+.main-outer-container .content .content-message {
     position: absolute;
     width: 100%;
     font-size: 12px;
@@ -90,15 +87,15 @@ body {
     top: 50%
 }
 
-.infocard .content .content-message .content-error {
+.main-outer-container .content .content-message .content-error {
     display: none
 }
 
-.infocard .content .content-message .content-loading {
+.main-outer-container .content .content-message .content-loading {
     display: none
 }
 
-.infocard .content .content-box {
+.main-outer-container .content .content-box {
     box-sizing: border-box;
     position: absolute;
     padding: 10px 20px 10px 20px;
@@ -106,26 +103,26 @@ body {
     height: 100%
 }
 
-.infocard .content .content-box:before {
+.main-outer-container .content .content-box:before {
     content: "";
     float: left;
     height: 100%
 }
 
-.infocard .content .content-box .footnotes {
+.main-outer-container .content .content-box .footnotes {
     text-align: right;
     font-size: 11px;
     height: 20px;
     color: #888888
 }
 
-.infocard .content .content-box .info-value {
+.main-outer-container .content .content-box .info-value {
     position: relative;
     overflow: auto;
     margin-bottom: 10px
 }
 
-.infocard .content .content-box .info-value .values {
+.main-outer-container .content .content-box .info-value .values {
     margin-top: 5px;
     font-size: 48px;
     text-align: right;
@@ -133,72 +130,72 @@ body {
 }
 
 @media (max-width:979px) and (min-width:768px) {
-    .infocard .content .content-box .info-value .values {
+    .main-outer-container .content .content-box .info-value .values {
         font-size: 43.2px
     }
 }
 
 @media (max-width:767px) {
-    .infocard .content .content-box .info-value .values {
+    .main-outer-container .content .content-box .info-value .values {
         font-size: 38.4px
     }
 }
 
-.infocard .content .content-box .info-value .values .value {
+.main-outer-container .content .content-box .info-value .values .value {
     display: inline-block
 }
 
-.infocard .content .content-box .info-value .values .value:not(:first-child) {
+.main-outer-container .content .content-box .info-value .values .value:not(:first-child) {
     margin-left: 3%
 }
 
-.infocard .content .content-box .info-value .values .value .prefix {
+.main-outer-container .content .content-box .info-value .values .value .prefix {
     font-size: 60%
 }
 
-.infocard .content .content-box .info-value .values .value .value-label {
+.main-outer-container .content .content-box .info-value .values .value .value-label {
     font-size: 70%
 }
 
-.infocard .content .content-box .info-value .values-small {
+.main-outer-container .content .content-box .info-value .values-small {
     font-size: 24px
 }
 
 @media (max-width:979px) and (min-width:768px) {
-    .infocard .content .content-box .info-value .values-small {
+    .main-outer-container .content .content-box .info-value .values-small {
         font-size: 21.6px
     }
 }
 
 @media (max-width:767px) {
-    .infocard .content .content-box .info-value .values-small {
+    .main-outer-container .content .content-box .info-value .values-small {
         font-size: 19.2px
     }
 }
 
-.infocard .content .content-box .info-value .values-xsmall {
+.main-outer-container .content .content-box .info-value .values-xsmall {
     font-size: 20px
 }
 
 @media (max-width:979px) and (min-width:768px) {
-    .infocard .content .content-box .info-value .values-xsmall {
+    .main-outer-container .content .content-box .info-value .values-xsmall {
         font-size: 18px
     }
 }
 
 @media (max-width:767px) {
-    .infocard .content .content-box .info-value .values-xsmall {
+    .main-outer-container .content .content-box .info-value .values-xsmall {
         font-size: 16px
     }
 }
 
-.infocard .content .content-box .info-value .desc {
+.main-outer-container .content .content-box .info-value .desc {
     text-align: right;
     font-size: 12px
 }
 
 @media (max-width:767px) {
-    .infocard .info-value-hidden {
+    .main-outer-container .info-value-hidden {
         display: none;
         height: 0px
     }
@@ -266,53 +263,20 @@ h4 {}
 
 /* page.html */
 
-.secondary {
-    margin-left: 0;
-}
 
-.primary {
-    padding-left: 20px;
-    border-left: 1px solid rgba(0, 0, 0, 0.21);
-}
 
-.row-fluid .secondary {
-    width: 25%;
-}
 
-.row-fluid .primary {
-    width: 75%;
-}
 
-#content {
-    width: 80%;
-}
-
-[role=main] {
-    background: rgb(233, 234, 229) url("../../../base/images/bg.png");
-    padding-top: 5px;
-    margin-bottom: 5px;
-}
 
 .toolbar .breadcrumb {
     font-size: 16px;
 }
 
 
-/* Header Customisations - header.html*/
-
-.masthead {
-    min-height: 60px;
-    color: #F6FFE0;
-    background: #00202F;
-    padding-top: 5px;
-}
 
 
-/* Footer Template */
 
-.footer-row {
-    margin-left: -20px;
-}
+
 
 
 /* Package Folder Templates */
@@ -357,7 +321,7 @@ h4 {}
     background: rgb(253, 253, 253);
 }
 
-.infocard-small {
+.main-outer-container-small {
     margin: 0px auto;
     margin-bottom: 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.19), 0 1px 2px rgba(0, 0, 0, 0.23);
@@ -395,11 +359,6 @@ h4 {}
 */
 }
 
-.dataset-header {
-    /*font-family: "Gotham Bold";*/
-    font-size: 25px;
-    padding-left: 10px;
-}
 
 
 /* Snippets */
@@ -442,10 +401,7 @@ h4 {}
     margin-top: -8px;
 }
 
-.wrapper {
-    background-image: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
-}
+
 
 .dataset-side-content {
     border-bottom: 1px solid rgba(48, 49, 44, 0.2);

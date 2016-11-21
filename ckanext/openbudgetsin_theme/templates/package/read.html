@@ -4,7 +4,7 @@
   {% block toolbar %}
     {{ super() }}
   {% endblock %}
-  <div class="infocard">
+  <div class="main-outer-container">
   <div class="dataset-header-row">
     <div class="row-fluid" >
     
@@ -21,7 +21,7 @@
         {% endblock %}
         </h1>
       </div>
-      <div class="span3 button-container">
+      <div class="span3 button-container hidden-phone">
         <div class="manage-button">
         
         {% block content_action %}
@@ -81,7 +81,7 @@
             
             
               <div class ="row-fluid">
-               <div class="span3 datasetview-sidecontent">
+               <aside class="span3 datasetview-sidecontent hidden-phone">
                 {% block secondary_content %}
 
                   {% block secondary_help_content %}{% endblock %}
@@ -108,7 +108,7 @@
                   </div>
 
                   {% endblock %}
-                </div>
+                </aside>
                 <div class="span9  inner-content-container">
                 <div class="dataset-description-container">
                 <div class="row">
