@@ -27,8 +27,6 @@ Example:
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
-    {% if node.children %}
-
     <div class="span2">
         <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image">
     </div>
@@ -78,7 +76,7 @@ Example:
 
           {% endfor %}
 
-          {% if i == 1 %}
+          {% if i == 1 and node.children %}
           <div class="span4 pull-right">
             {% link_for "MORE...", controller='organization', action='read', id=node.name %}
           </div>
@@ -90,8 +88,6 @@ Example:
 
       </div>
 
-    {% endif %}
-    
   {% endblock %}
 
   </div>
