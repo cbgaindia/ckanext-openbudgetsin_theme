@@ -1,12 +1,14 @@
-.media-image {
+.org-image {
     width: 8em;
-    height: 8em;
+    height: 8.5em;
 }
-.media-head {
+.org-heading {
     display: inline;
 }
-.media-item {
+.org-item {
     width: 96.5%;
+    margin: 0 0 1em 0;
+    list-style-type: none;
 }
 .media-grid {
     margin-left: 0.1em;
@@ -15,12 +17,13 @@
     background-color: inherit;
     border: none;
 }
-.media-head > a, .child-node > a{
+.org-heading > a, .child-node > a{
     color: #4F4E53;
     font-weight: bold;
 }
 .child-node {
     font-size: 0.83em;
+    padding: 0;
 }
 .count {
     font-size: 1.2em;
@@ -30,4 +33,8 @@
 .hierarchy-tree-top {
     padding: 20px 0;
     background-color: white;
+    margin: 0 0 1em 0;
+}
+.more-text > a {
+    color: #0ea8f4;
 }

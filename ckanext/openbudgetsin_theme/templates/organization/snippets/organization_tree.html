@@ -14,26 +14,25 @@ Example:
 
 #}
 
-<link rel="stylesheet" href="/level_of_gov.css" />
-
-<ul class="hierarchy-tree-top" style="margin: 0 0 1em 0;">
+<ul class="hierarchy-tree-top">
   {% for node in top_nodes recursive %}
+  <li class="media-item org-item">
     {% set longname = h.group_tree_get_longname(node.name) %} 
     {% set display_text = node.title %} 
     {% if use_longnames and longname%}
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
-    {% if not node.children %}
+    {% if not node.highlighted %}
         <div class="row-fluid">
           <div class="span12">
-            <h3 class="media-head">
+            <h3 class="media-head org-heading">
               {% link_for display_text, controller='organization', action='read', id=node.name %}
              </h3>
 
              <span style="margin: 0 10px;">|</span>
 
-             <strong class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count([node])).format(num=h.get_package_count([node])) }} found</strong>
+             <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count([node])).format(num=h.get_package_count([node])) }} found</span>
 
           </div>
         </div>
@@ -44,10 +43,11 @@ Example:
           </div>
         </div>
     {% endif %}
+    <br>
 
     {% if node.children %}
       <ul class="hierarchy-tree"> {{ loop(node.children) }} </ul>
     {% endif %}
-    </li>
+  </li>
   {% endfor %}
 </ul>
