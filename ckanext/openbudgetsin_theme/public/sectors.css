@@ -12,35 +12,59 @@
     border-radius: 0;
     padding: 10px 20px;
     font-size: 14px;
-    margin: 10px;
-    margin-bottom: 20px;
-    margin-left: 0;
+    margin: 15px 20px 15px -10px;
 }
 .sector-image {
     margin: -15px;
 }
-.sector-heading {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.facet-heading:before,
+.facet-heading:after {
+    display: table;
+    line-height: 0;
+    content: "";
 }
-.context-info .sector-nums dl dt {
-    margin-top: -15px;
-    padding: 15px;
+.facet-heading {
+    margin: 0;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: -10px;
+}
+dt {
     font-weight: bold;
     font-size: 15px;
 }
-.context-info .sector-nums dl dd {
-    padding: 0 35px;
-    margin-top: -18px;
+dd {
+    padding: 0 15px;
     font-size: 16px;
 }
 .sector-nums {
-    margin-bottom: -10px;
+    margin-top: 15px;
+    margin-bottom: -25px;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    padding-top: 15px;
 }
-.sector-facet-heading {
-    margin-top: -20px;
-    font-size: 16px;
-    background-color: white;
-    border: none;
-    padding: 0;
+.module-footer {
+    border-bottom: 1px dotted #BBB;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.facet-item-name {
+    position: relative;
+    top: 7px;
+}
+.facet-item {
+    padding-left: 15px !important;
+    border-bottom: none !important;
+}
+.inline-facet-item {
+    display: inline;
+}
+.facet-item * {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+.dataset-list {
+    margin-top: -35px;
 }
