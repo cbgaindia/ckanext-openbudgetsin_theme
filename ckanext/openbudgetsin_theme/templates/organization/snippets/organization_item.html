@@ -11,13 +11,11 @@ Example:
 
 #}
 
-<link rel="stylesheet" href="/level_of_gov.css" />
-
 {% set type = node.type or 'organization' %}
 {% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
 
 {% block item %}
-<li class="media-item" style="margin: 0 0 1em 0;">
+<li class="media-item org-item">
 <div class="row-fluid">
     {% block item_inner scoped %}
 
@@ -27,23 +25,21 @@ Example:
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
-    {% if node.children %}
-
     <div class="span2">
-        <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image">
+        <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image org-image">
     </div>
     
     <div class="span10">
         <div class="row-fluid">
           <div class="span12">
-              <h3 class="media-head">
+              <h3 class="media-head org-heading">
                   {% link_for display_text, controller='organization', action='read', id=node.name %}
                </h3>
 
                <span style="margin: 0 10px;">|</span>
 
             {% if node.children %}
-              <strong class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</strong>
+              <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</span>
             {% else %}
               <span class="count">{{ _('0 Datasets found') }}</span>
             {% endif %}
@@ -78,8 +74,8 @@ Example:
 
           {% endfor %}
 
-          {% if i == 1 %}
-          <div class="span4 pull-right">
+          {% if i == 1 and node.children | length > 5 %}
+          <div class="span4 pull-right more-text">
             {% link_for "MORE...", controller='organization', action='read', id=node.name %}
           </div>
           {% endif %}
@@ -90,8 +86,6 @@ Example:
 
       </div>
 
-    {% endif %}
-    
   {% endblock %}
 
   </div>

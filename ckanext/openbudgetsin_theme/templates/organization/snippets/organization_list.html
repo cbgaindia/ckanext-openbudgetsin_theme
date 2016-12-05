@@ -2,6 +2,7 @@
 
 {% block organization_list %}
 <ul class="media-grid" data-module="media-grid">
+     {% set organizations = h.get_featured_organizations(count=4) %}
      {% if  c.q %}
      	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
      {% else %}

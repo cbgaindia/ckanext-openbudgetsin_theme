@@ -128,8 +128,6 @@ def get_description(organization):
     return group.description
 
 
-
-
 def get_date(package, output_required=None):
     '''
     Reurns the required date depending upon the output_required.
@@ -191,4 +189,3 @@ def get_latest(resources):
             package_modified = this_resource_modified
 
     return package_modified
-

@@ -14,7 +14,10 @@
   {# TODO: Add JSTree #}
 
   <div id="organization-tree">
-     {% snippet 'organization/snippets/organization_tree.html', top_nodes=[h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type)], use_longnames=True %}
+      {% set top_nodes = [h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type, include_parents=False)] %}
+      {% if (not top_nodes[0].highlighted) or (top_nodes[0].children) %}
+          {% snippet 'organization/snippets/organization_tree.html', top_nodes=top_nodes, use_longnames=True %}
+      {% endif %}
   </div>
 
 {% endblock %}
