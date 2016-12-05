@@ -94,8 +94,7 @@
 
 /* page.html */
 
-<<<<<<< HEAD
-=======
+
 .secondary {
     margin-left: 0;
     /* change background color for sidebar
@@ -103,10 +102,6 @@
     border-color: #CCC;
     */
 }
->>>>>>> 3c808a2238a860e00ec0d50f58c80f6258457c74
-
-
-
 
 
 .toolbar .breadcrumb {
@@ -240,10 +235,7 @@
     margin-top: -8px;
 }
 
-<<<<<<< HEAD
 
-
-=======
 .wrapper {
     background-image: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
@@ -261,7 +253,7 @@
     border-bottom: 1px solid #BBB;
 }
 */
->>>>>>> 3c808a2238a860e00ec0d50f58c80f6258457c74
+
 .dataset-side-content {
     border-bottom: 1px solid rgba(48, 49, 44, 0.2);
     border-right: 1px solid rgba(48, 49, 44, 0.2);
