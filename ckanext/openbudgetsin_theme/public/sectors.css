@@ -44,7 +44,8 @@ dd {
     border-bottom: 1px solid #BBB;
     padding-top: 15px;
 }
-.module-footer {
+.facet-footer {
+    border: none;
     border-bottom: 1px dotted #BBB;
     margin-right: 15px;
     margin-left: 15px;

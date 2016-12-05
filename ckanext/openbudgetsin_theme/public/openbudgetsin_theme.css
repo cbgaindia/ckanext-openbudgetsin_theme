@@ -268,8 +268,10 @@ h4 {}
 
 .secondary {
     margin-left: 0;
+    /* change background color for sidebar
     background-color: #E9E9E9;
     border-color: #CCC;
+    */
 }
 
 .primary {
@@ -447,9 +449,12 @@ h4 {}
 .wrapper {
     background-image: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    /* add padding for sidebar in container
     padding: 20px;
     padding-top: 30px;
+    */
 }
+/* change background for wrapper and page header
 .wrapper, .page-header {
     background-color: #E1E1E1;
 }
@@ -457,6 +462,7 @@ h4 {}
     padding-top: 0 !important;
     border-bottom: 1px solid #BBB;
 }
+*/
 .dataset-side-content {
     border-bottom: 1px solid rgba(48, 49, 44, 0.2);
     border-right: 1px solid rgba(48, 49, 44, 0.2);
