@@ -22,6 +22,7 @@
   {% block resource %}
     <section class="module module-resource">
       {% block resource_inner %}
+     <div class="row ">
       <div class="module-content">
         <div class="actions">
           {% block resource_actions %}
@@ -38,7 +39,7 @@
                   {% elif  res.resource_type == 'api' %}
                     <i class="icon-key"></i> {{ _('API Endpoint') }}
                   {% elif not res.has_views or not res.can_be_previewed %}
-                    <i class="icon-external-link"></i> {{ _('Go to resource') }}
+                    <i class="icon-external-link"></i> {{ _('Download Resource') }}
                   {% else %}
                     <i class="icon-download"></i> {{ _('Download') }}
                   {% endif %}
@@ -52,6 +53,7 @@
           </ul>
           {% endblock %}
         </div>
+
         {% block resource_content %}
           {% block resource_read_title %}<h1 class="page-heading">{{ h.resource_display_name(res) | truncate(50) }}</h1>{% endblock %}
           {% block resource_read_url %}
@@ -73,6 +75,10 @@
           </div>
         {% endblock %}
       </div>
+      </div>
+
+
+
       {% block data_preview %}
       {% block resource_view %}
         {% block resource_view_nav %}

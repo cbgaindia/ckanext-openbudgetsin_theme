@@ -128,8 +128,11 @@
   {% endblock -%}
 {%- endblock -%}
 
+  
+
 {%- block scripts %}
     {% resource 'base/main' %}
+  
     {% resource 'base/ckan' %}
     {% if g.tracking_enabled %}
       {% resource 'base/tracking.js' %}

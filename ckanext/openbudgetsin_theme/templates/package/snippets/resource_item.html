@@ -3,7 +3,7 @@
 {% set url = h.url_for(controller='package', action=url_action, id=pkg.name, resource_id=res.id) %}
 
 <li class="resource-item" data-id="{{ res.id }}">
-  <div class="row">
+  <div class="row-fluid">
   <div class="span7">
   {% block resource_item_title %}
   <a class="heading" href="{{ url }}" title="{{ res.name or res.description }}">
@@ -19,7 +19,7 @@
     </p>
   {% endblock %}
   </div>
-  <div class="span5 ">
+  <div class="span5 resource-btn-container">
     <div class="btn-group">
      
     {% if res.url and h.is_url(res.url) %}
