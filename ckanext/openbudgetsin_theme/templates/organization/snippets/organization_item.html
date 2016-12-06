@@ -29,11 +29,17 @@ Example:
         <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image org-image">
     </div>
     
+    {% if not node.children %}
+      {% set action = 'read' %}
+    {% else %}
+      {% set action = 'about' %}
+    {% endif %}
+
     <div class="span10">
         <div class="row-fluid">
           <div class="span12">
               <h3 class="media-head org-heading">
-                  {% link_for display_text, controller='organization', action='read', id=node.name %}
+                  {% link_for display_text, controller='organization', action=action, id=node.name %}
                </h3>
 
                <span style="margin: 0 10px;">|</span>
@@ -66,8 +72,15 @@ Example:
           <div class="span4">
             {% set child_node = child %}
             {% if child_node %}
+
+              {% if not child_node.children %}
+                {% set action = 'read' %}
+              {% else %}
+                {% set action = 'about' %}
+              {% endif %}
+
             <span class="child-node">
-                {% link_for child_node.title, controller='organization', action='read', id=child_node.name %}
+                {% link_for child_node.title, controller='organization', action=action, id=child_node.name %}
             </span>
             {% endif %}
           </div>
