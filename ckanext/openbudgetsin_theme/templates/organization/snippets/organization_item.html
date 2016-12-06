@@ -15,7 +15,7 @@ Example:
 {% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
 
 {% block item %}
-<li class="media-item org-item">
+<li class=" media org-item" >
 <div class="row-fluid">
     {% block item_inner scoped %}
 
@@ -25,37 +25,27 @@ Example:
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
-    <div class="span2">
-        <img src="{{ node.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ node.name }}" class="media-image org-image">
-    </div>
-    
-    <div class="span10">
-        <div class="row-fluid">
-          <div class="span12">
-              <h3 class="media-head org-heading">
+    <div class="span3">
+        <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
+  </div>
+  <div class="span9">
+              <h3 class="media-heading org-heading">
                   {% link_for display_text, controller='organization', action='read', id=node.name %}
                </h3>
 
-               <span style="margin: 0 10px;">|</span>
+               {#<span style="margin: 0 10px;">|</span>
 
             {% if node.children %}
               <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</span>
             {% else %}
               <span class="count">{{ _('0 Datasets found') }}</span>
             {% endif %}
+            #}
+    
 
-          </div>
-        </div>
-
-        <div class="row-fluid">
-          <div class="span12">
             <p>{{ h.markdown_extract(h.get_description(node)) }}</p>
-          </div>
-        </div>
-
         {% set j = 0 %} 
         {% for i in range(2) %}
-        <div class="row-fluid">
           {% if i == 1 %}
             {% set n = j+2 %} 
           {% else %}
@@ -79,15 +69,10 @@ Example:
             {% link_for "MORE...", controller='organization', action='read', id=node.name %}
           </div>
           {% endif %}
-
           {% set j = j+3 %} 
-        </div>
         {% endfor %}
-
-      </div>
-
   {% endblock %}
-
+  </div>
   </div>
 </li>
 {% endblock %}

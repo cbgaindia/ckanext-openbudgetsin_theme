@@ -95,6 +95,36 @@ a.tag:hover {
         padding: 3px 10px;
 }
 
+.module .module-content .heading-meta {
+    font-size: 80%;
+    color: grey;
+    
+}
+
+.dataset-resources {
+    margin-top: 10px;
+}
+
+a.label.sector-label {
+    padding: 4px 6px;
+    font-size: 75%;
+}
+.dataset-heading {
+    font-size: 110%;
+}
+
+.media-list{
+	list-style: none;
+}
+ul.media-list{
+	margin:0px;
+}
+
+li.org-item{
+	padding:10px 20px 30px 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgb(217, 217, 217);
+}
 ::-webkit-scrollbar {
     width: 8px;
 }

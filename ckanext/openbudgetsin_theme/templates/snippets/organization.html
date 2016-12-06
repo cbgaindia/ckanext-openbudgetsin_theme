@@ -17,7 +17,13 @@
   </h1>
 {% endblock %}
 
-{% block follow %}
+{% if show_nums %}
+  {% block nums %}
+ 
+  {% endblock %}
+{% endif %}
+
+{% block follow %}{#
 <div class="sector-nums">
     <div class="row-fluid">
       <div class="span3"></div>
@@ -33,5 +39,5 @@
         </div>
       <div class="span3"></div>
     </div>
-</div>
+</div>#}
 {% endblock %}
