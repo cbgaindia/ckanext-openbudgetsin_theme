@@ -5,27 +5,22 @@
 <div class="row-fluid">
   {% block item_inner scoped %}
 
-  <div class="span2">
+  <div class="span3">
     <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image org-image">
   </div>
   
-  <div class="span10">
-    <div class="row-fluid">
-      <div class="span12">
-        <h3 class="media-head org-heading">
-          {% link_for group.display_name, controller='group', action='read', id=group.name %}
-        </h3>
+  <div class="span9">
+    <h3 class="media-heading org-heading">
+      {% link_for group.display_name, controller='group', action='read', id=group.name %}
+    </h3>
 
-        <span style="margin: 0 10px;">|</span>
+    {% if group.packages %}
+      <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', group.packages).format(num=group.packages) }} found</span>
+    {% else %}
+      <span class="dataset-count">{{ _('0 Datasets found') }}</span>
+    {% endif %}
 
-        {% if group.packages %}
-          <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', group.packages).format(num=group.packages) }} found</span>
-        {% else %}
-          <span class="count">{{ _('0 Datasets found') }}</span>
-        {% endif %}
-
-      </div>
-    </div>
+     
 
     {% if group.description %}
     <div class="row-fluid">

@@ -1,4 +1,3 @@
-
 import actions
 import db
 import logging
@@ -8,9 +7,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.lib.dictization.model_dictize as md
 from ckan.lib.dictization import table_dictize
-# from ckan.lib.dictization import table_dictize
 from ckanext.openbudgetsin_theme import helpers
-
 from ckan.common import c
 from ckan.lib.plugins import DefaultOrganizationForm
 from ckanext.openbudgetsin_theme.logic import action
@@ -20,9 +17,6 @@ log = logging.getLogger(__name__)
 
 # This plugin is designed to work only these versions of CKAN
 plugins.toolkit.check_ckan_version(min_version='2.0')
-
-
-
 
 class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)

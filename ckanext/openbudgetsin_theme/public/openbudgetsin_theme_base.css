@@ -6,6 +6,13 @@ body {
 .row {
     margin-left: 0px;
 }
+.primary{
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.wrapper{
+	overflow: hidden;
+}
 
 /* Home Page */
 
@@ -121,9 +128,12 @@ ul.media-list{
 }
 
 li.org-item{
-	padding:10px 20px 30px 20px;
+	padding:10px 0px 20px 0px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid rgb(217, 217, 217);
+}
+li:last-child{
+	border-bottom: none;
 }
 ::-webkit-scrollbar {
     width: 8px;

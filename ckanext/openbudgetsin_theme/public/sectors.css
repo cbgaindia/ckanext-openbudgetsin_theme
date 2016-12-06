@@ -1,4 +1,4 @@
-.dataset-item {
+/*.dataset-item {
     background-color: white;
     padding: 15px;
 }
@@ -69,3 +69,16 @@ dd {
 .dataset-list {
     margin-top: -35px;
 }
+*/
+
+.page-header {
+    border-bottom: none;
+    background-color: transparent;
+    
+}
+ .primary{
+    display: flex;
+    flex: 1;
+}
+
+
