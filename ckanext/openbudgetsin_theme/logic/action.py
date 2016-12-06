@@ -93,7 +93,10 @@ def _group_tree_branch(root_group, highlight_group_name=None, type='group'):
     root_node = nodes[root_group.id] = GroupTreeNode(
         {'id': root_group.id,
          'name': root_group.name,
-         'title': root_group.title})
+         'title': root_group.title,
+         'image_display_url': root_group.image_url
+         }
+    )
     if root_group.name == highlight_group_name:
         nodes[root_group.id].highlight()
         highlight_group_name = None
