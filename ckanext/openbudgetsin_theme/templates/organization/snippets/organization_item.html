@@ -59,18 +59,15 @@ Example:
           </div>
         </div>
 
-        {% set j = 0 %} 
-        {% for i in range(2) %}
         <div class="row-fluid">
-          {% if i == 1 %}
-            {% set n = j+2 %} 
+          {% if node.children | length > 5 %}
+            {% set children = node.children[:5] %}
           {% else %}
-            {% set n = j+3 %} 
+            {% set children = node.children %}
           {% endif %}
 
-          {% for child in node.children[j:n] %}
+          {% for child_node in children %}
           <div class="span4">
-            {% set child_node = child %}
             {% if child_node %}
 
               {% if not child_node.children %}
@@ -84,18 +81,13 @@ Example:
             </span>
             {% endif %}
           </div>
-
           {% endfor %}
 
-          {% if i == 1 and node.children | length > 5 %}
+          {% if children | length > 5 %}
           <div class="span4 pull-right more-text">
             {% link_for "MORE...", controller='organization', action='read', id=node.name %}
           </div>
           {% endif %}
-
-          {% set j = j+3 %} 
-        </div>
-        {% endfor %}
 
       </div>
 
