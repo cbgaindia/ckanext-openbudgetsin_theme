@@ -16,8 +16,8 @@ Example:
 
 {% block item %}
 <li class=" media org-item" >
-<div class="row-fluid">
-    {% block item_inner scoped %}
+<div class="row">
+  {% block item_inner scoped %}
 
     {% set longname = h.group_tree_get_longname(node.name) %} 
     {% set display_text = node.title %} 
@@ -27,52 +27,62 @@ Example:
 
     <div class="span3">
         <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
-  </div>
-  <div class="span9">
-              <h3 class="media-heading org-heading">
-                  {% link_for display_text, controller='organization', action='read', id=node.name %}
-               </h3>
+    </div>
 
-               
+    {% if not node.children %}
+      {% set action = 'read' %}
+    {% else %}
+      {% set action = 'about' %}
+    {% endif %}
 
-            {% if node.children %}
-              <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</span>
-            {% else %}
-              <span class="dataset-count">{{ _('0 Datasets found') }}</span>
-            {% endif %}
-            
-    
-
-            <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
-          {% set j = 0 %} 
-          {% for i in range(2) %}
-            {% if i == 1 %}
-              {% set n = j+2 %} 
-            {% else %}
-              {% set n = j+3 %} 
-            {% endif %}
-
-          {% for child in node.children[j:n] %}
+    <div class="span9">
+      <h3 class="media-heading org-heading">
+        {% link_for display_text, controller='organization', action=action, id=node.name %}
+  
+      </h3>
+  
+      {% if node.children %}
+        <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</span>
+      {% else %}
+        <span class="dataset-count">{{ _('0 Datasets found') }}</span>
+      {% endif %}
+  
+      <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
+  
+      <div class="row">
+        {% if node.children | length > 5 %}
+          {% set children = node.children[:5] %}
+        {% else %}
+          {% set children = node.children %}
+        {% endif %}
+  
+        {% for child_node in children %}
           <div class="span4">
-            {% set child_node = child %}
             {% if child_node %}
-            <span class="child-node">
-                {% link_for child_node.title, controller='organization', action='read', id=child_node.name %}
-            </span>
-            {% endif %}
+  
+              {% if not child_node.children %}
+                {% set action = 'read' %}
+              {% else %}
+                {% set action = 'about' %}
+              {% endif %}
+  
+              <span class="child-node">
+                  {% link_for child_node.title, controller='organization', action=action, id=child_node.name %}
+              </span>
+           {% endif %}
           </div>
-
-          {% endfor %}
-
-          {% if i == 1 and node.children | length > 5 %}
-          <div class="span4 pull-right more-text">
-            {% link_for "MORE...", controller='organization', action='read', id=node.name %}
-          </div>
-          {% endif %}
-          {% set j = j+3 %} 
         {% endfor %}
+  
+        {% if children | length > 5 %}
+        <div class="span4 pull-right more-text">
+          {% link_for "MORE...", controller='organization', action='read', id=node.name %}
+        </div>
+        {% endif %}
+  
+      </div>
+    </div>
+
   {% endblock %}
-  </div>
-  </div>
+</div>
 </li>
 {% endblock %}
