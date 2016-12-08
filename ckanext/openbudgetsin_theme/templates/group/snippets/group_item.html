@@ -4,12 +4,13 @@
 <li class="media org-item">
 <div class="row-fluid">
   {% block item_inner scoped %}
-
-  <div class="span3">
+<div class="span3 hidden-phone">
+ <a href="#" class="pull-left ">
     <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image org-image">
+  </a>
   </div>
-  
   <div class="span9">
+  <div class="media-body">
     <h3 class="media-heading org-heading">
       {% link_for group.display_name, controller='group', action='read', id=group.name %}
     </h3>
@@ -23,21 +24,19 @@
      
 
     {% if group.description %}
-    <div class="row-fluid">
-      <div class="span12">
+ 
         <p>{{ h.markdown_extract(group.description, extract_length=80) }}</p>
-      </div>
-    </div>
     {% endif %}
 
-  </div>
+  
 
   {% if group.user_member %}
     <input name="group_remove.{{ group.id }}" value="{{ _('Remove') }}" type="submit" class="btn btn-danger btn-small media-edit" title="{{ _('Remove dataset from this group') }}"/>
   {% endif %}
 
   {% endblock %}
-
+  </div>
+  </div>
 </div>
 </li>
 {% endblock %}

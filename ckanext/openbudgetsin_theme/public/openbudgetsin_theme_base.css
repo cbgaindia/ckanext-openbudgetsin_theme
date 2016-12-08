@@ -6,10 +6,7 @@ body {
 .row {
     margin-left: 0px;
 }
-.primary{
-	padding-bottom: 9999px;
-	margin-bottom: -9999px;
-}
+
 .wrapper{
 	overflow: hidden;
 }
@@ -129,7 +126,7 @@ ul.media-list{
 
 li.org-item{
 	padding:10px 0px 20px 0px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid rgb(217, 217, 217);
 }
 li:last-child{
@@ -182,6 +179,10 @@ li:last-child{
 	.inner-content-container{
 		border-radius: 5px 0px 5px 5px;
 	}
+	.primary{
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
 	
 }
 
@@ -189,6 +190,7 @@ li:last-child{
 	body{
 		padding : 0px;
 	}
+
 	
 	.row-fluid .primary {
 	    padding:0px 10px;
@@ -270,8 +272,11 @@ li:last-child{
 	}
 	ul.nav.nav-tabs.nav-tabs-plain {
     font-size: 90%;
-}
-
+	}
+	li.org-item {
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
+	}
 
 
 }
