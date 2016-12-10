@@ -1,9 +1,11 @@
+import logging
+from datetime import datetime
 
+import ckan.lib.helpers as h
+import ckan.lib.munge as munge
 import ckan.model as model
 import ckan.plugins as p
-import logging
 
-from datetime import datetime
 from ckan.common import request
 
 
@@ -189,3 +191,20 @@ def get_latest(resources):
             package_modified = this_resource_modified
 
     return package_modified
+
+
+def make_image_url(image_url):
+    '''
+    It checks if an image_url is actually a url, if not then it creates a complete url to render it.
+    '''
+    image_display_url = None
+    if image_url and not image_url.startswith('http'):
+        #munge here should not have an effect only doing it incase
+        #of potential vulnerability of dodgy api input
+        image_url = munge.munge_filename_legacy(image_url)
+        image_display_url = h.url_for_static(
+            'uploads/group/%s' % image_url,
+            qualified=True
+        )
+
+    return image_display_url
