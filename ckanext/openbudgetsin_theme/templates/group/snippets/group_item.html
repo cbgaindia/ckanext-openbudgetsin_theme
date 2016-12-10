@@ -18,8 +18,8 @@
 
         <span style="margin: 0 10px;">|</span>
 
-        {% if group.packages %}
-          <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', group.packages).format(num=group.packages) }} found</span>
+        {% if group.package_count %}
+          <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }} found</span>
         {% else %}
           <span class="count">{{ _('0 Datasets found') }}</span>
         {% endif %}
