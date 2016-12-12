@@ -2,14 +2,16 @@ import actions
 import db
 import logging
 import re
+
+from ckan.common import c
+from ckan.lib.dictization import table_dictize
+import ckan.lib.dictization.model_dictize as md
+from ckan.lib.plugins import DefaultOrganizationForm
 import ckan.model as model
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-import ckan.lib.dictization.model_dictize as md
-from ckan.lib.dictization import table_dictize
 from ckanext.openbudgetsin_theme import helpers
-from ckan.common import c
-from ckan.lib.plugins import DefaultOrganizationForm
+
 from ckanext.openbudgetsin_theme.logic import action
 from ckanext.openbudgetsin_theme import helpers
 
@@ -17,6 +19,7 @@ log = logging.getLogger(__name__)
 
 # This plugin is designed to work only these versions of CKAN
 plugins.toolkit.check_ckan_version(min_version='2.0')
+
 
 class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -34,7 +37,7 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
         return {
             'get_date': helpers.get_date,
         }
-        
+
 
 def custom_convert_from_extras(key, data, errors, context):
 
@@ -137,11 +140,12 @@ class HierarchyDisplay(plugins.SingletonPlugin):
                 base_query += [item]
         if c.include_children_selected:
             # add all the children organizations in an 'or' join
-            search_params['q'] = " ".join(base_query)
+            # search_params['q'] = " ".join(base_query)
             children = _children_name_list(helpers.group_tree_section(
-                c.group_dict.get('id'), include_parents=False, include_siblings=False).get(
-                    'children', []))
+                c.group_dict.get('id'), include_parents=False,
+                include_siblings=False).get('children', []))
             if(children):
+                search_params['q'] = " ".join(base_query)
                 if (len(search_params['q'].strip()) > 0):
                     search_params['q'] += ' AND '
                 search_params['q'] += '(organization:%s' % c.group_dict.get('name')
@@ -207,6 +211,7 @@ class FeaturedviewsPlugin(plugins.SingletonPlugin):
         }
         return helpers
 
+
 def _get_featured_view(resource_view_id):
     if not resource_view_id:
         return None
@@ -215,27 +220,29 @@ def _get_featured_view(resource_view_id):
 
     return featured
 
+
 def _get_canonical_view(package_id):
     canonical = db.Featured.find(package_id=package_id, canonical=True).first()
 
     if not canonical:
         return None
-    
+
     resource_view = model.ResourceView.get(canonical.resource_view_id)
     if resource_view is None:
         return None
-    
+
     resource_view_dictized = md.resource_view_dictize(
-        resource_view, 
+        resource_view,
         {'model': model}
     )
-    
+
     resource = md.resource_dictize(
-        model.Resource.get(resource_view_dictized['resource_id']), 
+        model.Resource.get(resource_view_dictized['resource_id']),
         {'model': model}
     )
 
     return {'resource': resource, 'resource_view': resource_view_dictized}
+
 
 def _get_homepage_views():
     homepage_view_ids = [
@@ -250,18 +257,16 @@ def _get_homepage_views():
     for view in resource_views:
         resource_view = md.resource_view_dictize(view, {'model': model})
         resource_obj = model.Resource.get(resource_view['resource_id'])
-        
+
         if resource_obj.state == 'deleted':
             continue
-        
+
         resource = md.resource_dictize(resource_obj, {'model': model})
 
         homepage_views.append({
             'resource_view': resource_view,
             'resource': resource,
-            'package': md.package_dictize(resource_obj.package, {'model':model})
+            'package': md.package_dictize(resource_obj.package, {'model': model})
         })
 
     return homepage_views
-
-    

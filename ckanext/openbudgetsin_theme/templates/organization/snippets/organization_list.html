@@ -2,12 +2,18 @@
 
 {% block organization_list %}
 <ul class="media-list">
-     {% set organizations = h.get_featured_organizations(count=4) %}
+    {# problem with filtering organizations according to search query #}
+    {# % set organizations = h.get_featured_organizations(count=4) %}
      {% if  c.q %}
      	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
      {% else %}
      	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+     {% endif % #}
+
+     {% if not c.q %}
+       {% set organizations = h.get_featured_organizations(count=4) %}
      {% endif %}
+     {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
 
      {% for node in top_nodes %}
        {% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=True %}

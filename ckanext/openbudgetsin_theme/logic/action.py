@@ -1,8 +1,10 @@
 import logging
 
-import ckan.plugins as p
 import ckan.logic as logic
+import ckan.plugins as p
+
 from ckanext.openbudgetsin_theme.model import GroupTreeNode
+import ckanext.openbudgetsin_theme.helpers as h
 
 log = logging.getLogger(__name__)
 _get_or_bust = logic.get_or_bust
@@ -72,7 +74,9 @@ def _nest_group_tree_list(group_tree_list, group_tree_leaf):
         node = GroupTreeNode(
          {'id': group.id,
           'name': group.name,
-          'title': group.title})
+          'title': group.title,
+          'image_display_url': h.make_image_url(group.image_url)
+          })
         if not root_node:
             root_node = last_node = node
         else:
@@ -90,11 +94,12 @@ def _group_tree_branch(root_group, highlight_group_name=None, type='group'):
     :returns: the top GroupTreeNode of the tree
     '''
     nodes = {}  # group_id: GroupTreeNode()
+
     root_node = nodes[root_group.id] = GroupTreeNode(
         {'id': root_group.id,
          'name': root_group.name,
          'title': root_group.title,
-         'image_display_url': root_group.image_url
+         'image_display_url': h.make_image_url(root_group.image_url)
          }
     )
     if root_group.name == highlight_group_name:
@@ -104,7 +109,8 @@ def _group_tree_branch(root_group, highlight_group_name=None, type='group'):
             root_group.get_children_group_hierarchy(type=type):
         node = GroupTreeNode({'id': group_id,
                               'name': group_name,
-                              'title': group_title})
+                              'title': group_title
+                              })
         nodes[parent_id].add_child_node(node)
         if highlight_group_name and group_name == highlight_group_name:
             node.highlight()
