@@ -25,9 +25,11 @@ Example:
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
+    {% if node.image_display_url %}
     <div class="span3">
         <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
     </div>
+    {% endif %}
 
     {% if not node.children %}
       {% set action = 'read' %}
@@ -35,51 +37,21 @@ Example:
       {% set action = 'about' %}
     {% endif %}
 
-    <div class="span9">
+    <div class="{% if node.image_display_url %}span9{% else %}span12{% endif %}">
       <h3 class="media-heading org-heading">
         {% link_for display_text, controller='organization', action=action, id=node.name %}
-  
       </h3>
   
       {% if node.children %}
-        <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count(node.children)).format(num=h.get_package_count(node.children)) }} found</span>
+        {% set dataset_count = h.get_package_count(node.children) %}
       {% else %}
-        <span class="dataset-count">{{ _('0 Datasets found') }}</span>
+        {% set dataset_count = h.get_package_count([node]) %}
       {% endif %}
+
+      <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
   
       <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
   
-      <div class="row">
-        {% if node.children | length > 5 %}
-          {% set children = node.children[:5] %}
-        {% else %}
-          {% set children = node.children %}
-        {% endif %}
-  
-        {% for child_node in children %}
-          <div class="span4">
-            {% if child_node %}
-  
-              {% if not child_node.children %}
-                {% set action = 'read' %}
-              {% else %}
-                {% set action = 'about' %}
-              {% endif %}
-  
-              <span class="child-node">
-                  {% link_for child_node.title, controller='organization', action=action, id=child_node.name %}
-              </span>
-           {% endif %}
-          </div>
-        {% endfor %}
-  
-        {% if children | length > 5 %}
-        <div class="span4 pull-right more-text">
-          {% link_for "MORE...", controller='organization', action='read', id=node.name %}
-        </div>
-        {% endif %}
-  
-      </div>
     </div>
 
   {% endblock %}

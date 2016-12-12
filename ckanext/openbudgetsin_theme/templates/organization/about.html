@@ -12,15 +12,17 @@
 {% endblock %}
 
 {% block organization_description %}
-  {{ super() }}
   
   {# TODO: Add JSTree #}
 
-  <div id="organization-tree">
-      {% set top_nodes = [h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type, include_parents=False)] %}
-      {% if (not top_nodes[0].highlighted) or (top_nodes[0].children) %}
-          {% snippet 'organization/snippets/organization_tree.html', top_nodes=top_nodes, use_longnames=True %}
+  <ul class="media-list">
+      {% set top_node = [h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type, include_parents=False)][0] %}
+      {% if (not top_node.highlighted) or (top_node.children) %}
+        {% set nodes = top_node.children %}
+        {% for node in nodes %}
+          {% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=True %}
+        {% endfor %}
       {% endif %}
-  </div>
+  </ul>
 
 {% endblock %}
