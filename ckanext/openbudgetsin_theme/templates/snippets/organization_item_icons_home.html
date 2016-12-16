@@ -1,0 +1,33 @@
+{% block organization_item %}
+  <section class="group-list module module-narrow module-shallow">
+    {% block organization_item_header %}
+    <div class="row-fluid">
+     <div class="item-image">
+        {% set url=h.url_for(controller='organization', action='read', id=organization.name) %}
+        {% set truncate=truncate or 0 %}
+        {% block organization_item_header_image %}
+        <a class="module-image" href="{{ url }}">
+          <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="org-img"/>
+        </a>
+        {% endblock %}
+      </div>
+    </div>
+     {% endblock %}
+     <div class="row-fluid">
+      <div class="item-content">
+      {% block organization_item_header_title %}
+            <h3 class="media-heading"><a href={{ url }}>{{ organization.title or organization.name }}</a></h3>
+          {% endblock %}
+          {% block organization_item_header_description %}
+            {% if organization.description %}
+              {% if truncate == 0 %}
+                <p>{{ h.markdown_extract(organization.description)|urlize }}</p>
+              {% else %}
+                
+              {% endif %}
+            {% endif %}
+          {% endblock %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

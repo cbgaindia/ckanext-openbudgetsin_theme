@@ -15,8 +15,98 @@ body {
 
 .banner-container {
     /*min-height: 400px;*/
-    width:100%;
-    background: url("Banner_8_11-06.png");
+    min-width:100%;
+
+    background: url("banner-08.jpg");
+    background-size: cover;
+}
+
+.organizationclusters-container {
+    padding: 30px 80px;
+    background: #E9EAE5 url("../../../base/images/bg.png");
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.49);
+}
+
+.module-image img {
+    max-width: 180px;
+    max-height: 200px;
+    }
+
+.module-image {
+    width: auto; 
+    height: auto; 
+    float: none;
+}
+.module-image .org-img {
+    box-shadow:  0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+    border: 1px solid rgba(128, 128, 128, 0.42);
+}
+
+.sector-media-heading {
+    font-size: 100%;
+}
+
+.span4.home-group-item {
+    margin-left: 0px;
+}
+
+.span4.home-group-item {
+    margin: 0px 13px 30px 0px;
+    display: inline-block;
+}
+
+section.sector-list.module.module-narrow.module-shallow {
+    margin: 0;
+    background-color: #F2F2F2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+    height: 115px;
+    border: 1px solid rgba(128, 128, 128, 0.42);
+   
+}
+
+section.sector-list.module.module-narrow.module-shallow:hover{
+	background-color: white;
+}
+
+.module:first-child .sector-module-heading, .sector-module-heading {
+    padding: 0px;
+    display: inline;
+}
+a.sector-module-image.sector-module-image {
+    float: left;
+  
+    text-align: center;
+}
+
+.sector-module-image img {
+    float: left;
+    vertical-align: middle;
+}
+
+.sector-description {
+    margin: auto;
+    display: table;
+    text-align: center;
+    height: 117px;
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+h5.sector-media-heading {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.home-items-heading{
+	margin-top:0px;
+	font-size: 90%;
+}
+
+.header-container{
+	width: 100%;
+	
 }
 
 /* Header - header.html */
@@ -25,6 +115,10 @@ body {
     color: #F6FFE0;
     background: #00202F;
     padding-top: 5px;
+}
+
+nav.section.navigation {
+    margin-right: -90px;
 }
 
 [role=main] {
@@ -127,11 +221,14 @@ ul.media-list{
 li.org-item{
 	padding:10px 0px 20px 0px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid rgb(217, 217, 217);
+	border-bottom: 1px dotted rgb(217, 217, 217);
 }
 li:last-child{
 	border-bottom: none;
 }
+
+
+
 ::-webkit-scrollbar {
     width: 8px;
 }

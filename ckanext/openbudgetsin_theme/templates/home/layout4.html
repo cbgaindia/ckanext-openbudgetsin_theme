@@ -8,13 +8,13 @@
       </div>
     </div>
   </div>
-
   <div class="newinfo-container">
     <div class="row-fluid">
     </div>
   </div>
   <div class="datasetclusters-container">
     <div class="organizationclusters-container">
+    <div class="row-fluid">
       <div class="row-fluid">
         <div class="levelgov-cont-header">
           <h2>Level of Government</h2>
@@ -28,14 +28,13 @@
         </div>
       </div>
       <div class="row-fluid">
-        <div class="container-fluid organization-icons">
-          <div class="span3 ">
+        <div class="container text-center organization-icons">
             {% block featured_organization %}
               {% snippet 'home/snippets/featured_organization.html' %}
             {% endblock %}
-          </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="sectorsclusters-container">
     <div class="row-fluid">
@@ -50,17 +49,13 @@
           </p>
         </div>
       </div>
-      <div class="row-fluid">
-        <div class="container-fluid organization-icons">
-          <div class="span4 ">
+      <div class="container organization-icons">
+        <div class="row-fluid">   
             {% block featured_group %}
             {% snippet 'home/snippets/featured_group.html' %}
           {% endblock %}
-          </div>
+          
         </div>
       </div>
-      
     </div>
-    
   </div>
-

@@ -10,10 +10,7 @@
     margin-top: 290px;
 }
 
-.organizationclusters-container {
-    padding: 30px 80px;
-    background: #E9EAE5 url("../../../base/images/bg.png");
-    box-shadow: inset 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+
 }
 
 .sectorsclusters-container {
@@ -62,8 +59,7 @@
 
 /* Module Heading */
 
-.module:first-child .module-heading,
-.module-heading {}
+
 
 .module-heading {
     position: relative;
