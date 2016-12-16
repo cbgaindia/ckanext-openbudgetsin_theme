@@ -1,0 +1,81 @@
+{#{% block group_item %}
+  <a class="sector-module-image" href="{{ h.url_for(controller='group', action='read', id=group.name) }}" >
+    {% block group_item_header %}
+      
+      
+        {% set truncate=truncate or 0 %}
+        {% set truncate_title = truncate_title or 0 %}
+        {% set title = group.title or group.name %}
+        {% block group_item_header_image %}
+        <div class="span6 ">
+         
+            <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" />
+          
+        </div>
+        {% endblock %}
+        {% block group_item_header_title %}
+        <div class="span6">
+        <div class="sector-description">
+          <h5 class="home-items-heading ">{{ group.title or group.name }}</h5>
+        {% endblock %}
+        {% block group_item_header_description %}
+          {% if group.description %}
+            {% if truncate == 0 %}
+              <p>{{ h.markdown_extract(group.description)|urlize }}</p>
+            {% else %}
+              <p>{{ h.markdown_extract(group.description, truncate)|urlize }}</p>
+            {% endif %}
+          {% endif %}
+        {% endblock %}
+        </div>
+      </div>
+     
+    {% endblock %}
+    {% block group_item_content %}
+      {% set list_class = "unstyled dataset-list" %}
+      {% set item_class = "dataset-item module-content" %}
+      {% snippet 'snippets/package_list.html', packages=group.packages, list_class=list_class, item_class=item_class, truncate=120 %}
+    {% endblock %}
+    </a>
+  {% endblock %}#}
+
+{% block group_item %}
+  <section class="sector-list  module module-narrow module-shallow">
+    
+    {% block group_item_header %}
+      
+      <header class="sector-heading sector-module-heading">
+        {% set truncate=truncate or 0 %}
+        {% set truncate_title = truncate_title or 0 %}
+        {% set title = group.title or group.name %}
+        <a class=" sector-module-image"  href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
+        {% block group_item_header_image %}
+          
+            <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" />
+          
+        {% endblock %}
+        {% block group_item_header_title %}
+        <div class="sector-description">
+          <h5 class="sector-media-heading"><a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">{{ group.title or group.name }}</a></h5>
+        </div>
+        {% endblock %}
+        {% block group_item_header_description %}
+          {#{% if group.description %}
+            {% if truncate == 0 %}
+              <p>{{ h.markdown_extract(group.description)|urlize }}</p>
+            {% else %}
+              <p>{{ h.markdown_extract(group.description, truncate)|urlize }}</p>
+            {% endif %}
+          {% endif %}#}
+        {% endblock %}
+        </a>
+      </header>
+    {% endblock %}
+    {% block group_item_content %}
+      {% set list_class = "unstyled dataset-list" %}
+      {% set item_class = "dataset-item module-content" %}
+      {% snippet 'snippets/package_list.html', packages=group.packages, list_class=list_class, item_class=item_class, truncate=120 %}
+    {% endblock %}
+  </section>
+{% endblock %}
+
