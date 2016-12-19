@@ -18,28 +18,64 @@ Example:
   {% set text_no_query_none = _('No datasets found') %}
 
 {% elif type == 'group' %}
-  {% set text_query = ungettext('{number} group found for "{query}"', '{number} groups found for "{query}"', count) %}
+  {%- if dataset_count -%}
+    {% set text_query = ungettext('{number} group', '{number} groups' , count) +
+                        ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) +
+                        ' found for "{query}"' %}
+  {% else %}
+    {% set text_query = ungettext('{number} group', '{number} groups' , count) + ' found for "{query}"' %}
+  {% endif %}
+
   {% set text_query_none = _('No groups found for "{query}"') %}
-  {% set text_no_query = ungettext('{number} group found', '{number} groups found', count) %}
+
+  {%- if dataset_count -%}
+    {% set text_no_query = ungettext('{number} group', '{number} groups', count) + 
+                           ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) + ' found' %}
+  {% else %}
+    {% set text_no_query = ungettext('{number} group found', '{number} groups found', count) %}
+  {% endif %}
+
   {% set text_no_query_none = _('No groups found') %}
 
 {% elif type == 'organization' %}
-  {% set text_query = ungettext('{number} organization found for "{query}"', '{number} organizations found for "{query}"', count) %}
+  {%- if dataset_count -%}
+    {% set text_query = ungettext('{number} organization', '{number} organizations', count) +
+                        ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) +
+                        ' found for "{query}"' %}
+  {% else %}
+    {% set text_query = ungettext('{number} organization', '{number} organizations', count) + ' found for "{query}"' %}
+  {% endif %}
+
   {% set text_query_none = _('No organizations found for "{query}"') %}
-  {% set text_no_query = ungettext('{number} organization found', '{number} organizations found', count) %}
+
+  {%- if dataset_count -%}
+    {% set text_no_query = ungettext('{number} organization', '{number} organizations', count) +
+                           ungettext(' and {dataset_count} dataset found', ' and {dataset_count} datasets found', dataset_count) %}
+  {% else %}
+    {% set text_no_query = ungettext('{number} organization found', '{number} organizations found', count) %}
+  {% endif %}
+
   {% set text_no_query_none = _('No organizations found') %}
 {%- endif -%}
 
 {% if query %}
   {%- if count -%}
-    {{ text_query.format(number=h.localised_number(count), query=query) }}
+    {%- if dataset_count -%}
+      {{ text_query.format(number=h.localised_number(count), dataset_count=h.localised_number(dataset_count), query=query) }}
+    {%- else -%}
+      {{ text_query.format(number=h.localised_number(count), query=query) }}
+    {%- endif -%}
   {%- else -%}
     {{ text_query_none.format(query=query) }}
   {%- endif -%}
 {%- else -%}
-  {# %- if count -%}
-    {{ text_no_query.format(number=h.localised_number(count)) }}
+  {%- if count -%}
+    {%- if dataset_count -%}
+      {{ text_no_query.format(number=h.localised_number(count), dataset_count=h.localised_number(dataset_count)) }}
+    {%- else -%}
+      {{ text_no_query.format(number=h.localised_number(count)) }}
+    {%- endif -%}
   {%- else -%}
     {{ text_no_query_none }}
-  {%- endif -% #}
-{%- endif -%}
+    {%- endif -%}
+    {%- endif -%}
