@@ -1,6 +1,6 @@
 {% set organizations = h.get_featured_organizations(count=4) %}
-
-{% for organization in organizations %}
+{% set grp_organizations = h.group_tree(organizations=organizations, type_='organization') %}
+{% for organization in grp_organizations %}
   <div class="item-container">
   	<div class="span3">
     {% snippet 'snippets/organization_item_icons_home.html', organization=organization, truncate=50, truncate_title=35 %}

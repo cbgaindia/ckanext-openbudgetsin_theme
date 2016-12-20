@@ -5,8 +5,9 @@
      <div class="item-image">
         {% set url=h.url_for(controller='organization', action='read', id=organization.name) %}
         {% set truncate=truncate or 0 %}
-        {% block organization_item_header_image %}
+        {% block organization_item_header_image scoped %}
         <a class="module-image" href="{{ url }}">
+       
           <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="org-img"/>
         </a>
         {% endblock %}
@@ -16,7 +17,7 @@
      <div class="row-fluid">
       <div class="item-content">
       {% block organization_item_header_title %}
-            <h3 class="media-heading"><a href={{ url }}>{{ organization.title or organization.name }}</a></h3>
+            <h3 class="media-heading org-title"><a href={{ url }}>{{ organization.title or organization.name }}</a></h3>
           {% endblock %}
           {% block organization_item_header_description %}
             {% if organization.description %}

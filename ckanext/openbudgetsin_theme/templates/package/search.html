@@ -72,7 +72,7 @@
 {% block secondary_content %}
 <div class="filters">
   <div>
-  <h2 class="module-heading">Add Filters
+  <h2 class="module-heading dataset-sidebar-top"><i class="icon-info-sign"></i>Add Filters
         </h2>
     {% for facet in c.facet_titles %}
       {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
