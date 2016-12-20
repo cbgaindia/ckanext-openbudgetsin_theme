@@ -1,0 +1,59 @@
+{#
+Displays a tree of organzations
+
+NB This template can be slow because it is recursive and uses link_for. At
+DGU we speeded up display of the tree 10 times (necessary as we have 1000 
+organizations) by replacing this template with a recursive code routine:
+https://github.com/datagovuk/ckanext-dgu/blob/5fb78b354517c2198245bdc9c98fb5d6c82c6bcc/ckanext/dgu/lib/helpers.py#L140 
+
+orgs    - List of organizations
+
+Example:
+
+  {% snippet 'organization/snippets/organization_tree.html', top_nodes=h.group_tree(type_='organization'), use_longnames=False %}
+
+#}
+
+<ul class="hierarchy-tree-top">
+  {% for node in top_nodes recursive %}
+  <li class="media-item org-item">
+    {% set longname = h.group_tree_get_longname(node.name) %} 
+    {% set display_text = node.title %} 
+    {% if use_longnames and longname%}
+      {% set display_text = longname + " (" + display_text + ")" %}
+    {% endif %} 
+
+    {% if not node.children %}
+      {% set action = 'read' %}
+    {% else %}
+      {% set action = 'about' %}
+    {% endif %}
+
+    {% if not node.highlighted %}
+        <div class="row-fluid">
+          <div class="span12">
+            <h3 class="media-head org-heading">
+              {% link_for display_text, controller='organization', action=action, id=node.name %}
+             </h3>
+
+             <span style="margin: 0 10px;">|</span>
+
+             <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', h.get_package_count([node])).format(num=h.get_package_count([node])) }} found</span>
+
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span12">
+            <p>{{ h.markdown_extract(h.get_description(node)) }}</p>
+          </div>
+        </div>
+    {% endif %}
+    <br>
+
+    {% if node.children %}
+      <ul class="hierarchy-tree"> {{ loop(node.children) }} </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

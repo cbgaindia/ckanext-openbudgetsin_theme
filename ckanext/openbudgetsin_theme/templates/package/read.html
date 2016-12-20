@@ -1,58 +1,161 @@
 {% extends "package/read_base.html" %}
 
-{% set pkg = c.pkg_dict %}
-
-{#
-{% block primary_content_inner %}
-
-  
-  {% block package_description %}
-    {% if pkg.private %}
-      <span class="dataset-private label label-inverse pull-right">
-        <i class="icon-lock"></i>
-        {{ _('Private') }}
-      </span>
-    {% endif %}
-    <h1>
-      {% block page_heading %}
-        {{ pkg.title or pkg.name }}
-        {% if pkg.state.startswith('draft') %}
-          [{{ _('Draft') }}]
-        {% endif %}
-        {% if pkg.state == 'deleted' %}
-          [{{ _('Deleted') }}]
-        {% endif %}
-      {% endblock %}
-    </h1>
-    {% block package_notes %}
-      {% if pkg.notes %}
-        <div class="notes embedded-content">
-          {{ h.render_markdown(pkg.notes) }}
-        </div>
-      {% endif %}
-    {% endblock %}
+{%- block main_content %}
+  {% block toolbar %}
+    {{ super() }}
+  {% endblock %}
+  <div class="main-outer-container">
+  <div class="dataset-header-row">
+    <div class="row-fluid" >
     
-    <span class="insert-comment-thread"></span>
-  {% endblock %}
+      <div class="span9 ">
+        <h1 class="dataset-header">
+        {% block page_heading %}
+          {{ pkg.title or pkg.name }}
+          {% if pkg.state.startswith('draft') %}
+            [{{ _('Draft') }}]
+          {% endif %}
+          {% if pkg.state == 'deleted' %}
+            [{{ _('Deleted') }}]
+          {% endif %}
+        {% endblock %}
+        </h1>
+      </div>
+      <div class="span3 button-container hidden-phone">
+        <div class="manage-button">
+        
+        {% block content_action %}
+          {% if h.check_access('package_update', {'id':pkg.id }) %}
+            {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
+          {% endif %}
+        {% endblock %}
+        </div>
+      <div class="embed-button">
+      {% block embedbutton %}
+          {% set view = h.get_canonical_resource_view(pkg.id) %}
+          {% if view %}
+          {% snippet 'package/snippets/embed_button.html',
+                resource_view = view['resource_view'],
+                resource = view['resource'],
+                package = pkg
+            %}
+          {% endif %}
+      {% endblock %}
+      </div>
+      </div>
+    </div>
+    </div>
+    
+      
+      {% block viscontainer %}
 
-  {% block package_resources %}
-    {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
-  {% endblock %}
+        {% set view = h.get_canonical_resource_view(pkg.id) %}
+        {% if view %}
+        <div class="viscontainer" id="datapreview-row">
+            {% snippet 'package/snippets/resource_view.html',
+                resource_view = view['resource_view'],
+                resource = view['resource'],
+                package = pkg
+            %}
+        </div>
+        {% endif %}
 
-  {% block package_tags %}
-    {% snippet "package/snippets/tags.html", tags=pkg.tags %}
-  {% endblock %}
+      {% endblock %}
+      {#
+      {% if h.get_canonical_resource_view(pkg.id) %}
+      <hr>
+      {% else %}
+      {% endif %}#}
+      <div class ="dataset-detail-container">
+        <div class ="container-fluid datasetview-maincontent"> 
 
-  {% block package_additional_info %}
-    {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
-  {% endblock %}
+        {% block primary_content_inner %}
+         
+          {% block package_description %}
+            {% if pkg.private %}
+              <span class="dataset-private label label-inverse pull-right">
+                <i class="icon-lock"></i>
+                {{ _('Private') }}
+              </span>
+            {% endif %} 
+            
+            
+              <div class ="row-fluid">
+               <aside class="span3 datasetview-sidecontent hidden-phone">
+                {% block secondary_content %}
 
+                  {% block secondary_help_content %}{% endblock %}
+
+                  {#{% block package_info %}
+                    {% snippet 'package/snippets/info.html', pkg=pkg %}
+                  {% endblock %}
+                  #}
+                  <div class="organisation-container">
+                  {% block package_organization %}
+                    {% if pkg.organization %}
+                      {% set org = h.get_organization(pkg.organization.name) %}
+                      {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+                    {% endif %}
+                  {% endblock %}
+                  
+                  {% block package_social %}
+                    {% snippet "snippets/social.html" %}
+                  {% endblock %}
+
+                  {% block package_license %}
+                    {% snippet "snippets/license.html", pkg_dict=pkg %}
+                  {% endblock %}
+                  </div>
+
+                  {% endblock %}
+                </aside>
+                <div class="span9  inner-content-container">
+                <div class="dataset-description-container">
+                <div class="row">
+                  <div class="span4">
+                    <h3>
+                  Dataset Description
+                    </h3>
+                  <hr class="section-hr">
+                  </div>
+                </div>
+                
+                {% block package_notes %}
+                  {% if pkg.notes %}
+                    <div class="notes embedded-content">
+                      {{ h.render_markdown(pkg.notes) }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+                </div>
+                {# FIXME why is this here? seems wrong #}
+                <span class="insert-comment-thread"></span>
+              {% endblock %}
+              <div class="">
+
+              {% block package_resources %}
+                {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
+              {% endblock %}
+              </div>
+              {% block package_tags %}
+                {% snippet "package/snippets/tags.html", tags=pkg.tags %}
+              {% endblock %}
+
+              {% block package_additional_info %}
+                {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
+              {% endblock %}
+
+            {% endblock %}
+            
+                </div>
+                 
+              </div>
+           
+            
+          </div>
+        </div>
+      </div>
+    </div>
+      </script>
 {% endblock %}
-#}
 
-{% block primary %}
-
-{% endblock %}
-
-{% block secondary %}
-{% endblock %}

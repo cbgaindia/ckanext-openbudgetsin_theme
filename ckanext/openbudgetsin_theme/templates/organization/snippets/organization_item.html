@@ -1,0 +1,64 @@
+{#
+Displays a tree of organizations
+
+node    - organization
+
+Example:
+
+{% for node in h.group_tree(type_='organization') %}
+{% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=False %}
+{% endfor %}
+
+#}
+
+{% set type = node.type or 'organization' %}
+{% set url = h.url_for(type ~ '_read', action='read', id=node.name) %}
+
+{% block item %}
+<li class=" media org-item" >
+<div class="row">
+  {% block item_inner scoped %}
+
+    {% set longname = h.group_tree_get_longname(node.name) %} 
+    {% set display_text = node.title %} 
+    {% if use_longnames and longname%}
+      {% set display_text = longname + " (" + display_text + ")" %}
+    {% endif %} 
+
+    {% if node.image_display_url and not query %}
+    <div class="span3">
+        <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
+    </div>
+    {% endif %}
+
+    {% if not node.children %}
+      {% set action = 'read' %}
+    {% else %}
+      {% set action = 'about' %}
+    {% endif %}
+
+    <div class="{% if node.image_display_url %}span9{% else %}span12{% endif %}">
+      <h3 class="media-heading org-heading">
+        {% link_for display_text, controller='organization', action=action, id=node.name %}
+      </h3>
+  
+      {# if some search query was performed, then the resultant nodes will have dataset_count
+         otherwise we need to count that by iterating over all top level organizations #}
+      {% if not dataset_count %}
+        {% if node.children %}
+          {% set dataset_count = h.get_package_count(node.children) %}
+        {% else %}
+          {% set dataset_count = h.get_package_count([node]) %}
+        {% endif %}
+      {% endif %}
+
+      <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
+  
+      <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
+  
+    </div>
+
+  {% endblock %}
+</div>
+</li>
+{% endblock %}

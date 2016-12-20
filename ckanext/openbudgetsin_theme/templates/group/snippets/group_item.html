@@ -1,0 +1,37 @@
+{% ckan_extends %}
+
+{% block item %}
+<li class="media org-item">
+<div class="row-fluid">
+  {% block item_inner scoped %}
+    <div class="span3 hidden-phone">
+      <a href="#" class="pull-left ">
+        <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image org-image">
+      </a>
+    </div>
+    <div class="span9">
+      <div class="media-body">
+        <h3 class="media-heading org-heading">
+          {% link_for group.display_name, controller='group', action='read', id=group.name %}
+        </h3>
+
+        {% if group.package_count %}
+          <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }} found</span>
+        {% else %}
+          <span class="dataset-count">{{ _('0 Datasets found') }}</span>
+        {% endif %}
+    
+        {% if group.description %}
+            <p>{{ h.markdown_extract(group.description, extract_length=80) }}</p>
+        {% endif %}
+
+        {% if group.user_member %}
+          <input name="group_remove.{{ group.id }}" value="{{ _('Remove') }}" type="submit" class="btn btn-danger btn-small media-edit" title="{{ _('Remove dataset from this group') }}"/>
+        {% endif %}
+
+      </div>
+    </div>
+  {% endblock %}
+</div>
+</li>
+{% endblock %}

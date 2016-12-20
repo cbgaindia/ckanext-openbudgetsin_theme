@@ -1,0 +1,15 @@
+
+ {% ckan_extends %}
+ 
+ {% block organizations_search_form %}
+   {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+   {% if not c.q %}
+     {% set count = top_nodes|length %}
+   {% else %}
+     {% set count = c.page.item_count %}
+   {% endif %}
+ 
+   {% set dataset_count = h.get_package_count(c.page.items) %}
+ 
+   {% snippet 'snippets/search_form.html', form_id='organization-search-form', type='organization', query=c.q, sorting_selected=c.sort_by_selected, count=count, placeholder=_('Search organizations...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
+ {% endblock %}

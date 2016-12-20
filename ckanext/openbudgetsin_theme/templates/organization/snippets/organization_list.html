@@ -1,0 +1,24 @@
+{% ckan_extends %}
+
+{% block organization_list %}
+<ul class="media-list">
+    {# problem with filtering organizations according to search query #}
+    {# % set organizations = h.get_featured_organizations(count=4) %}
+     {% if  c.q %}
+     	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
+     {% else %}
+     	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+     {% endif % #}
+
+     {% if not c.q %}
+       {% set organizations = h.get_featured_organizations(count=4) %}
+       {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+     {% else %}
+       {% set top_nodes =  organizations %}
+     {% endif %}
+
+     {% for node in top_nodes %}
+       {% snippet 'organization/snippets/organization_item.html', node=node, dataset_count=node.package_count, query=c.q, use_longnames=True %}
+     {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% ckan_extends %}
+
+{% block content_primary_nav %}
+{% endblock %}
+
+{% block page_heading %}
+  {% if c.group_dict.longname %}
+    {{ c.group_dict.longname }} ({{ c.group_dict.display_name }})
+  {% else %}
+      {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block organization_description %}
+
+  {% set top_node = [h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type, include_parents=False)][0] %}
+  {% set nodes = top_node.children %}
+  {% set count = nodes | length %}
+  {% set dataset_count = h.get_package_count(nodes) %}
+
+  {% block organizations_search_form scoped %}
+      <h2 class="org-dataset_count">{% snippet 'snippets/search_result_text.html', query=c.q, count=count, dataset_count=dataset_count, type='organization' %}</h2>
+      
+  {% endblock %}
+  
+  {# TODO: Add JSTree #}
+
+  <ul class="media-list">
+  {% if (not top_node.highlighted) or nodes %}
+    {% for node in nodes %}
+      {% snippet 'organization/snippets/organization_item.html', node=node, use_longnames=True %}
+    {% endfor %}
+  {% endif %}
+  </ul>
+
+{% endblock %}
