@@ -126,10 +126,13 @@ h5.sector-media-heading {
 /* Header - header.html */
 
 .masthead {
-    min-height: 60px;
+    min-height: 50px;
     color: #F6FFE0;
     background: #00202F;
-    padding-top: 5px;
+    padding-top: 15px;
+}
+.masthead .nav-collapse {
+    padding-top: 0px; 
 }
 
 nav.section.navigation {
@@ -274,7 +277,7 @@ ul.footer-social {
 }
 
 .social-media-links li i {
- 
+    text-decoration: none;
     font-size: 230%;
 }
 
@@ -290,7 +293,9 @@ ul.footer-right-content li{
 h3.media-heading.org-title {
     font-size: 100%;
 }
-
+.org-dataset_count{
+    font-size: 100%;
+}
 
 
 .dataset-sidebar-top{
@@ -471,3 +476,8 @@ h3.media-heading.org-title {
 }
 }
 
+@media only screen and (min-width:1200px){
+    a.logo img {
+    margin-left: -20px;
+}
+}

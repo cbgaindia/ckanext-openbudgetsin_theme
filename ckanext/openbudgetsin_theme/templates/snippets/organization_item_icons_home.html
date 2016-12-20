@@ -17,7 +17,8 @@
      <div class="row-fluid">
       <div class="item-content">
       {% block organization_item_header_title %}
-            <h3 class="media-heading org-title"><a href={{ url }}>{{ organization.title or organization.name }}</a></h3>
+        {% set url=h.url_for(controller='organization', action='about', id=organization.name) %}
+            <h3 class="media-heading org-title"><a href="{{ url }}">{{ organization.title or organization.name }}</a></h3>
           {% endblock %}
           {% block organization_item_header_description %}
             {% if organization.description %}
