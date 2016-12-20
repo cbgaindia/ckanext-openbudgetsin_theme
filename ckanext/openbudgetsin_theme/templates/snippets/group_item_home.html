@@ -51,7 +51,7 @@
         <a class=" sector-module-image"  href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
         {% block group_item_header_image %}
           
-            <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" />
+            <img  class="hidden-tablet" src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" />
           
         {% endblock %}
         {% block group_item_header_title %}

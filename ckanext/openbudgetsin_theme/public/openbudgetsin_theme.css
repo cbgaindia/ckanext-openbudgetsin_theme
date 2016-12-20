@@ -3,9 +3,6 @@
 
 
 
-.sectorsclusters-container {
-    padding: 30px 80px;
-}
 
 .levelgov-cont-header,
 .sectors-cont-header {
@@ -112,6 +109,7 @@
 
 .datasetview-maincontent {
     padding: 0px;
+    overflow: hidden;
 }
 
 .datasetview-sidecontent {

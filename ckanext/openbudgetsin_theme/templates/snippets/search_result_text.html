@@ -19,23 +19,23 @@ Example:
 
 {% elif type == 'group' %}
   {%- if dataset_count -%}
-    {% set text_query = ungettext('{number} group', '{number} groups' , count) +
+    {% set text_query = ungettext('{number} sector', '{number} sectors' , count) +
                         ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) +
                         ' found for "{query}"' %}
   {% else %}
-    {% set text_query = ungettext('{number} group', '{number} groups' , count) + ' found for "{query}"' %}
+    {% set text_query = ungettext('{number} sector', '{number} sectors' , count) + ' found for "{query}"' %}
   {% endif %}
 
-  {% set text_query_none = _('No groups found for "{query}"') %}
+  {% set text_query_none = _('No sectors found for "{query}"') %}
 
   {%- if dataset_count -%}
-    {% set text_no_query = ungettext('{number} group', '{number} groups', count) + 
+    {% set text_no_query = ungettext('{number} sector', '{number} sectors', count) + 
                            ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) + ' found' %}
   {% else %}
-    {% set text_no_query = ungettext('{number} group found', '{number} groups found', count) %}
+    {% set text_no_query = ungettext('{number} sector found', '{number} sectors found', count) %}
   {% endif %}
 
-  {% set text_no_query_none = _('No groups found') %}
+  {% set text_no_query_none = _('No sectors found') %}
 
 {% elif type == 'organization' %}
   {%- if dataset_count -%}
@@ -43,16 +43,16 @@ Example:
                         ungettext(' and {dataset_count} dataset', ' and {dataset_count} datasets', dataset_count) +
                         ' found for "{query}"' %}
   {% else %}
-    {% set text_query = ungettext('{number} organization', '{number} organizations', count) + ' found for "{query}"' %}
+    {% set text_query = ungettext('{number} Budget Source', '{number} Budget Sources', count) + ' found for "{query}"' %}
   {% endif %}
 
   {% set text_query_none = _('No organizations found for "{query}"') %}
 
   {%- if dataset_count -%}
-    {% set text_no_query = ungettext('{number} organization', '{number} organizations', count) +
+    {% set text_no_query = ungettext('{number} Budget Source', '{number} Budget Sources', count) +
                            ungettext(' and {dataset_count} dataset found', ' and {dataset_count} datasets found', dataset_count) %}
   {% else %}
-    {% set text_no_query = ungettext('{number} organization found', '{number} organizations found', count) %}
+    {% set text_no_query = ungettext('{number} Budget Source found', '{number} Budget Sources found', count) %}
   {% endif %}
 
   {% set text_no_query_none = _('No organizations found') %}

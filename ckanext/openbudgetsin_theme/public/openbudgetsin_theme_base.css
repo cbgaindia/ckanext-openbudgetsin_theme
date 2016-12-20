@@ -350,7 +350,7 @@ h3.media-heading.org-title {
     .inner-content-container {
         border-radius: 5px 0px 5px 5px;
     }
-    .primary {
+    .primary, .inner-content-container {
         padding-bottom: 9999px;
         margin-bottom: -9999px;
     }

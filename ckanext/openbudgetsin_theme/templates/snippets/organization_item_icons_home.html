@@ -3,11 +3,11 @@
     {% block organization_item_header %}
     <div class="row-fluid">
      <div class="item-image">
-        {% set url=h.url_for(controller='organization', action='read', id=organization.name) %}
+        {% set url=h.url_for(controller='organization', action='about', id=organization.name) %}
         {% set truncate=truncate or 0 %}
         {% block organization_item_header_image scoped %}
         <a class="module-image" href="{{ url }}">
-       
+
           <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="org-img"/>
         </a>
         {% endblock %}
