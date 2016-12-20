@@ -25,7 +25,7 @@ Example:
       {% set display_text = longname + " (" + display_text + ")" %}
     {% endif %} 
 
-    {% if node.image_display_url %}
+    {% if node.image_display_url and not query %}
     <div class="span3">
         <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
     </div>
@@ -42,10 +42,14 @@ Example:
         {% link_for display_text, controller='organization', action=action, id=node.name %}
       </h3>
   
-      {% if node.children %}
-        {% set dataset_count = h.get_package_count(node.children) %}
-      {% else %}
-        {% set dataset_count = h.get_package_count([node]) %}
+      {# if some search query was performed, then the resultant nodes will have dataset_count
+         otherwise we need to count that by iterating over all top level organizations #}
+      {% if not dataset_count %}
+        {% if node.children %}
+          {% set dataset_count = h.get_package_count(node.children) %}
+        {% else %}
+          {% set dataset_count = h.get_package_count([node]) %}
+        {% endif %}
       {% endif %}
 
       <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
