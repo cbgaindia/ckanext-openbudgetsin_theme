@@ -13,3 +13,6 @@
  
    {% snippet 'snippets/search_form.html', form_id='organization-search-form', type='organization', query=c.q, sorting_selected=c.sort_by_selected, count=count, placeholder=_('Search organizations...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
  {% endblock %}
+
+ {% block page_pagination %}
+  {% endblock %}
