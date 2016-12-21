@@ -27,15 +27,16 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
 
     # IConfigurer
 
-    def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
+    def update_config(self, config):
+        toolkit.add_template_directory(config, 'templates')
+        toolkit.add_public_directory(config, 'public')
         toolkit.add_resource('fanstatic', 'openbudgetsin_theme')
 
     # ITemplateHelpers
     def get_helpers(self):
         return {
             'get_date': helpers.get_date,
+            'get_group_link':helpers.get_group_link,
         }
 
 

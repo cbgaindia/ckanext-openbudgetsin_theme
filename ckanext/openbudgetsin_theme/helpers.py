@@ -5,6 +5,9 @@ import ckan.lib.helpers as h
 import ckan.lib.munge as munge
 import ckan.model as model
 import ckan.plugins as p
+import copy
+from pylons import config
+from webhelpers.html import escape, HTML, literal, url_escape
 
 from ckan.common import request
 
@@ -210,3 +213,9 @@ def make_image_url(image_url):
         )
 
     return image_display_url
+
+def get_group_link(menu_item, title, **kw):
+   
+    link = literal("<a class='btn pull-right' href='/dataset/groups/" +kw["id"] + "'>" +"<i class='icon-group'>Add to Group</i> </a>")
+    return link 
+    
