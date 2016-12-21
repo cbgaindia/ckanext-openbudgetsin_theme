@@ -22,10 +22,12 @@
         </h1>
       </div>
       <div class="span3 button-container hidden-phone">
+      
         <div class="manage-button">
         
         {% block content_action %}
           {% if h.check_access('package_update', {'id':pkg.id }) %}
+        
             {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
           {% endif %}
         {% endblock %}
@@ -42,6 +44,15 @@
           {% endif %}
       {% endblock %}
       </div>
+      {% if h.check_access('package_update', {'id':pkg.id }) %}
+            <div class="row-fluid">
+              <div class="group-button">
+              {{ h.get_group_link('dataset_groups', _('Add to Group'), id=pkg.name) }}
+              </div>
+            </div>
+      {% endif %}
+
+      
       </div>
     </div>
     </div>
