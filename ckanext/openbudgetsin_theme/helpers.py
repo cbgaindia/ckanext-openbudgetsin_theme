@@ -136,26 +136,29 @@ def get_date(package, output_required=None):
     for 'created': return the oldest creation dates among the resources.
     for 'updated': return the latest modification dates among the resources.
     '''
-    resources = package['resources']
-
-    if output_required == "created":
-        # get the oldest datetime for the creation date; passing current datetime for
-        # default
-        return_datetime = get_oldest(resources, datetime.now())
-
-    elif output_required == "updated":
-        # get the latest datetime for the modification datetime; passing current datetime
-        # for default.
-        return_datetime = get_latest(resources)
-
+    try:
+        resources = package['resources']
+    except KeyError:
+        return None
     else:
-        logging.error("No required datetime found")
-        return_datetime = datetime.now()
+        if output_required == "created":
+            # get the oldest datetime for the creation date; passing current datetime for
+            # default
+            return_datetime = get_oldest(resources, datetime.now())
 
-    # extract the date only
-    return_date = datetime.strftime(return_datetime.date(), "%B %d, %Y")
+        elif output_required == "updated":
+            # get the latest datetime for the modification datetime; passing current
+            # datetime for default.
+            return_datetime = get_latest(resources)
 
-    return return_date
+        else:
+            logging.error("No required datetime found")
+            return_datetime = datetime.now()
+
+        # extract the date only
+        return_date = datetime.strftime(return_datetime.date(), "%B %d, %Y")
+
+        return return_date
 
 
 def get_oldest(resources, package_created):
@@ -199,8 +202,8 @@ def make_image_url(image_url):
     '''
     image_display_url = None
     if image_url and not image_url.startswith('http'):
-        #munge here should not have an effect only doing it incase
-        #of potential vulnerability of dodgy api input
+        # munge here should not have an effect only doing it incase
+        # of potential vulnerability of dodgy api input
         image_url = munge.munge_filename_legacy(image_url)
         image_display_url = h.url_for_static(
             'uploads/group/%s' % image_url,
