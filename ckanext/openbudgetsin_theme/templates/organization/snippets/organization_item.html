@@ -52,8 +52,8 @@ Example:
         {% endif %}
       {% endif %}
 
-      <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
-  
+      {#<span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
+      #}
       <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
   
     </div>

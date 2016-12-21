@@ -19,7 +19,7 @@
   {% set dataset_count = h.get_package_count(nodes) %}
 
   {% block organizations_search_form scoped %}
-      <h2 class="org-dataset_count">{% snippet 'snippets/search_result_text.html', query=c.q, count=count, dataset_count=dataset_count, type='organization' %}</h2>
+      <h2 class="org-dataset_count">{% snippet 'snippets/search_result_text.html', query=c.q, count=count, type='organization' %}</h2>
       
   {% endblock %}
   

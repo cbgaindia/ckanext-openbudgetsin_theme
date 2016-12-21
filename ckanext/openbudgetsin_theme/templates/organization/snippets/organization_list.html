@@ -26,7 +26,7 @@
      {% endif %}
 
      {% for node in top_nodes %}
-       {% snippet 'organization/snippets/organization_item.html', node=node, dataset_count=node.package_count, query=c.q, use_longnames=True %}
+       {% snippet 'organization/snippets/organization_item.html', node=node, query=c.q, use_longnames=True %}
      {% endfor %}
 </ul>
 {% endblock %}
