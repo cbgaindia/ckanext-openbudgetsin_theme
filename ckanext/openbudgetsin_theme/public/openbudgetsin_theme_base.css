@@ -303,6 +303,10 @@ h3.media-heading.org-title {
     padding: 10px 25px 10px 12px;
 }
 
+i.icon-download-alt.icon-large {
+    font-size: 14px;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
