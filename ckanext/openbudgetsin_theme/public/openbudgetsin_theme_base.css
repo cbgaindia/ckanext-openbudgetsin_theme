@@ -90,6 +90,7 @@ a.sector-module-image.sector-module-image {
 
 .sector-module-image img {
     float: left;
+    height: 115px;
     vertical-align: middle;
 }
 
