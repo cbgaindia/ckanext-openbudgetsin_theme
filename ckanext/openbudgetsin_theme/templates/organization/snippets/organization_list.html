@@ -17,6 +17,14 @@
        {% set top_nodes =  organizations %}
      {% endif %}
 
+     {% if c.sort_by_selected %}
+       {% if "asc" in c.sort_by_selected %}
+         {% set top_nodes =  organizations|sort(attribute='display_name') %}
+       {% elif "desc" in c.sort_by_selected %}
+         {% set top_nodes = organizations|sort(attribute='display_name', reverse=True) %}
+       {% endif %}
+     {% endif %}
+
      {% for node in top_nodes %}
        {% snippet 'organization/snippets/organization_item.html', node=node, dataset_count=node.package_count, query=c.q, use_longnames=True %}
      {% endfor %}
