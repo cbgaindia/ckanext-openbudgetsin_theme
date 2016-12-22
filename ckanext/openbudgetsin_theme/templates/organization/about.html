@@ -11,6 +11,8 @@
   {% endif %}
 {% endblock %}
 
+
+
 {% block organization_description %}
 
   {% set top_node = [h.group_tree_section(id_=c.group_dict.id, type_=c.group_dict.type, include_parents=False)][0] %}
@@ -18,7 +20,12 @@
   {% set count = nodes | length %}
   {% set dataset_count = h.get_package_count(nodes) %}
 
+  {% if c.group_dict.description %}
+  {{ h.render_markdown(c.group_dict.description) }}
+  {% endif %}
+  
   {% block organizations_search_form scoped %}
+
       <h2 class="org-dataset_count">{% snippet 'snippets/search_result_text.html', query=c.q, count=count, type='organization' %}</h2>
       
   {% endblock %}
