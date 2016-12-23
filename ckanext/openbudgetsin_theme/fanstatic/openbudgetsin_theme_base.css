@@ -342,6 +342,10 @@ i.icon-download-alt.icon-large {
     font-size: 16px;
 }
 
+.org-title a {
+    font-weight: normal;
+}
+
 
 /*============== Revise =============*/
 
@@ -495,8 +499,7 @@ a {
 }
 
 .dataset-description {
-    margin-top: 2px;
-    padding: 0px 10px;
+ 
 }
 
 .nav-tabs.nav-stacked > li > a {
@@ -516,6 +519,18 @@ a {
     display: flex;
     flex: 1;
 }
+
+.filters .nav-item a span {
+    font-size: 87%;
+}
+
+.dataset-content .dataset-description {
+    font-size: 95%;
+}
+.dataset-heading a {
+    font-size: 95%;
+    }
+
 /*==============================================*/
 
 ::-webkit-scrollbar {
