@@ -24,6 +24,7 @@ plugins.toolkit.check_ckan_version(min_version='2.0')
 class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers, inherit=True)
+    plugins.implements(plugins.IFacets)
 
     # IConfigurer
 
@@ -38,6 +39,17 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
             'get_date': helpers.get_date,
             'get_group_link':helpers.get_group_link,
         }
+
+    def dataset_facets(self,facets_dict, package_type):
+        facets_dict['groups'] = plugins.toolkit._('Sectors')
+        facets_dict['organization'] = plugins.toolkit._('Budget Sources')
+        return  facets_dict
+    
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        return  facets_dict
+
+    def group_facets(self, facets_dict, group_type, package_type):
+        return facets_dict
 
 
 def custom_convert_from_extras(key, data, errors, context):

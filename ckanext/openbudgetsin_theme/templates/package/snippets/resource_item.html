@@ -24,7 +24,7 @@
      
     {% if res.url and h.is_url(res.url) %}
        
-          <a href="{{ res.url }}" download="{{ res.url }}" class="resource-url-analytics" target="_blank">
+          <a href="{{ res.url }}" download="{{ res.name }}" class="resource-url-analytics" target="_blank">
             {% if res.has_views %}
               <button class="btn download-button"><i class="icon-download-alt  icon-large"></i> Download </button>
               

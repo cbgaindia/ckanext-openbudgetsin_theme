@@ -3,16 +3,11 @@
 {% block organization_list %}
 <ul class="media-list">
     {# problem with filtering organizations according to search query #}
-    {# % set organizations = h.get_featured_organizations(count=4) %}
-     {% if  c.q %}
-     	{% set top_nodes = h.group_tree_highlight(organizations, h.group_tree(type_='organization')) %}
-     {% else %}
-     	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
-     {% endif % #}
+   
 
      {% if not c.q %}
-       {% set organizations = h.get_featured_organizations(count=4) %}
-       {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+       {#{% set organizations = h.get_featured_organizations(count=4) %}
+       {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}#}
      {% else %}
        {% set top_nodes =  organizations %}
      {% endif %}
@@ -25,8 +20,12 @@
        {% endif %}
      {% endif %}
 
+     {% if not c.q %}
+      {% snippet "organization/snippets/featured_organizations.html" %}
+     {% else %}
      {% for node in top_nodes %}
        {% snippet 'organization/snippets/organization_item.html', node=node, query=c.q, use_longnames=True %}
      {% endfor %}
+     {% endif %}
 </ul>
 {% endblock %}

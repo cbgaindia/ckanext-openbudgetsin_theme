@@ -92,7 +92,7 @@ section.sector-list.module.module-narrow.module-shallow:hover {
 }
 
 a.sector-module-image.sector-module-image {
-    float: left;
+    text-decoration: none;
     text-align: center;
 }
 
@@ -114,7 +114,7 @@ a.sector-module-image.sector-module-image {
 h5.sector-media-heading {
     display: table-cell;
     vertical-align: middle;
-    font-weight: normal;
+    font-weight: 300;
 }
 
 .home-items-heading {
@@ -129,6 +129,7 @@ h5.sector-media-heading {
 .organizationclusters-container,
 .sectorsclusters-container {
     padding: 30px 80px;
+    background: url("../../../base/images/bg.png");
 }
 
 
@@ -264,7 +265,8 @@ li:last-child {
 
 .search-form {
     border-bottom: none;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .module-image {
@@ -491,6 +493,7 @@ a {
 }
 
 .table-container {
+    font-weight: 300;
     padding: 20px 10px;
 }
 
@@ -521,24 +524,169 @@ a {
 }
 
 .filters .nav-item a span {
-    font-size: 87%;
+
+    font-size: 100%;
+    font-weight: 300;
 }
 
 .dataset-content .dataset-description {
     font-size: 95%;
+    font-weight: 300;
 }
 .dataset-heading a {
-    font-size: 95%;
+    font-size: 100%;
     }
+.sectors-box {
+    margin: 0px auto;
+    width: 300px;
+}
 
-/*==============================================*/
+/* =============== New page Design =====================*/
+
+.top-container {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.49);
+    background: #c1d6e9 ;
+    padding-bottom: 30px;
+}
+h2.home-tagline {
+    font-weight: 100;
+}
+form.module-content.search-form {
+    padding-bottom: 0px;
+}
+.searchbar-container {
+    margin-top: -20px;
+}
+.dataset_count-banner {
+    font-weight: 100;
+    text-align: center;
+}
+.dataset-explore{
+    margin-top: 10px;
+}
+.homepage-logo
+{
+    display: block;
+    margin: 0px auto;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.top-container .search-form .search-input.search-giant input {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.features-banner{
+        padding: 30px 40px 40px;
+    font-weight: 300;
+    background: url("../../../base/images/bg.png");
+}
+.blog-banner{
+    text-align: center;
+}
+
+.level-of-governance {
+    background: #E9EAE5 url("../../../base/images/bg.png");
+    padding: 20px;
+    -moz-box-shadow: inset 0 0 8px #000000;
+    -webkit-box-shadow: inset 0 0 8px #000000;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.49);
+}
+.thumbnail h3 {
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.3;
+}
+.thumbnail > img {
+    width: 200px;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+.thumbnail{
+    min-height: 275px;
+    width: 200px;
+        margin: 0px auto;
+    background: #c1d6e9;
+    padding: 0px;
+    border: 1px solid rgba(51, 51, 51, 0.15);
+}
+.thumbnail:hover {
+    background: white;
+}
+.thumbnails .span3 a {
+    text-decoration: none;
+}
+a.btn.dataset-explore {
+    font-size: 90%;
+    font-weight: 400;
+}
+.sector-media-heading a {
+    font-weight: 100;
+}
+.sector-module-image img {
+    border-right: 1px solid rgb(210, 210, 210);
+}
+
+header.module-content.page-header.about-header {
+    padding-top: 0px;
+}
+.about-header a.btn {
+    margin: 10px;
+}
+p.org-description {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.74);
+}
+.organization_description {
+    margin-top: -10px;
+}
+
+.org-description a {
+    font-weight: 400;
+}
+
+img.banner-image {
+    height: 90px;
+}
+.banner-mid-description{
+        margin-top: 20px;
+}
+.banner-bottom-image{
+    width:75%;
+}
+a.btn.btn-primary.dataset-explore {
+    margin-top: 20px;
+}
+span.banner-head {
+    font-size: 150%;
+    font-weight: 700;
+}
+.row-fluid.feature-container {
+    margin-top: 20px;
+}
+h2.banner-head {
+    line-height: 0;
+    font-size: 150%;
+}
+.row-fluid.icons_support_text {
+    margin: 5px 0px 20px;
+}
+.levelgov-cont-descr p, .sectors-cont-descr p {
+    font-weight: 300;
+}
+img.media-image.media-object.pull-left.org-image {
+    width: 100px;
+}
+/* =============== New page Design =====================*/
+
+/*==============================================
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 16px;
 }
 
 
-/* Track */
+
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
@@ -547,17 +695,17 @@ a {
 }
 
 
-/* Handle */
+
 
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    /*background: rgba(255,0,0,0.8);*/
+    background: rgba(255,0,0,0.8);
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {}
-
+*/
 @media (max-width: 480px) {
     .banner-container {
         min-width: 100%;
@@ -572,12 +720,11 @@ a {
     .masthead .btn-navbar {
         margin-top: 0px;
     }
-    .searchbar-container {
-        margin-top: 250px;
-    }
+  
     .banner-outer-container {
         background-color: rgb(172, 201, 226);
     }
+    
 }
 
 @media (min-width: 480px) {
@@ -589,6 +736,7 @@ a {
 }
 
 @media (min-width: 767px) {
+
     .wrapper {
         min-height: 400px;
         background-image: none;
@@ -615,6 +763,7 @@ a {
         padding-bottom: 9999px;
         margin-bottom: -9999px;
     }
+    
 }
 
 @media (max-width: 767px) {
@@ -654,6 +803,15 @@ a {
         padding: 10px 10px;
         font-size: 120%;
     }
+    .homepage-logo {
+    width: 250px;
+    }
+    .span4.home-group-item {
+    margin: 0px 13px 10px 0px;
+    }
+    .sectorsclusters-container {
+    padding: 30px 80px;
+}
 }
 
 @media (max-width: 480px) {
@@ -724,9 +882,37 @@ a {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 980) {
+@media (max-width: 979px) and (min-width: 768px) {
     .module-image .org-img {
         width: 70%;
+    }
+    .span4.home-group-item {
+    margin: 0px 13px 20px 0px;
+    }
+    .sectors-box {
+    width: 220px;
+    }
+    section.sector-list.module.module-narrow.module-shallow {
+    height: 75px;
+    }
+    .sector-description {
+    height: 75px;
+    }
+    h5.sector-media-heading {
+    font-size: 80%;
+    }
+    .sector-module-image img {
+        height: 75px;
+    }
+    .thumbnail > img {
+    width: 200px;
+    }
+    .thumbnail {
+    min-height: 225px;
+    width: 150px;
+    }
+    .thumbnail h3 {
+    font-size: 90%;
     }
 }
 
@@ -741,3 +927,4 @@ a {
 
     background: rgba(208, 168, 37, 0.85);
     */
+

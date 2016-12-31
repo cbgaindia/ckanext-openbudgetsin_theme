@@ -2,16 +2,22 @@
  {% ckan_extends %}
  
  {% block organizations_search_form %}
-   {% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
+   
    {% if not c.q %}
-     {% set count = top_nodes|length %}
+     {% set count = 4 %}
    {% else %}
+   	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
      {% set count = c.page.item_count %}
    {% endif %}
  
    {% set dataset_count = h.get_package_count(c.page.items) %}
  
+ {% if not c.q %}
+ {% snippet 'snippets/search_form_tiers_gov.html', form_id='organization-search-form', type='organization', query=c.q,  count=count, placeholder=_('Search Budget Sources...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
+
+ {% else %}
    {% snippet 'snippets/search_form.html', form_id='organization-search-form', type='organization', query=c.q, sorting_selected=c.sort_by_selected, count=count, placeholder=_('Search organizations...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
+ {% endif %}
  {% endblock %}
 
  {% block page_pagination %}
