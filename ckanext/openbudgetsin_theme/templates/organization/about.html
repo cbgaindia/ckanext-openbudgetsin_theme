@@ -1,6 +1,20 @@
 {% ckan_extends %}
 
-{% block content_primary_nav %}
+{% block page_header %}
+  <header class="module-content page-header about-header">
+    {% if self.content_action() | trim %}
+      <div class="content_action">
+        {% block content_action %}
+          {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+            {% link_for _('Manage'), controller='organization', action='edit', id=c.group_dict.name, class_='btn', icon='wrench' %}
+          {% endif %}
+      {% endblock %}
+      </div>
+    {% endif %}
+    <ul class="nav nav-tabs">
+      {% block content_primary_nav %}{% endblock %}
+    </ul>
+  </header>
 {% endblock %}
 
 {% block page_heading %}
@@ -11,6 +25,11 @@
   {% endif %}
 {% endblock %}
 
+{% block secondary_content %}
+  {% snippet 'snippets/organization.html', organization=c.group_dict, show_nums=true , show_description=false %}
+  {% block organization_facets %}{% endblock %}
+{% endblock %}
+            
 
 
 {% block organization_description %}
@@ -21,7 +40,9 @@
   {% set dataset_count = h.get_package_count(nodes) %}
 
   {% if c.group_dict.description %}
+  <div class="organization_description">
   {{ h.render_markdown(c.group_dict.description) }}
+  </div>
   {% endif %}
   
   {% block organizations_search_form scoped %}
@@ -29,6 +50,7 @@
       <h2 class="org-dataset_count">{% snippet 'snippets/search_result_text.html', query=c.q, count=count, type='organization' %}</h2>
       
   {% endblock %}
+  <hr>
   
   {# TODO: Add JSTree #}
 

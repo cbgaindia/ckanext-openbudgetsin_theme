@@ -105,7 +105,7 @@
                   {% block package_organization %}
                     {% if pkg.organization %}
                       {% set org = h.get_organization(pkg.organization.name) %}
-                      {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+                      {% snippet "snippets/organization.html", organization=org,show_description=true,  has_context_title=true %}
                     {% endif %}
                   {% endblock %}
                   

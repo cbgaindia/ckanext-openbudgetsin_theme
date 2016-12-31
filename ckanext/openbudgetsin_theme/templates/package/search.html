@@ -10,6 +10,7 @@
 {% block primary_content %}
   <section class="module">
     <div class="module-content">
+    
       {% block page_primary_action %}
         {% if h.check_access('package_create') %}
           <div class="page_primary_action">
@@ -17,7 +18,9 @@
           </div>
         {% endif %}
       {% endblock %}
+
       {% block form %}
+      
         {% set facets = {
           'fields': c.fields_grouped,
           'search': c.search_facets,
@@ -25,6 +28,7 @@
           'translated_fields': c.translated_fields,
           'remove_field': c.remove_field }
         %}
+
         {% set sorting = [
           (_('Relevance'), 'score desc, metadata_modified desc'),
           (_('Name Ascending'), 'title_string asc'),
