@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-
+import time
 import ckan.lib.helpers as h
 import ckan.lib.munge as munge
 import ckan.model as model
@@ -13,12 +13,19 @@ from ckan.common import request
 
 
 def group_tree(organizations=[], type_='organization'):
+    start_time = time.time()
+    print organizations
     full_tree_list = p.toolkit.get_action('group_tree')({}, {'type': type_})
 
     if not organizations:
+        
+        print("--- group_tree %s seconds ---" % (time.time() - start_time))
+        
         return full_tree_list
     else:
         filtered_tree_list = group_tree_filter(organizations, full_tree_list)
+        print("---group tree %s seconds ---" % (time.time() - start_time))
+        
         return filtered_tree_list
 
 
