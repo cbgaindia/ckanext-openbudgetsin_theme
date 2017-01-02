@@ -678,6 +678,13 @@ h2.banner-head {
 img.media-image.media-object.pull-left.org-image {
     width: 100px;
 }
+.navbar .nav li.dropdown.open > .dropdown-toggle
+{
+    background-color: rgba(248, 202, 77, 0.95);
+}
+.masthead .navigation .open li a:hover {
+    color: white;
+}
 /* =============== New page Design =====================*/
 
 /*==============================================
