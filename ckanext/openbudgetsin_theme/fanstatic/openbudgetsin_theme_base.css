@@ -208,7 +208,6 @@ nav.section.navigation {
 
 .module .module-content p {
     font-size: 85%;
-    font-weight: 300;
 }
 
 .resource-btn-container {
@@ -684,6 +683,9 @@ img.media-image.media-object.pull-left.org-image {
 }
 .masthead .navigation .open li a:hover {
     color: white;
+}
+p.org-media-descrp {
+    font-weight: 300;
 }
 /* =============== New page Design =====================*/
 
