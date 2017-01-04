@@ -7,3 +7,26 @@
 {% resource 'openbudgetsin_theme/openbudgetsin_theme_base.css' %}
 {% endblock %}
 
+{% block meta %}
+      {{ super() }}
+  <meta charset="utf-8">
+    <meta name="description" content="Open Budget Data Portal for India">
+    <meta name="application-name" content="openbudgetsindia.org">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@OpenBudgetsIn">
+    <meta name="twitter:title" content="OpenBudgetsIndia
+      ">
+    <meta name="twitter:description" content="Open Budget Data Portal for India">
+    <meta name="twitter:url" content="https://openbudgetsindia.org/">
+    <meta name="twitter:image:src" content="">
+    
+    <meta property="og:title" content="OpenBudgetsIndia" />
+    <meta property="og:description" content="Open Budget Data Portal for India" />
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="https://openbudgetsindia.org/" >
+    <meta property="og:image" content="Logo_highres_text_original-26.png" >
+    <meta property="og:site_name" content="OpenBudgetsIndia" >
+    
+    <meta name="apple-mobile-web-app-title" content="OpenBudgetsIndia">
+{% endblock %}
