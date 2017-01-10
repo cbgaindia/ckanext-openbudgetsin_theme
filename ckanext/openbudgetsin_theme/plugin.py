@@ -46,9 +46,13 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
         return  facets_dict
     
     def organization_facets(self, facets_dict, organization_type, package_type):
+        facets_dict['groups'] = plugins.toolkit._('Sectors')
+        facets_dict['organization'] = plugins.toolkit._('Budget Sources')
         return  facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
+        facets_dict['groups'] = plugins.toolkit._('Sectors')
+        facets_dict['organization'] = plugins.toolkit._('Budget Sources')
         return facets_dict
 
 
