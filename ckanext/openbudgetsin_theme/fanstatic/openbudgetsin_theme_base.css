@@ -274,6 +274,7 @@ li:last-child {
 }
 
 .span4.social-media-links {
+        font-weight: 300;
     text-align: center;
     font-size: 24px;
     color: white;
@@ -577,7 +578,7 @@ form.module-content.search-form {
 }
 
 .features-banner{
-        padding: 30px 40px 40px;
+    padding: 30px 40px 20px 30px;
     font-weight: 300;
     background: url("../../../base/images/bg.png");
 }
@@ -646,7 +647,7 @@ p.org-description {
 }
 
 img.banner-image {
-    height: 90px;
+    height: 80px;
 }
 .banner-mid-description{
         margin-top: 20px;
@@ -662,14 +663,14 @@ span.banner-head {
     font-weight: 700;
 }
 .row-fluid.feature-container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 h2.banner-head {
     line-height: 0;
     font-size: 150%;
 }
 .row-fluid.icons_support_text {
-    margin: 5px 0px 20px;
+    margin: 20px 0px 20px;
 }
 .levelgov-cont-descr p, .sectors-cont-descr p {
     font-weight: 300;
