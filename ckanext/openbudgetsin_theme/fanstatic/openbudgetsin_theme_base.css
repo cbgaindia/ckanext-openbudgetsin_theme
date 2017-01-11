@@ -694,6 +694,9 @@ p.org-media-descrp {
 .dropdown-backdrop{
     position: static;
 }
+.about_page ul {
+    font-size: 85%;
+}
 /* =============== New page Design =====================*/
 
 /*==============================================
