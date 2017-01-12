@@ -942,6 +942,9 @@ p.org-media-descrp {
     }
 }
 
+.ckanext-pages-content p {
+   font-size: 85%;
+}
 
 /*
 
