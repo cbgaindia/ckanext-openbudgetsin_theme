@@ -1,5 +1,7 @@
 {% ckan_extends %}
 
+{% block subtitle %}{{ c.group_dict.display_name }} - {{ _('Budget Source') }}{% endblock %}
+
 {% block page_header %}
   <header class="module-content page-header about-header">
     {% if self.content_action() | trim %}
@@ -66,4 +68,11 @@
 
   {% block meta_description %}
     <meta name="description" content="{{ c.group_dict.description }}">
+{% endblock %}
+
+{% block og_objs%}
+    <meta property="og:title" content="{{ c.group_dict.display_name }}" />
+    <meta property="og:description" content="{{ c.group_dict.description }}"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
 {% endblock %}

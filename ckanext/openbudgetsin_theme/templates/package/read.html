@@ -127,8 +127,6 @@
                     <h3>
                   Dataset Description
                     </h3>
-                  }
-                  }
                   <hr class="section-hr">
                   </div>
                 </div>
@@ -182,3 +180,10 @@
     {{ tag.display_name + ','|trim }}
 {%- endfor %} " />
 {% endblock %}    
+
+{% block og_objs%}
+    <meta property="og:title" content="{{ pkg.title or pkg.name }}" />
+    <meta property="og:description" content="{{ pkg.notes }}"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

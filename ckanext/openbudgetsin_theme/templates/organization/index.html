@@ -33,3 +33,10 @@
   {% block meta_description %}
     <meta name="description" content="Tiers of government refer to distinct levels of government which are set up in geographically vast countries with heterogeneity in population. In India, there are three tiers of government: Union, State and Local.">
 {% endblock %}
+
+{% block og_objs%}
+  <meta property="og:title" content="Organizations - OpenBudgetsIndia" />
+    <meta property="og:description" content="Tiers of government refer to distinct levels of government which are set up in geographically vast countries with heterogeneity in population. The purpose of such classification is to ensure efficient governance and an equitable provisioning of public goods through co-operation, co-ordination and competition between the different tiers. "/>
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

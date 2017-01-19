@@ -49,3 +49,10 @@
     <meta name="description" content="
 The portal includes twelve broad sectors. These sectors represent Union and State Budget expenditure on both Economic Services and Social Services. The sector specific data-sets aid in tracking the trends and patterns of public spending by the government to influence varied development outcomes.">
 {% endblock %}
+
+{% block og_objs%}
+    <meta property="og:title" content="Sectors - Open Budgets India" />
+    <meta property="og:description" content="Search datasets based on 12 broad sectors"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

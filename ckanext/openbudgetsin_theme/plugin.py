@@ -56,6 +56,8 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
         return facets_dict
 
 
+
+
 def custom_convert_from_extras(key, data, errors, context):
 
     '''Converts values from extras, tailored for groups.'''
