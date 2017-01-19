@@ -674,6 +674,7 @@ h2.banner-head {
 }
 .levelgov-cont-descr p, .sectors-cont-descr p {
     font-weight: 300;
+        line-height: 1.5em;
 }
 img.media-image.media-object.pull-left.org-image {
     width: 100px;
