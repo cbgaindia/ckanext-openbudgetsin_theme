@@ -127,6 +127,8 @@
                     <h3>
                   Dataset Description
                     </h3>
+                  }
+                  }
                   <hr class="section-hr">
                   </div>
                 </div>
@@ -170,3 +172,13 @@
       </script>
 {% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="{{ pkg.notes }}">
+{% endblock %}
+{% block meta_abstract %}
+{% endblock %}
+{% block meta_keyword %}
+  <meta name="keywords" content="{% for tag in pkg.tags -%}
+    {{ tag.display_name + ','|trim }}
+{%- endfor %} " />
+{% endblock %}    

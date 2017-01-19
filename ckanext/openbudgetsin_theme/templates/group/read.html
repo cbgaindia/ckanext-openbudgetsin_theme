@@ -36,3 +36,6 @@
     {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet, extras={'id':c.group_dict.id}) }}
   {% endfor %}
 {% endblock %}
+{% block meta_description %}
+    <meta name="description" content="{{ c.group_dict.description }}">
+{% endblock %}

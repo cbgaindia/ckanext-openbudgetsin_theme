@@ -3,10 +3,6 @@
 {% block subtitle %}{{ _('Sectors') }}{% endblock %}
 
 
-
-
-
-
 {% block breadcrumb_content %}
   <li class="active">{% link_for _('Groups'), controller='group', action='index' %}</li>
 {% endblock %}
@@ -49,3 +45,7 @@
   {% snippet "group/snippets/helper.html" %}
 {% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="
+The portal includes twelve broad sectors. These sectors represent Union and State Budget expenditure on both Economic Services and Social Services. The sector specific data-sets aid in tracking the trends and patterns of public spending by the government to influence varied development outcomes.">
+{% endblock %}
