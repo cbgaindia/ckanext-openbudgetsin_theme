@@ -11,3 +11,19 @@
   {% endfor %}
 {% endblock %}
 {% endblock %}
+
+{% block meta_description %}
+    <meta name="description" content="{{ c.group_dict.description }}">
+{% endblock %}
+{% block meta_abstract %}
+{% endblock %}
+{% block meta_keyword %}
+	<meta name="keywords" content="Open Budgets India, OBI, Budget Source " />
+{% endblock %}    
+
+{% block og_objs%}
+    <meta property="og:title" content="{{ c.group_dict.display_name }}" />
+    <meta property="og:description" content="{{ c.group_dict.description }}"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

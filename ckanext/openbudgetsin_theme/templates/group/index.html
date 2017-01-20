@@ -3,10 +3,6 @@
 {% block subtitle %}{{ _('Sectors') }}{% endblock %}
 
 
-
-
-
-
 {% block breadcrumb_content %}
   <li class="active">{% link_for _('Groups'), controller='group', action='index' %}</li>
 {% endblock %}
@@ -49,3 +45,14 @@
   {% snippet "group/snippets/helper.html" %}
 {% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="
+Open Budgets India is a comprehensive and user-friendly Open Data Portal on Budgets in India which aims to facilitate free, easy and timely access to relevant data on budgets. It provides budget information on Union, State and Local Level Budgets in India. The portal includes twelve broad sectors representing Union and State Budgets expenditure on both Economic Services and Social Services.">
+{% endblock %}
+
+{% block og_objs%}
+    <meta property="og:title" content="Sectors - Open Budgets India" />
+    <meta property="og:description" content="Search datasets based on 12 broad sectors"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

@@ -170,3 +170,20 @@
       </script>
 {% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="{{ pkg.notes }}">
+{% endblock %}
+{% block meta_abstract %}
+{% endblock %}
+{% block meta_keyword %}
+  <meta name="keywords" content="{% for tag in pkg.tags -%}
+    {{ tag.display_name + ','|trim }}
+{%- endfor %} " />
+{% endblock %}    
+
+{% block og_objs%}
+    <meta property="og:title" content="{{ pkg.title or pkg.name }}" />
+    <meta property="og:description" content="{{ pkg.notes }}"/>
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="{{ h.full_current_url() }}" >
+{% endblock %}

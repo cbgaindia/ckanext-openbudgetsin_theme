@@ -1,32 +1,38 @@
 {% ckan_extends %}
 
 {% block styles %}
-  {{ super() }}
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-
-{% resource 'openbudgetsin_theme/openbudgetsin_theme_base.css' %}
+  	{{ super() }}
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	{% resource 'openbudgetsin_theme/openbudgetsin_theme_base.css' %}
 {% endblock %}
 
 {% block meta %}
       {{ super() }}
   <meta charset="utf-8">
+
+{% block meta_description %}
     <meta name="description" content="Open Budget Data Portal for India">
+{% endblock %}
+{% block meta_abstract %}
+
+{% endblock %}
+{% block meta_keyword %}
+<meta name="keywords" content="Open Budgets India, Union Budget, State Budgets, Municipal Budgets, OBI, Data Portal India, Open Budgets Data Portal, Open Data, Free Data, Open Budgets Data India, Data Science, Data Visualization, RBI, IPFS, CSV, Budget Data" />
+{% endblock %}    
     <meta name="application-name" content="openbudgetsindia.org">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@OpenBudgetsIn">
-    <meta name="twitter:title" content="OpenBudgetsIndia
-      ">
+    <meta name="twitter:title" content="Open Budgets India">
     <meta name="twitter:description" content="Open Budget Data Portal for India">
     <meta name="twitter:url" content="https://openbudgetsindia.org/">
-    <meta name="twitter:image:src" content="">
+    <meta name="twitter:image:src" content="metatags-29.png">
+{% block og_objs%}
+
+{% endblock %}
     
-    <meta property="og:title" content="OpenBudgetsIndia" />
-    <meta property="og:description" content="Open Budget Data Portal for India" />
-    <meta property="og:type" content="article" >
-    <meta property="og:url" content="https://openbudgetsindia.org/" >
-    <meta property="og:image" content="Logo_highres_text_original-26.png" >
-    <meta property="og:site_name" content="OpenBudgetsIndia" >
+    <meta property="og:image" content="metatags-28.png" >
+    <meta property="og:site_name" content="Open Budgets India" >
     
-    <meta name="apple-mobile-web-app-title" content="OpenBudgetsIndia">
+    <meta name="apple-mobile-web-app-title" content="Open Budgets India">
 {% endblock %}
