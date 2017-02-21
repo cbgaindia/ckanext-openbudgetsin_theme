@@ -1,7 +1,7 @@
 <img src="ckanext/openbudgetsin_theme/public/Logo_highres_text_original-26.png" alt="OpenBugetsIndia" height=100 style="display:block;margin-left: auto; margin-right: auto;">
 # ckanext-openbudgetsin_theme
 ## Extension to provide custom theme to OpenBudgetsIndia(CKAN)
-The extension provides multiple plugins to provide basic theme, new hierarchical arrangement of organizations, canonical view of visualizations for the dataset resource view.
+The extension serves the purpose of providing a basic theme, new hierarchical arrangement of organizations, canonical view of visualizations for the dataset resource view.Here is the list of plugins available in the CKAN Extension -
 * Openbudgetsin_ThemePlugin - Provides basic theme and structure to the ckan instance.
 
 * HierarchyDisplay - The  plugin provides capability of add new hierarchial arrangement of organizations.The plugin is   
