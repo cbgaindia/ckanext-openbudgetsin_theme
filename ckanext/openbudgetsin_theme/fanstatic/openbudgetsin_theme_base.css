@@ -179,6 +179,11 @@ nav.section.navigation {
     overflow: hidden;
 }
 
+.context-info h1.heading {
+    word-break: keep-all;
+    -ms-word-break: keep-all;
+}
+
 .datasetview-maincontent .module-heading {
     border-radius: 4px 4px 0px 0px !important;
 }
