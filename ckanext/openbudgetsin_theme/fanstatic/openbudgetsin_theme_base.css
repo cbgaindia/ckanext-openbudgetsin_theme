@@ -182,6 +182,10 @@ nav.section.navigation {
 .context-info h1.heading {
     word-break: keep-all;
     -ms-word-break: keep-all;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 .datasetview-maincontent .module-heading {
