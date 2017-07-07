@@ -493,6 +493,10 @@ a:focus {
     ;
 }
 
+.dropdown-menu li a{
+    background-color: white!important;
+}
+
 a {
     color: #000000;
 }
