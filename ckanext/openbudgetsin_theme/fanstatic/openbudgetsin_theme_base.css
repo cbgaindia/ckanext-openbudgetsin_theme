@@ -381,7 +381,6 @@ i.icon-download-alt.icon-large {
 }
 
 .viscontainer {
-    padding: 10px 40px 20px 40px;
     border-radius: 5px;
     background: none;
     margin-top: 0px;
@@ -492,6 +491,10 @@ a:focus {
     color: black;
     background-color: rgba(248, 202, 77, 0.95);
     ;
+}
+
+.dropdown-menu li a{
+    background-color: white!important;
 }
 
 a {
