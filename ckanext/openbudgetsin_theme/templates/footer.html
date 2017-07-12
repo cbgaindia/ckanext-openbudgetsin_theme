@@ -13,7 +13,7 @@
             {% block footer_links_ckan %}
               {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
               <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
-              <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}"></a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data License Logo"></a></li>
             {% endblock %}
           </ul>
         {% endblock %}
@@ -25,9 +25,9 @@
         <div class="row-fluid">
         <ul class="footer-social">
     
-          <li class="nav-item"><a href="https://twitter.com/OpenBudgetsIn" target="_blank"><i class="icon-twitter-sign"></i></a></li>
-          <li class="nav-item"><a href="https://www.facebook.com/OpenBudgetsIndia" target="_blank"><i class="icon-facebook-sign"></i></a></li>
-          <li class="nav-item"><a href="https://github.com/cbgaindia" target="_blank"><i class="icon-github-sign"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/OpenBudgetsIn" aria-hidden="true" alt="Open Budgets India's Official Twitter Handle" role="link" title="Official Twitter Handle" aria-label="Open Budgets India's Official Twitter Handle" target="_blank"><i class="icon-twitter-sign"></i></a></li>
+          <li class="nav-item"><a href="https://www.facebook.com/OpenBudgetsIndia" aria-hidden="true" role="link" alt="Open Budgets India's Official Facebook Page" title="Official Facebook Page" aria-label="Open Budgets India's Official Facebook Page" target="_blank"><i class="icon-facebook-sign"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/cbgaindia" alt="Open Budgets India's Official Github handle" aria-label="Open Budgets India's Official Github handle" title="Official Github Handle" aria-hidden="true" role="link" target="_blank"><i class="icon-github-sign"></i></a></li>
           
         </ul>
         </div>
