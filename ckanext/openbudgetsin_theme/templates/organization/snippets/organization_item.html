@@ -17,14 +17,15 @@ Example:
 {% block item %}
 <li class=" media org-item" >
 <div class="row">
-  {% block item_inner scoped %}
-
-    {% set longname = h.group_tree_get_longname(node.name) %} 
-    {% set display_text = node.title %} 
-    {% if use_longnames and longname%}
-      {% set display_text = longname + " (" + display_text + ")" %}
-    {% endif %} 
-
+  {% block item_inner scoped %}    
+    
+    {% set display_text = node.title %}
+    {# TODO: This piece is taking huge load time, need to debug
+        {% set display_text = node.title %} 
+        {% if use_longnames and longname%}
+            {% set display_text = longname + " (" + display_text + ")" %}
+        {% endif %}  
+    #}
     {% if node.image_display_url and not query %}
     <div class="span3">
         <img src="{{ node.image_display_url }}" alt="{{ node.name }}" class="media-image media-object pull-left org-image">
@@ -44,6 +45,7 @@ Example:
   
       {# if some search query was performed, then the resultant nodes will have dataset_count
          otherwise we need to count that by iterating over all top level organizations #}
+      {# TODO: Need to recheck this logic as counts are inaccurate
       {% if not dataset_count %}
         {% if node.children %}
           {% set dataset_count = h.get_package_count(node.children) %}
@@ -51,8 +53,7 @@ Example:
           {% set dataset_count = h.get_package_count([node]) %}
         {% endif %}
       {% endif %}
-
-      {#<span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
+      <span class="dataset-count">{{ ungettext('{num} Dataset', '{num} Datasets', dataset_count).format(num=dataset_count) }} found</span>
       #}
       <p class="org-media-descrp">{{ h.markdown_extract(h.get_description(node)) }}</p>
   
