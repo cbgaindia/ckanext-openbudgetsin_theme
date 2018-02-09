@@ -877,8 +877,9 @@ h5.sector-media-heading {
     width: 100%;
 }
 
-.organizationclusters-container,
-.sectors-clusters-container {}
+.sectors-clusters-container {
+    padding:20px 0px;
+}
 
 .thumbnails {
     margin: 0px;
@@ -1086,6 +1087,10 @@ p.org-media-descrp {
         min-height: 220px;
         width: 160px;
     }
+}
+
+.feature-container .span3 {
+    margin-bottom: 20px;
 }
 
 .intro-new-section .explore-button {
