@@ -1127,3 +1127,9 @@ p.org-media-descrp {
         margin: 0px auto;
     }
 }
+
+.intro-desc {
+    padding: 30px 60px;
+    text-align: left;
+    max-width: 400px;
+}
