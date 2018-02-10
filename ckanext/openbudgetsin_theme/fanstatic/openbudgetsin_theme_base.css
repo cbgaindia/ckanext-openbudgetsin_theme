@@ -1061,7 +1061,11 @@ p.org-media-descrp {
     font-size: 6px;
     top: -2em;
 }
-
+.intro-desc {
+    padding: 30px 60px;
+    text-align: left;
+    max-width: 400px;
+}
 
 /*.homepage-container .row-fluid{
        /*margin-left: -20px;
@@ -1128,8 +1132,30 @@ p.org-media-descrp {
     }
 }
 
-.intro-desc {
-    padding: 30px 60px;
-    text-align: left;
-    max-width: 400px;
+
+@media  (min-width: 1099px) {
+.button-row{
+    max-width: 400px;    
+    padding: 0px 60px;
 }
+}
+
+@media  (min-width: 770px) {
+.viz-iframe{
+    float:right
+}
+}
+
+@media  (max-width: 770px) {
+.intro-desc {
+        padding: 0px;
+    text-align: center;
+    /* max-width: 400px; */
+    margin: 0px auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+}
+
+
