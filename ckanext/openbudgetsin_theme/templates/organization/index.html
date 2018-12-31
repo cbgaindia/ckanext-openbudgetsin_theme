@@ -4,7 +4,7 @@
  {% block organizations_search_form %}
    
    {% if not c.q %}
-     {% set count = 4 %}
+     {% set count = 5 %}
    {% else %}
    	{% set top_nodes = h.group_tree(organizations=organizations, type_='organization') %}
      {% set count = c.page.item_count %}
