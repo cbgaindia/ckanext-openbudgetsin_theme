@@ -1,7 +1,7 @@
 body {
     background: none;
     font-size: 100%;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-family: 'Inter', "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
 
 .row {
@@ -659,7 +659,6 @@ form.module-content.search-form {
     }
     .viscontainer {
         padding: 10px 10px 10px 10px;
-        c
     }
     [role=main],
     .main,
@@ -757,6 +756,10 @@ form.module-content.search-form {
 
 
 /* Home Page */
+
+.homepage-container{
+    background-color: #F0F3F5;
+}
 
 .homepage-container .row {
     margin-left: 0px;
