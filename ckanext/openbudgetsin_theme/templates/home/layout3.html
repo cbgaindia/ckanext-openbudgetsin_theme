@@ -1,46 +1,136 @@
 {% block meta_description %}
 <meta name="description" content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India."> {% endblock %} {% set stats = h.get_site_statistics() %}
 <div class="homepage-container">
-    <div class="">
+    <!-- <div class=""> -->
+        <div class="row-fluid">
+            <div class="latest-highlights-container">
+                {% block latest_highlights %} {% snippet 'home/snippets/latest_highlights.html' %} {% endblock %}
+            </div>
+        </div>
         <div class="row-fluid">
             <div class="top-container">
-                <div class="container">
-                    <div class="row-fluid">
-                        <img class="homepage-logo" alt="OpenBudgetsIndia's Logo" src="Logo_highres_text_original-26.png">
+                <div class="">
+                    <div class="row-fluid text-align-center">
+                        <!-- <div class="span2"></div> -->
+                        <h2 class="home-tagline"> Making India's Budgets open, usable and easy to comprehend</h2>
+                        <!-- <div class="span2"></div> -->
+                        <!-- <img class="homepage-logo" alt="OpenBudgetsIndia's Logo" src="Logo_highres_text_original-26.png"> -->
                     </div>
                     <div class="row-fluid">
-                        <div class=" text-center">
+                        <div class="text-center">
                             {% block search %} {% snippet 'home/snippets/search.html' %} {% endblock %}
                         </div>
                     </div>
-                    <div class="row-fluid">
+                    <!-- <div class="row-fluid">
                         <div class="dataset_count-banner">
-                            <a class="" href="/dataset">Explore <b>{{ h.SI_number_span(stats.dataset_count) }}</b> datasets from <b>{{ h.SI_number_span(stats.organization_count) }}</b> Budget Sources.
-                  </a>
+                            <a class="" href="/dataset">Explore <b>{{ h.SI_number_span(stats.dataset_count) }}</b> datasets from <b>{{ h.SI_number_span(stats.organization_count) }}</b> Budget Sources.</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <div class="row-fluid">
-            <div class="bg-white intro-new-section">
-                <div class="">
-                    <div class="row  text-center">
-                        <div class=" ">
-                            <div class="row-fluid">
-                                <div class="introductory-text">
-                                    <h2 class="light-text">Introducing</h2>
-                                    <h1>Dashboards</h1>
+            <div class="bg-curved intro-new-section">
+                <!-- <img src="home-dashboard-curved-bg.svg" /> -->
+                <!-- <div class=""> -->
+                    <!-- <div class="row"> -->
+                        <!-- <div class=""> -->
+                            <div class="hompepage-section-intro-text-container">
+                                <div class="row-fluid">
+                                    <div class="introductory-text">
+                                        <!-- <h2 class="light-text">Introducing</h2> -->
+                                        <h2 class="homepage-section-heading"><span>Dashboards</span></h2>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="banner-description">
+                                       <h3 class="homepage-section-text">
+                                           Open Budgets India brings new dashboards for exploring Union, State 
+                                           and District level fiscal data. These dashboards help you navigate through 
+                                           data, visualizations and insights from various tiers of government.
+                                        </h3> 
+                                    </div>
                                 </div>
                             </div>
                             <div class="row-fluid">
-                                <div class="span8 offset2 banner-description light-text">
-                                   Open Budgets India brings new dashboards for exploring Union, State and District level fiscal data. These dashboards help you navigate through data, visualizations and insights from various tiers of government. 
+                            <div class="dashboard-cards-container">
+                                <div class="dashboard-card tall card-width">
+                                    <div class="right-aligned card-container">
+                                        <div class="image-container bubble-chart">
+
+                                        </div>
+                                        <div class="text-container">
+                                            <h4>
+                                                Explore the latest Himachal Pradesh Fiscal Data Explorer
+                                            </h4>
+                                            <p>A unique tool where citizens can explore budgets and spending data of state 
+                                                governments and district treasuries in a comprehensible and easy-to-use interface
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards-group-flex-column card-width ml-2">
+                                    <div class="dashboard-card">
+                                        <div class="left-aligned card-container">
+                                            <div class="text-container">
+                                                <h4>Union Budget Explorer 2020 - 2021</h4>
+                                                <p>Explore the comprehensive money flow data of the Union Budget 2020-21</p>
+                                            </div>
+                                            <div class="image-container line-chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-card">
+                                        <div class="left-aligned card-container">
+                                            <div class="text-container">
+                                                <h4>Union Budget Explorer 2019 - 2020</h4>
+                                                <p>Explore the comprehensive money flow data of the Union Budget 2019 - 20</p>
+                                            </div>
+                                            <div class="image-container pie-chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row-fluid">
-                            <div class="container">
-                                <div class="span3">
+                            <div class="dashboard-cards-container mt-2">
+                                <div class="dashboard-card card-width">
+                                    <div class="left-aligned card-container card-row-mobile">
+                                        <div class="text-container">
+                                            <h4>Assam Budget Explorer 2020-2021</h4>
+                                            <p>Explore the comprehensive money flow data for Assam</p>
+                                        </div>
+                                        <div class="image-container area-chart">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards-group-flex-row ml-2">
+                                    <div class="dashboard-card card-width-small">
+                                        <div class="left-aligned card-container">
+                                            <div class="text-container">
+                                                <h4>Assam Budget Explorer 2019-2020</h4>
+                                                <p></p>
+                                            </div>
+                                            <div class="image-container square-chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-card card-width-small ml-2">
+                                        <div class="left-aligned card-container">
+                                            <div class="text-container">
+                                                <h4>Union Budget Explorer 2018 - 2019</h4>
+                                                <p></p>
+                                            </div>
+                                            <div class="image-container bar-chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="span3">
                                     <h2>Union Budget Explorer</h2>
                                     <h4>2020-21</h4>
                                     <div class="btn-group" role="group" aria-label="Explore">
@@ -76,79 +166,93 @@
                                         </a>
                                     </div>  
                                 </div>
-                                
+                                 -->
                             </div>
+                            </div>
+                            <div class="row-fluid mt-2 text-center">
+                                <button class="dashboards-button home-primary-button">View All Dashboards<img class="button-arrow-right" src="arrow-right-white.svg" /></button>
                             </div>
                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class=" bg-grey features-banner">
-                <div class="container">
-                    <div class=" row text-center">
-                        <div class="span8 offset2">
-                            <h2 class="banner-head">Key Features</h2>
-                            <br>
-                            <div class="banner-head-tagline">Budget Documents and much more!</div>
-                        </div>
-                        <div class=" feature-container">
-                            <div class="span3">
-                                <a href="/dataset?res_format=PDF" target="_blank">
-                                <img class="banner-image" alt="Explore Budget Documents (PDFs)" src="Budget_doc_icon-17.png">
-                                <div class=" icons_support_text">Budget Documents (PDFs)
-                                    
-                                </div>
-                            </a>
-                            </div>
-                            <div class="span3">
-                                <a href="/dataset?res_format=CSV">
-                                <img class="banner-image" alt="Explore machine readable Datasets" src="Key_features_icon-22.png">
-                                <div class=" icons_support_text">
-                                    Machine Readable Datasets 
-                                </div>
-                            </a>
-                            </div>
-                            <div class="span3">
-                                <a href="/dataset?tags=Visualization">
-                                <img class="banner-image" alt="Explore Data Visualizations" src="Key_features_icon-23.png">
-                                <div class=" icons_support_text">
-                                    Data Visualizations
-                                </div>
-                            </a>
-                            </div>
-                            <div class="span3">
-                                <a href="/budget-basics/" target="_blank">
-                                <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png">
-                                <div class=" icons_support_text">
-                                    Budget Basics
-                                </div>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
         </div>
         <div class="row-fluid">
             <div class="bg-white level-of-governance">
-                <div class="container">
-                    <div class="row-fluid">
-                        <div class="levelgov-cont-header">
-                            <h2>Tiers of Government</h2>
+                <!-- <div class="container"> -->
+                    <div class="hompepage-section-intro-text-container">
+                        <div class="row-fluid">
+                            <div class="levelgov-cont-header">
+                                <h2 class="homepage-section-heading">Government-wise Budget Data</h2>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="levelgov-cont-descr banner-description">
+                                <h3 class="homepage-section-text">
+                                    Explore budget data for different levels of government. In India, the 
+                                    budget data is available for three levels of government: Union, State and Local, the 
+                                    latter being either urban or rural.
+                                </h3>
+                            </div>
                         </div>
                     </div>
                     <div class="row-fluid">
-                        <div class="span8 offset2 levelgov-cont-descr">
-                            <p>
-                                Tiers of government refer to distinct levels of government set up for a particular country. In India, there are three tiers of government: Union, State and Local, the latter being either urban or rural.</p>
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <ul class="thumbnails">
-                            <li class="span2 offset1 ">
+                        <!-- <ul class="thumbnails"> -->
+                            <div class="govt-tiers-cards-container">
+                                <div class="govt-tier-card">
+                                        <div class="image-container combined-budget">
+
+                                        </div>
+                                        <div class="text-container">
+                                            <h4>
+                                                Combined Budget
+                                            </h4>
+                                            <h4 class="homepage-section-text">(Union & States)</h4>
+                                        </div>
+                                </div>
+                                <div class="govt-tier-card ml-30">
+                                    <div class="image-container union-budget">
+
+                                    </div>
+                                    <div class="text-container">
+                                        <h4>
+                                            Union Budget
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="govt-tier-card ml-30">
+                                    <div class="image-container states-budget">
+
+                                    </div>
+                                    <div class="text-container">
+                                        <h4>
+                                            State Budgets
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="govt-tier-card ml-30">
+                                    <div class="image-container district-treasuries">
+
+                                    </div>
+                                    <div class="text-container">
+                                        <h4>
+                                            District Treasury Flows
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="govt-tier-card ml-30">
+                                    <div class="image-container municipal-budget">
+
+                                    </div>
+                                    <div class="text-container">
+                                        <h4>
+                                            Municipal Corporation Budgets
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <li class="span2 offset1 ">
                                 <a href="/organization/about/combined-budget">
                                     <div class="thumbnail">
                                         <img src="CB-09.png" alt="Combined Budget (Union & States) Datasets">
@@ -188,13 +292,190 @@
                                     </div>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="bg-grey features-banner">
+                <!-- <div class="container"> -->
+                    <!-- <div class=" row text-center"> -->
+                        <div class="key-features-section">
+                            <div class="intro-section-row">
+                                <div class="hompepage-section-intro-text-container">
+                                    <div class="row-fluid">
+                                            <h2 class="homepage-section-heading">Key Features</h2>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="banner-description">
+                                            <h3 class="homepage-section-text">
+                                                Budget Documents and much more!
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hompepage-section-intro-text-container budget-basics">
+                                    <div class="row-fluid">
+                                            <h2 class="homepage-section-heading">Budget Basics</h2>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="banner-description">
+                                            <h3 class="homepage-section-text">
+                                                Learn all about government budgets from our step-by-step guide!
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section-row">
+                                <div class="feature-container">
+                                    <div class="feature">
+                                        <div class="image-container pdf-icon">
+                                            <!-- <img class="banner-image" alt="Explore Budget Documents (PDFs)" src="Budget_doc_icon-17.png"> -->
+                                        </div>
+                                        <div class="text-container">
+                                            <h4>
+                                                <a href="/dataset?res_format=PDF" target="_blank">
+                                                    Budget Documents (PDFs)
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="feature ml-24">
+                                        <div class="image-container dataset-icon">
+                                            <!-- <img class="banner-image" alt="Explore machine readable Datasets" src="Key_features_icon-22.png"> -->
+                                        </div>
+                                        <div class="text-container mt-8">
+                                            <h4>
+                                                <a href="/dataset?res_format=CSV" target="_blank">
+                                                    Machine Readable Datasets
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="feature ml-24">
+                                        <div class="image-container visualisation-icon">
+                                            <!-- <img class="banner-image" alt="Explore Data Visualizations" src="Key_features_icon-23.png"> -->
+                                        </div>
+                                        <div class="text-container">
+                                            <h4>
+                                                <a href="/dataset?tags=Visualization" target="_blank">
+                                                    Data Visualizations
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="budget-basics-card">
+                                    <div class="image-container">
+                                        <!-- <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png"> -->
+                                        <a href="/budget-basics/" target="_blank" class="link-button">Get Started <img class="button-arrow-right" src="arrow-right-purple.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="budget-basics-section-mobile ml-2">
+                            <div class="hompepage-section-intro-text-container">
+                                <div class="row-fluid">
+                                        <h2 class="homepage-section-heading">Budget Basics</h2>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="banner-description">
+                                        <h3 class="homepage-section-text">
+                                            Learn all about government budgets from our step-by-step guide!
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="budget-basics-card">
+                                <div class="image-container">
+                                     <!-- <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png">  -->
+                                    <a href="/budget-basics/" target="_blank" class="link-button">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <a href="/dataset?res_format=PDF" target="_blank">
+                                <img class="banner-image" alt="Explore Budget Documents (PDFs)" src="Budget_doc_icon-17.png">
+                                <div class="icons_support_text">Budget Documents (PDFs)</div>
+                            </a>
+                            <a href="/dataset?res_format=CSV">
+                                <img class="banner-image" alt="Explore machine readable Datasets" src="Key_features_icon-22.png">
+                                <div class=" icons_support_text">
+                                    Machine Readable Datasets 
+                                </div>
+                            </a>
+                            <a href="/dataset?tags=Visualization">
+                                <img class="banner-image" alt="Explore Data Visualizations" src="Key_features_icon-23.png">
+                                <div class=" icons_support_text">
+                                    Data Visualizations
+                                </div>
+                            </a>
+                            <a href="/budget-basics/" target="_blank">
+                                <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png">
+                                <div class=" icons_support_text">
+                                    Budget Basics
+                                </div>
+                            </a> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="case-studies-section">
+                <div class="hompepage-section-intro-text-container">
+                    <div class="row-fluid">
+                            <h2 class="homepage-section-heading">New Developments on Budget Transparency and Accountability</h2>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="banner-description">
+                            <h3 class="homepage-section-text">
+                                See how people are using Open Budgets for better advocacy.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-studies-cards-container">
+                    <div class="case-studies-card">
+                        <div class="right-aligned card-container">
+                            <div class="image-container">
+
+                            </div>
+                            <div class="text-container">
+                                <h4>
+                                    Are Assam’s correctional homes equipped to fight COVID 19?
+                                </h4>
+                                <p>
+                                    As the nation prepares to go into the second week of lockdown, the 
+                                    news cycle remains dominated by the COVID 19 pandemic that is fast 
+                                    gripping every corner of the world...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-studies-card ml-2">
+                        <div class="right-aligned card-container">
+                            <div class="image-container">
+
+                            </div>
+                            <div class="text-container">
+                                <h4>
+                                    Are Assam’s correctional homes equipped to fight COVID 19?
+                                </h4>
+                                <p>
+                                    As the nation prepares to go into the second week of lockdown, the 
+                                    news cycle remains dominated by the COVID 19 pandemic that is fast 
+                                    gripping every corner of the world...
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="row-fluid">
+        <!-- <div class="row-fluid">
             <div class="bg-grey sectors-clusters-container">
                 <div class="container">
                     <div class="row ">
@@ -417,8 +698,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
 </div>
 {#
 <div class="blog-banner">
