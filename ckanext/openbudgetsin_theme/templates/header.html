@@ -6,60 +6,48 @@
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
     {% endif %}
   {% endblock %}#}
-  <div class="container-fluid nav-container">
-    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button" aria-hidden="true"  aria-label="Expand navigation bar" aria-controls="navbar">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    {# The .header-image class hides the main text and uses image replacement for the title #}
-    <hgroup class="{{ g.header_class }} pull-left">
-
-      {% block header_logo %}
-        {% if g.site_logo %}
-          <a class="logo" href="{{ h.url('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="Open Budgets India header logo" title="{{ g.site_title }}" /></a>
-        {% else %}
-          <h1>
-            <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
-          </h1>
-          {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
-        {% endif %}
-      {% endblock %}
-
-    </hgroup>
+  <div class="nav-container">
+    <div class="d-flex align-center mobile-menu-navbar-content">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="mobile-menu-btn" type="button" aria-hidden="true"  aria-label="Expand navigation bar" aria-controls="navbar">
+        <!-- <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> -->
+        <img src="mobile-menu-hamburger-icon.svg" alt="Mobile Menu Icon" />
+      </button>
+      {# The .header-image class hides the main text and uses image replacement for the title #}
+      <hgroup class="{{ g.header_class }}">
+  
+        {% block header_logo %}
+          {% if g.site_logo %}
+            <a class="logo" href="{{ h.url('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="Open Budgets India header logo" title="{{ g.site_title }}" /></a>
+          {% else %}
+            <h1>
+              <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
+            </h1>
+            {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
+          {% endif %}
+        {% endblock %}
+  
+      </hgroup>
+      <span class="screen-reader-icon-seperator"></span>
+      <img src="screen-reader.svg" alt="Screen Reader Icon" class="screen-reader-icon"/>
+    </div>
 
     <div class="nav-collapse collapse">
 
       {% block header_site_navigation %}
         <nav role="navigation" class="section navigation">
           <ul class="nav nav-pills">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Portal<b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-            <li><a href="/pages/how-to-use-the-portal">How to Use</a></li>
-            <li><a href="/pages/faqs">FAQs</a></li>
-            <li><a href="/about">About Us</a></li>
-            </ul>
-           
-
-            </li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datasets<b class="caret"></b></a>
+            <li class="dropdown ml-0">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">OBI Portal<img class="nav-link-caret" src="./arrow/caret-down-white.svg" /></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                <li>
-                  <a href="/organization">By Tiers of Government</a>
-                </li>
-                <li><a href="/group">By Sectors</a></li>
-                <li><a href="/dataset">All Datasets</a></li>
+              <li><a href="/pages/how-to-use-the-portal">How to Use</a></li>
+              <li><a href="/pages/faqs">FAQs</a></li>
+              <li><a href="/about">About Us</a></li>
               </ul>
-              
-
-              
-
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboards<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboards <img class="nav-link-caret" src="./arrow/caret-down-white.svg" /></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                 <li><a href="https://union2020.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2020-21<sup>NEW</sup></a></li>
                 <li><a href="https://union2019.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20</a></li>
@@ -70,16 +58,25 @@
                 <li><a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">Balasore District Treasury Dashboard<sup>NEW</sup></a></li>
                 <li><a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">Krishna District Treasury Dashboard<sup>NEW</sup></a></li>
               </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Budget Datasets<img class="nav-link-caret" src="./arrow/caret-down-white.svg" /></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li>
+                  <a href="/organization">By Tiers of Government</a>
+                </li>
+                <li><a href="/group">By Sectors</a></li>
+                <li><a href="/dataset">All Datasets</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/budget-basics/" target="_blank" class="home-primary-button budget-basics-btn">
+                <span>Budget Basics</span>
+              </a>
+            </li>
 
-              
-              <li><a href="/budget-basics/" target="_blank">Budget Basics</a></li>
-
-            
-
-            
         
-            {#<li><a href="https://blog.openbudgetsindia.org/" target="_blank">Blogs</a></li>
-            #}
+            {#<li><a href="https://blog.openbudgetsindia.org/" target="_blank">Blogs</a></li>#}
 
             {% if c.userobj %}
             <li class="dropdown">
@@ -155,15 +152,16 @@
         </nav>
       {% endblock %}
     </div>
+    <a href="/budget-basics/" target="_blank" class="home-primary-button budget-basics-btn btn-tab">
+      <span>Budget Basics</span>
+    </a>
   </div>
 
   {% block header_account %}
-
-    <div class="container">
+    {#<div class="container">
       
-    </div>
-
-{% endblock %}
+    </div>#}  
+  {% endblock %}
 
 </header>
 {% endblock %}

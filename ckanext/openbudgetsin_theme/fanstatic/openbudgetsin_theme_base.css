@@ -1169,3 +1169,170 @@ p.org-media-descrp {
 }
 
 
+
+    /********* Header Section *********/
+    .masthead{
+        min-height: auto;
+        padding: 20px 80px;
+        background: #0F1525;
+    }
+    .navbar .nav-container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile-menu-btn{
+        background: none;
+        outline: none;
+        border: none;
+    }
+    .mobile-menu-btn img{
+        width: 24px;
+        height: 15px;
+    }
+    .nav-container .header-image .logo img{
+        margin-left: 0;
+        height: 40px;
+    }
+    nav.section.navigation{
+        margin-right: 0;
+    }
+    .masthead .nav-collapse{
+        float: none;
+    }
+    .navbar .nav-pills  li{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 44px;
+    }
+    .navbar .nav-pills  li.ml-0{
+        margin-left: 0;
+    }
+    .navbar .nav-pills .nav-link-caret{
+        width: 24px;
+        height: 24.2px;
+        margin-left: 4px;
+    }
+
+    /** When dropdown is active - color or nav link **/
+    .navbar .nav li.dropdown.open>.dropdown-toggle {
+        background: none;
+        color: #FFFFFF;
+    }
+    .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+        color: #FFFFFF;
+        background: none;
+    }
+    .home-primary-button{
+        box-sizing: border-box;
+        background: #4B4797;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .home-primary-button:hover{
+        border: 2px solid#4B4797;
+        color: #4B4797;
+        background: #FFFFFF;
+        background-color: transparent;
+    }
+    .dashboards-button.home-primary-button:hover{
+        border: 2px solid#4B4797;
+        color: #4B4797;
+        background: #FFFFFF;
+        background-color: transparent;
+    }
+    .dashboards-button.home-primary-button:focus{
+        background: #273051;
+        border: 2px dashed #A090FF;
+    } */
+    .navbar .nav>li>a{
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .budget-basics-btn{
+        width: 140px;
+        height: 40px;
+    }
+    .btn-tab{
+        display: none;
+    }
+    .navbar .mobile-menu-btn{
+        display: none;
+    }
+    .navbar .nav-container .screen-reader-icon-seperator{
+        /* display: inline-block; */
+        height: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        margin: 0 16px;
+    }
+    .navbar .nav-container .screen-reader-icon{
+        width: 24px;
+        height: 24px;
+    }
+    @media(min-width: 1440px){
+        .navbar .nav-container{
+            max-width: 1312px;
+            min-width: 1120px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @media(max-width: 1279px){
+        .masthead{
+            padding: 20px 16px 20px 24px;
+        }
+        .navbar .nav-container{
+            max-width: 1120px;
+            min-width: 728px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .navbar .mobile-menu-btn {
+            display: block;
+            margin-right: 20px;
+        }
+        .btn-tab{
+            display: flex;
+        }
+        .nav-collapse, .nav-collapse.collapse {
+            overflow: hidden;
+            height: 0;
+            width: 0;
+        }
+        .nav-collapse {
+            clear: both;
+        }
+    }
+    @media(min-width: 360px) and (max-width: 767px){
+
+        .masthead{
+            padding: 20px 24px 20px 24px;
+        }
+        .navbar .nav-container{
+            max-width: 720px;
+            min-width: 272px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .btn-tab{
+            display: none;
+        }
+        .mobile-menu-navbar-content{
+            width: 100%;
+            justify-content: space-between;
+        }
+        .navbar .mobile-menu-btn{
+            margin-right: 0;
+        }
+        .navbar .nav-container .screen-reader-icon-seperator{
+            display: none;
+        }
+    }
+
