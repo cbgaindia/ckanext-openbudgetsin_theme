@@ -1170,6 +1170,213 @@ p.org-media-descrp {
 
 
 
+    /**** Search Section ***/
+.top-container{
+    padding: 64px 272px;
+}
+.homepage-container .top-container .container{
+    width: 736px;
+}
+
+h2.home-tagline{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 130%;
+    width: 90%;
+    color: #000000;
+}
+.homepage-container .text-align-center{
+    text-align: center;
+    text-align: -moz-center;
+    text-align: -webkit-center;
+}
+.searchbar-container{
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 8px;
+    margin-top: 40px;
+}
+.module-content{
+    padding: 0px;
+}
+.module-content:first-child {
+    margin-top: 0;
+    padding-top: 0px;
+}
+.form.module-content.search-form{
+    padding: 0 !important;
+}
+.search-form{
+    margin-bottom: 0px;
+}
+.search-form .search-input{
+    margin-bottom: 0px;
+}
+.search-input{
+    background: #F0F3F5;
+    border-radius: 8px;
+    padding: 8px 8px 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-container .search-form .search-input.search-giant input{
+    box-shadow: none;
+}
+.search-form .search-input.search-giant input{
+    padding: 0px;
+    background: none;
+    border: none;
+}
+.search-form .search-input input{
+    width: 70%;
+}
+.search-form .search-input.search-giant button{
+    margin-top: 0px;
+    right: 0px;
+    height: 48px;
+}
+.search-form .search-input button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 125px;
+    height: 48px;
+    background: rgba(13, 16, 24, 0.4);
+    border-radius: 4px;
+}
+.search-form .search-input .search-button-mobile{
+    display: none;
+}
+.search-form .search-input .search-button-desktop{
+    display: block;
+}
+.search-form .search-input.search-giant button img{
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+}
+.search-form .search-input button span{
+    display: inline;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+.searchbar-container .quick-links{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+.searchbar-container .quick-links span{
+    color: rgba(13, 16, 24, 0.64);
+}
+.searchbar-container .quick-links a{
+    color: #4B4797;
+}
+.link-color{
+    color: #4B4797;
+}
+.ml-8{
+    margin-left: 8px;
+}
+.ml-4{
+    margin-left: 4px;
+}
+
+@media(min-width: 1440px){
+    .top-container{
+        /* padding: 64px 528px; */
+        max-width: 864px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2.home-tagline{
+        /* max-width: 864px    ; */
+        width: 75%;
+    }
+    .searchbar-container{
+        /* box-sizing: border-box;
+        max-width: 864px; */
+    }
+}
+
+@media(max-width: 1279px){
+    .top-container{
+        padding: 48px 56px;
+    }   
+    h2.home-tagline{
+        width: 60%;
+    }
+    @media  (min-width: 1020px) and (max-width: 1140px){
+        h2.home-tagline{
+            width: 68%;
+        }
+    }
+    @media  (min-width: 930px) and (max-width: 1019px){
+        h2.home-tagline{
+            width: 80%;
+        }
+    }
+    @media  (min-width: 850px) and (max-width: 930px){
+        h2.home-tagline{
+            width: 85%;
+        }
+    }
+    @media  (min-width: 768px) and (max-width: 849px){
+        h2.home-tagline{
+            width: 95%;
+        }
+    }
+}
+
+@media  (max-width: 767px){
+    .top-container{
+        padding: 48px 16px;
+    } 
+    h2.home-tagline{
+        width: 100%;
+    }
+    .searchbar-container{
+        margin-top: 32px;
+    }
+    .search-input{
+        padding: 8px 16px;
+    }
+    .search-form .search-input input{
+        width: 80%;
+    }
+    .search-form .search-input .search-button-desktop{
+        display: none;
+    }
+    .search-form .search-input .search-button-mobile{
+        display: block;
+    }
+    .search-form .search-input button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        background: none;
+        border-radius: 0px;
+    }
+    .search-form .search-input.search-giant button img{
+        font-size: 24px;
+        height: 24px;
+        width: 24px;
+    }
+    .searchbar-container .quick-links{
+        display: none;
+    }
+
+}
+
     /**** Footer Section ****/
 
     .site-footer{
