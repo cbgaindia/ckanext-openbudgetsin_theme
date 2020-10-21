@@ -1170,6 +1170,211 @@ p.org-media-descrp {
 
 
 
+    /**** Footer Section ****/
+
+    .site-footer{
+        background: #0F1525;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+        padding: 0;
+    }
+    .site-footer a{
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+    .footer-links-container{
+        display: flex;
+        max-width: 1272px;
+        margin-right: auto;
+        margin-left: auto;
+        /* justify-content: space-between; */
+        padding: 40px 80px 40px 120px;
+    }
+    .footer-links-container .site-logo{
+        margin-top: 40px;
+        margin-right: 168px;
+        width: 271.7px;
+        height: 160px;
+        /* background-color: #FFFFFF; */
+    }
+    .footer-links-container .site-logo{
+        /* background-color: #FFFFFF; */
+        background-image: url("../../../obi-footer-square-logo.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .footer-links-container .footer-links{
+        display: flex;
+    }
+    .footer-links-container h4{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .footer-links-container .footer-links .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links-container .footer-links .links a{
+        margin-top: 16px;
+    }
+    .footer-links-container .footer-links .dashboard-links{
+        width: 256px;
+    }
+    .footer-links-container .footer-links .dataset-links, .footer-links-container .footer-links .platform-links{
+        width: 160px;
+    }
+    .site-footer .attribution-container{
+        background: #273051;
+        padding: 0 80px;
+    }
+    .site-footer .attribution-container .attribution-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 48px;
+    }
+    .site-footer .attribution-container .links-container{
+        display: flex;
+        align-items: center;
+    }
+    .site-footer .attribution-container .links-container a{
+        font-size: 12px;
+        line-height: 130%;
+    }
+    .site-footer .attribution-container .logos-container{
+        display: flex;
+    }
+    .site-footer .attribution-container .attribution-logos{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 388px;
+    }
+    .site-footer .attribution-container .attribution-logos .cc{
+        width: 68px;
+        height: 24px;
+        /* background: #FFFFFF; */
+        background-image: url("../../../cc-by-logo.svg");
+        background-position: center;
+        background-size: cover;
+    }
+    .site-footer .attribution-container .attribution-logos .oss{
+        width: 24px;
+        height: 24px;
+        /* background: #FFFFFF; */
+        background-image: url("../../../oss-logo.svg");
+        background-position: center;
+        background-size: cover;
+    }
+    .site-footer .attribution-container .social-media-links .link{
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        /* background: #FFFFFF; */
+        background-position: center;
+        background-size: cover;
+    }
+    .site-footer .attribution-container .social-media-links .github{
+        width: 20px;
+        background-image: url("../../../github-icon.svg");
+    }
+    .site-footer .attribution-container .social-media-links .twitter{
+        background-image: url("../../../twitter-icon.svg");
+    }
+    .site-footer .attribution-container .social-media-links .facebook{
+        background-image: url("../../../facebook-icon.svg");
+    }
+    @media(min-width: 1440px){
+        .footer-links-container .site-logo{
+            margin-right: 136px;
+        }
+        .footer-links-container .footer-links .links-container.ml-2{
+            margin-left: 40px;
+        }
+        .footer-links-container .footer-links .dashboard-links{
+            min-width: 256px;
+            max-width: 320px;
+            width: auto;
+        }
+        .footer-links-container .footer-links .dataset-links, .footer-links-container .footer-links .platform-links{
+            min-width: 160px;
+            max-width: 240px;
+            width: auto;
+        }
+        .site-footer .attribution-container .attribution-content{
+            max-width: 1312px;
+            min-width: 1120px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @media(max-width:1279px){
+        .footer-links-container{
+            padding: 40px;
+            flex-direction: column;
+        }
+        .footer-links-container .site-logo{
+            margin: 0 auto 40px auto;
+            width: 302.56px;
+            height: 40px;
+            background-image: url("../../../obi-footer-horizontal-logo.svg");
+        }
+        .footer-links-container .footer-links{
+            justify-content: space-between;
+        }
+        .site-footer .attribution-container{
+            padding: 0 40px;
+        }
+        .site-footer .attribution-container .attribution-logos{
+            margin-left: auto;
+            margin-right: 85px;
+        }
+    }
+    @media(min-width: 360px) and (max-width: 767px){
+        .footer-links-container{
+            padding: 40px 48px 48px 48px;
+        }
+        .footer-links-container .site-logo{
+            width: 242px;
+            height: 32px;
+        }
+        .footer-links-container .footer-links{
+            margin-right: auto;
+            margin-left: auto;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+        .footer-links-container .footer-links .links-container.ml-2{
+            margin-left: 0px;
+            margin-top: 48px;
+        }
+        .footer-links-container .footer-links .dashboard-links, 
+        .footer-links-container .footer-links .dataset-links, 
+        .footer-links-container .footer-links .platform-links{
+            width: 264px;
+        }
+        .site-footer .attribution-container{
+            padding: 24px 32px;
+        }
+        .site-footer .attribution-container .attribution-content{
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+        }
+        .site-footer .attribution-container .logos-container{
+            margin-top: 24px;
+        }
+        .site-footer .attribution-container .attribution-logos{
+            margin-left: 0px;
+            margin-right: 35px;
+        }
+
+    }
+
     /********* Header Section *********/
     .masthead{
         min-height: auto;
