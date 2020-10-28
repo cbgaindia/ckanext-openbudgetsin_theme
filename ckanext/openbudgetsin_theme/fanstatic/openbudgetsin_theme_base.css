@@ -1267,6 +1267,7 @@ p.org-media-descrp {
     outline: none;
     border: none;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 80%;
 }
 .trending-list-pagination-container .pagination-button.left{
@@ -1294,7 +1295,7 @@ p.org-media-descrp {
 }
 @media  (max-width: 1279px){
     .latest-highlights-container{
-        padding: 16px;
+        padding: 16px 56px;
     }
     .grid-container{
         display: block;
@@ -1316,6 +1317,9 @@ p.org-media-descrp {
         font-size: 16px;
     }   
     @media  (max-width: 767px){
+        .latest-highlights-container{
+            padding: 16px;
+        }
         .trending-title-container{
             width: 80%;
         }

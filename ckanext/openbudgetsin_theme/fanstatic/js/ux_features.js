@@ -4,24 +4,24 @@
 
 const trendingList = [
     {
-        title: "Introducing the new Himachal Pradesh Fiscal Data Explorer",
-        link: "https://hp.openbudgetsindia.org/"
+        title: "Get Union Budget 2020-21 data in CSV, XLSX & PDF formats",
+        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2020"
     },
     {
-        title: "Content2",
-        link: ""
+        title: "Access Assam Budget Data for FY 2020-21 in CSV, XLSX and PDF formats",
+        link: "https://openbudgetsindia.org/organization/about/assam"
     },
     {
-        title: "Content3",
-        link: ""
+        title: "Download Maharashtra Budget Documents for FY 2020-21 and previous years",
+        link: "https://openbudgetsindia.org/organization/about/maharashtra"
     },
     {
-        title: "Content4",
-        link: ""
+        title: "Get Odisha Budget Documents for FY 2020-21 and previous years",
+        link: "https://openbudgetsindia.org/organization/about/odisha"
     },
     {
-        title: "Content5",
-        link: ""
+        title: "Access Rajasthan Budget Documents for FY 2020-21 and previous years",
+        link: "https://openbudgetsindia.org/organization/about/rajasthan"
     }
 ]
 let activeIndex = 1
@@ -40,9 +40,9 @@ rightButton.addEventListener('click', () => {
     handleRightButtonClick()
 })
 
-// setInterval(() => {
-//     handleAutoChangeTrendingList()
-// }, 5000);
+setInterval(() => {
+    handleAutoChangeTrendingList()
+}, 5000);
 
 const handleLeftButtonClick = () => {
     if(activeIndex === trendingList.length){
@@ -97,7 +97,6 @@ const handleLastChangeFlag = () => {
 
 // Function for self changing 
 const handleAutoChangeTrendingList = () => {
-    console.log('inside auto change trending list')
     if(!lastChangeFlag){
         if(activeIndex === trendingList.length){
             activeIndex = 1
