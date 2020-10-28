@@ -2546,13 +2546,23 @@ h2.home-tagline{
         background-position: center;
         background-size: cover;
     }
+    .site-footer .attribution-container .attribution-logos .logo{
+        position: relative;
+    }
+    .site-footer .attribution-container .attribution-logos .card-link-container{
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+    }
     .site-footer .attribution-container .attribution-logos .oss{
-        width: 24px;
+        width: 80px;
         height: 24px;
         /* background: #FFFFFF; */
-        background-image: url("../../../oss-logo.svg");
+        background-image: url("../../../open_data_logo.png");
         background-position: center;
-        background-size: cover;
     }
     .site-footer .attribution-container .social-media-links .link{
         display: inline-block;
