@@ -1376,11 +1376,16 @@ h2.home-tagline{
 }
 .search-input{
     background: #F0F3F5;
+    border: 1px solid transparent;
     border-radius: 8px;
     padding: 8px 8px 8px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#home-search-input:focus .search-input{
+    background: #FFFFFF;
+    border: 1px solid #4B4797;
 }
 
 .top-container .search-form .search-input.search-giant input{
@@ -1406,8 +1411,19 @@ h2.home-tagline{
     position: relative;
     width: 125px;
     height: 48px;
+    border: 2px solid transparent;
     background: rgba(13, 16, 24, 0.4);
     border-radius: 4px;
+}
+.search-form .search-input button.active{
+    background: #4B4797;
+}
+.search-form .search-input button.active:hover{
+    border: 2px solid #A090FF;
+}
+.search-form .search-input button.active:focus{
+    background: #273051;
+    border: 2px solid #4B4797;
 }
 .search-form .search-input .search-button-mobile{
     display: none;

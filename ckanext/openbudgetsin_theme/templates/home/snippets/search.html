@@ -1,29 +1,29 @@
 {% set tags = h.get_facet_items_dict('tags', limit=3) %}
-{% set placeholder = _('Search from 11,000 datasets') %}
+{% set placeholder = _('Search from 11000 datasets') %}
 
 <div class="searchbar-container">
 <!-- <h2 class="home-tagline"> Making India's Budgets open, usable and easy to comprehend</h2> -->
   <form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
     <!--<h3 class="heading">{{ _("Search data") }}</h3>-->
     <div class="search-input control-group search-giant">
-      <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}"  aria-label="Search for Datasets"/>
-      <button type="submit" class="search-button-desktop">
+      <input id="home-search-input" type="text" class="search" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}"  aria-label="Search for Datasets"/>
+      <button type="submit" id="home-search-button" class="search-button-desktop">
         <!-- <i class="icon-search"></i> -->
         <img src="home-search-icon-white.svg" />
         <span>{{ _('Search') }}</span>
       </button>
-      <button type="type" class="search-button-mobile">
+      <button type="type" id="home-search-button" class="search-button-mobile">
         <img src="home-search-icon-grey.svg" />
       </button>
     </div>
   </form>
   <div class="quick-links">
     <span class="ml-8">Quick Links:</span>
-    <a class="ml-8">#maharashtra</a>
+    <a href="https://openbudgetsindia.org/dataset?q=maharashtra" target="_blank" class="ml-8">#maharashtra</a>
     <span class="ml-4 link-color">.</span>
-    <a class="ml-4">#police</a>
+    <a href="https://openbudgetsindia.org/dataset?q=police" target="_blank" class="ml-4">#police</a>
     <span class="ml-4 link-color">.</span>
-    <a class="ml-4">#union budget 2020-21</a>
+    <a href="https://openbudgetsindia.org/dataset?q=union+budget+2020-21" target="_blank" class="ml-4">#union budget 2020-21</a>
   </div>
   <!--
   <div class="tags">

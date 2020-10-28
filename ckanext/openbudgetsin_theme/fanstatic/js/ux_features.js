@@ -560,3 +560,22 @@ scrollableContainer.addEventListener('scroll', () => {
 })
 
 
+//########################### Home Search Section ########################
+
+let inputBox = document.getElementById('home-search-input')
+let searchButton = document.getElementById('home-search-button')
+if(inputBox){
+    inputBox.addEventListener('keyup', (e) => {
+        console.log('testing input', e.target.value)
+        let searchText = e.target.value.trim()
+    
+        if(searchText.length){
+            // Active button - remove disable class
+            searchButton.classList.add('active')
+        }
+        else{
+            // Disable button - add disable class
+            searchButton.classList.remove('active')
+        }
+    })
+}
