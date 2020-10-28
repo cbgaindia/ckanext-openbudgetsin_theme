@@ -1583,6 +1583,9 @@ h2.home-tagline{
         border-radius: 12px;
         display: flex;
         justify-content: space-between;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
     .dashboard-cards-container .dashboard-card .right-aligned {
         padding: 8px 16px 8px 8px;   
@@ -1601,6 +1604,12 @@ h2.home-tagline{
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
         /* transition: scale(1.2); */
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container{
@@ -1670,6 +1679,7 @@ h2.home-tagline{
         height: 48px;
         background: #4B4797;
         border-radius: 4px;
+        border: 2px solid transparent;
         margin: 0 auto;
         padding: 0;
         /* font-size: 16px;
@@ -1779,7 +1789,6 @@ h2.home-tagline{
         }
     
     }
-
     @media(min-width: 360px) and (max-width: 767px){
         .intro-new-section{
             padding: 0px 16px 64px 16px;
@@ -1865,6 +1874,16 @@ h2.home-tagline{
         .cards-group-flex-row .card-width-small{
             width: auto;
         }
+        /* @media(min-width: 400px) and (max-width: 500px){
+            .intro-new-section{
+                padding: 0px 2em 64px 2em;
+            }
+        }
+        @media(min-width: 500px) and (max-width: 767px){
+            .intro-new-section{
+                padding: 0px 3em 64px 3em;
+            }
+        } */
     }    
 
     /**** Govt Tiers Section ****/
@@ -1901,12 +1920,21 @@ h2.home-tagline{
         border: 2px solid transparent;
         border-radius: 12px;
         text-align: center;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
     .govt-tiers-cards-container .govt-tier-card:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
+        -moz-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
     }
     .govt-tiers-cards-container .govt-tier-card .image-container{
         width: 184px;
@@ -2039,12 +2067,21 @@ h2.home-tagline{
         border: 2px solid transparent;
         flex-direction: column;
         align-items: center;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
     .key-features-section .feature-container .feature:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     .feature-container .feature .image-container{
         min-width: 144px;
@@ -2084,6 +2121,9 @@ h2.home-tagline{
         border: 2px solid transparent;
         border-radius: 12px;
         margin-left: 32px;
+        -webkit-transition: transform 0.5s ease-in-out;
+        -moz-transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
     .key-features-section .budget-basics-card .image-container{
         position: relative;
@@ -2157,6 +2197,12 @@ h2.home-tagline{
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     .ml-24{
         margin-left: 24px;
@@ -2296,12 +2342,21 @@ h2.home-tagline{
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
         border: 2px solid transparent;
         border-radius: 12px;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
     .case-studies-card .right-aligned:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     .case-studies-card .card-container{
         display: flex;
@@ -2662,6 +2717,7 @@ h2.home-tagline{
         box-sizing: border-box;
         background: #4B4797;
         border-radius: 4px;
+        border: 2px solid transparent;
         font-weight: 400;
         font-size: 16px;
         color: #FFFFFF;
@@ -2669,22 +2725,33 @@ h2.home-tagline{
         align-items: center;
         justify-content: center;
     }
-    /* .home-primary-button:hover{
-        border: 2px solid#4B4797;
-        color: #4B4797;
-        background: #FFFFFF;
-        background-color: transparent;
+    .masthead .navigation .nav-pills li a.home-primary-button:hover{
+        background: #4B4797;
+    }
+    .home-primary-button:hover{
+        border: 2px solid #A090FF;
+        /* color: #4B4797; */
+        /* background: #FFFFFF; */
+        /* background-color: transparent; */
+    }
+    .masthead .navigation .nav-pills li a.home-primary-button:focus,
+    .home-primary-button:focus{
+        background: #273051;
+        border: 2px solid #4B4797;
+        /* color: #4B4797; */
+        /* background: #FFFFFF; */
+        /* background-color: transparent; */
     }
     .dashboards-button.home-primary-button:hover{
-        border: 2px solid#4B4797;
-        color: #4B4797;
-        background: #FFFFFF;
-        background-color: transparent;
+        border: 2px solid #A090FF;
+        /* color: #4B4797; */
+        /* background: #FFFFFF; */
+        /* background-color: transparent; */
     }
     .dashboards-button.home-primary-button:focus{
         background: #273051;
-        border: 2px dashed #A090FF;
-    } */
+        border: 2px solid #4B4797;
+    }
     .navbar .nav>li>a{
         padding: 0;
         display: flex;
