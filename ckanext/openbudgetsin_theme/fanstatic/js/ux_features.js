@@ -547,3 +547,16 @@ const dropdownMenuContent = {
         <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>`,
 }
+
+//########################### Swipe Right Button ########################
+
+let scrollableContainer = document.getElementById('govt-tiers-cards-container')
+
+scrollableContainer.addEventListener('scroll', () => {
+    let swipeButton = scrollableContainer.querySelector('.swipe-right-button')
+    if(swipeButton){
+        swipeButton.style.display = "none"
+    }
+})
+
+
