@@ -1680,22 +1680,22 @@ h2.home-tagline{
         background-repeat: no-repeat;
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.bubble-chart{
-        background-image: url("../../../dashboard-graphics/graphic/bubble.svg");
+        background-image: url("../../../gifs/sequence-scatter.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.line-chart{
-        background-image: url("../../../dashboard-graphics/graphic/line.svg");
+        background-image: url("../../../gifs/sequence-line.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.pie-chart{
-        background-image: url("../../../dashboard-graphics/graphic/pie.svg");
+        background-image: url("../../../gifs/sequence-pie.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.area-chart{
-        background-image: url("../../../dashboard-graphics/graphic/area.svg");
+        background-image: url("../../../gifs/sequence-scatter.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.square-chart{
-        background-image: url("../../../dashboard-graphics/graphic/square.svg");
+        background-image: url("../../../gifs/sequence-square.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.bar-chart{
-        background-image: url("../../../dashboard-graphics/graphic/bar.svg");
+        background-image: url("../../../gifs/sequence-bar.gif");
     }
     .dashboards-button{
         width: 230px;
