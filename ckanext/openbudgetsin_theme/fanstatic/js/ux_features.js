@@ -1,3 +1,5 @@
+
+
 // ######################### Trending Section functionalities ###################################
 
 const trendingList = [
@@ -423,3 +425,118 @@ const mobileMenuContent = {
 
 // ]
 
+
+//###################### Dropdown Functionality ########################
+
+const dropdownElement = document.getElementById('dashboard-dropdown')
+const dropdownContent = document.getElementById('dropdown-menu-content')
+
+dropdownElement.addEventListener('click', (e) => {
+    console.log('testing e target for dropdown', e.target.classList, e)
+    if(e.target.className.includes('dropdown-menu-link')){
+        e.stopPropagation()
+    }
+})
+
+const handleUpdateDropdownContent = (id) => {
+    // dropdownContent.classList.add('fade-out');
+    // setTimeout(() => {
+        // dropdownContent.classList.remove('fade-out')
+        // dropdownContent.innerHTML = dropdownMenuContent[id]
+        dropdownElement.innerHTML = dropdownMenuContent[id]
+        handleAddEventListenerForDropdown()
+        handleBackButtonForDropdown()
+    // }, 400);
+}
+const handleBackButtonForDropdown = () => {
+    let dropdownBackButton = document.querySelector('.dropdown-menu-back-button')
+    if(dropdownBackButton){
+        dropdownBackButton.addEventListener('click', () => {
+            handleUpdateDropdownContent(dropdownBackButton.id)
+        })
+    }
+}
+const handleAddEventListenerForDropdown = () => {
+    let dropdownLinks = document.querySelectorAll(".dropdown-menu-link")
+    dropdownLinks.forEach(link => link.addEventListener('click', (e) => {
+        handleUpdateDropdownContent(link.id)
+    }));
+}
+
+handleAddEventListenerForDropdown()
+
+
+
+
+const dropdownMenuContent = {
+    dashboards: 
+    `<li class="dropdown-menu-link" id="unionDashboards">
+        <a href="#" class="dropdown-menu-link">Union Dashboards</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    </li>
+    <li class="dropdown-menu-link" id="stateDashboards">
+        <a href="#" class="dropdown-menu-link">State Dashboards</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    </li>
+    <li class="dropdown-menu-link" id="districtDashboards">
+        <a href="#" class="dropdown-menu-link">District Dashboards</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    </li>`,
+
+    unionDashboards: 
+    `
+    <div class="dropdown-title-bar">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
+        <span>Union Dashboards</span>
+    </div>
+    <li>
+        <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2020-21</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20(I)</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+    <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2018-19</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>`,
+
+    stateDashboards: 
+    `
+    <div class="dropdown-title-bar">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
+        <span>State Dashboards</span>
+    </div>
+    <li>
+        <a href="#">Himachal Pradesh Fiscal Data Explorer</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2019-20</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://cbgaindia.github.io/story-generator/" target="_blank">Story Generator</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>`,
+
+    districtDashboards:
+    `
+    <div class="dropdown-title-bar">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
+        <span>District Dashboards</span>
+    </div>
+    <li>
+        <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">Balasore District Treasury Dashboard</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">Krishna District Treasury Dashboard</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>`,
+}
