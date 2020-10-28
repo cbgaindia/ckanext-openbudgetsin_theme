@@ -274,8 +274,12 @@ const mobileMenuContent = {
         <button id="dashboards" class="mobile-menu-back-button"></button>
         <span>State Dashboards</span>
     </div>
-    <a href="#">
+    <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
+      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+    </a>
+    <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">
+      <span>Assam Budget Explorer 2020-21</span> 
       <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">
@@ -513,7 +517,11 @@ const dropdownMenuContent = {
         <span>State Dashboards</span>
     </div>
     <li>
-        <a href="#">Himachal Pradesh Fiscal Data Explorer</a>
+        <a href="https://hp.openbudgetsindia.org/" target="_blank">Himachal Pradesh Fiscal Data Explorer</a>
+        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    </li>
+    <li>
+        <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2020-21</a>
         <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
