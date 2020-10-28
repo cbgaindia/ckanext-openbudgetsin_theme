@@ -1582,6 +1582,9 @@ h2.home-tagline{
     .dashboard-cards-container{
         display: flex;
     }
+    .dashboard-cards-container .dashboard-card{
+        position: relative;
+    }
     .dashboard-cards-container .tall {
         
     }
@@ -1707,6 +1710,14 @@ h2.home-tagline{
         color: #FFFFFF; */
         border: none;
         outline: none;
+    }
+    .dashboard-cards-container .card-link-container{
+        position:absolute; 
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
     }
     .button-arrow-right{
         width: 15px;
@@ -1921,6 +1932,7 @@ h2.home-tagline{
         padding: 0;
     }
     .govt-tiers-cards-container{
+        position: relative;
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -1932,6 +1944,7 @@ h2.home-tagline{
       }
     .govt-tiers-cards-container .govt-tier-card{
         box-sizing: border-box;
+        position: relative;
         width: 200px;
         height: 224px;
         padding: 8px 8px 16px;
@@ -1993,6 +2006,14 @@ h2.home-tagline{
         background-image: url("../../../map/municipal.png");
         background-position: 45% 45%;
         background-size: 130%;
+    }
+    .govt-tier-card .card-link-container{
+        position:absolute; 
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
     }
     .swipe-right-button{
         width: 75px;
@@ -2110,6 +2131,7 @@ h2.home-tagline{
     }
     .key-features-section .feature-container .feature{
         box-sizing: border-box;
+        position: relative;
         padding: 8px 8px 16px;
         display: flex;
         border: 2px solid transparent;
@@ -2159,6 +2181,14 @@ h2.home-tagline{
         text-decoration: underline;
         text-align: center;
     }
+    .feature-container .feature .card-link-container{
+        position:absolute; 
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+    }
     .key-features-section .budget-basics-card{
         box-sizing: border-box;
         padding: 8px;
@@ -2194,6 +2224,7 @@ h2.home-tagline{
         margin-right: auto;
         left: 0;
         right: 0;
+        border: 2px solid transparent;
     }
     .budget-basics-section-mobile .budget-basics-card{
         box-sizing: border-box;
@@ -2224,6 +2255,11 @@ h2.home-tagline{
         margin-right: auto;
         left: 0;
         right: 0;
+        border: 2px solid transparent;
+    }
+    .budget-basics-section-mobile .budget-basics-card .image-container .link-button:hover, 
+    .key-features-section .budget-basics-card .image-container .link-button:hover{
+        border: 2px solid #A090FF;
     }
     .key-features-section .hompepage-section-intro-text-container{
         box-sizing: border-box;
@@ -2406,7 +2442,16 @@ h2.home-tagline{
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
+    .case-studies-card .right-aligned .card-link-container{
+        position:absolute; 
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+    }
     .case-studies-card .card-container{
+        position: relative;
         display: flex;
     }
     .case-studies-card .right-aligned .image-container{
@@ -2525,6 +2570,7 @@ h2.home-tagline{
         padding: 40px 80px 40px 120px;
     }
     .footer-links-container .site-logo{
+        position: relative;
         margin-top: 40px;
         margin-right: 168px;
         width: 271.7px;
@@ -2537,6 +2583,14 @@ h2.home-tagline{
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+    }
+    .footer-links-container .site-logo .logo-link-container{
+        position:absolute; 
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
     }
     .footer-links-container .footer-links{
         display: flex;
@@ -2979,6 +3033,7 @@ h2.home-tagline{
       .mobile-menu-sidebar a>span{
           display: inline-block;
           min-width: 150px;
+          width: 180px;
           max-width: 210px;
       }
       .mobile-menu-sidebar .dropdown-right-arrow{
