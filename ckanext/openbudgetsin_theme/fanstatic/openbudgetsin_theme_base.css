@@ -1227,6 +1227,17 @@ p.org-media-descrp {
     text-decoration-line: underline;
     color: #FFFFFF;
 }
+.trending-title.fade-out{
+    opacity: 0;
+    transition: opacity 400ms;
+}
+.trending-title.fade-in{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.trending-title:hover, .trending-title:focus{
+    color: #FFFFFF;
+}
 .new-tag{
     width: 59px;
     height: 24px;
@@ -1259,7 +1270,7 @@ p.org-media-descrp {
     background-size: 80%;
 }
 .trending-list-pagination-container .pagination-button.left{
-    background-image: url("../../../arrow-left.svg");
+    background-image: url("../../../arrow-left-fade.svg");
 }
 .trending-list-pagination-container .pagination-button.right{
     background-image: url("../../../arrow-right.svg");

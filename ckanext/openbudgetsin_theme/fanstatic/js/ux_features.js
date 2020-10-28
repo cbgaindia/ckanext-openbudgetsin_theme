@@ -1,3 +1,118 @@
+// ######################### Trending Section functionalities ###################################
+
+const trendingList = [
+    {
+        title: "Introducing the new Himachal Pradesh Fiscal Data Explorer",
+        link: "https://hp.openbudgetsindia.org/"
+    },
+    {
+        title: "Content2",
+        link: ""
+    },
+    {
+        title: "Content3",
+        link: ""
+    },
+    {
+        title: "Content4",
+        link: ""
+    },
+    {
+        title: "Content5",
+        link: ""
+    }
+]
+let activeIndex = 1
+let lastChangeFlag = false
+const leftButton = document.getElementById('trending-list-left-button')
+const rightButton = document.getElementById('trending-list-right-button')
+const trendingItem = document.getElementById('trending-list-link')
+const trendingListPagination = document.getElementById('trending-list-pagination')
+
+// Event listeners for Trending Section
+leftButton.addEventListener('click', () => {
+    handleLeftButtonClick()
+})
+
+rightButton.addEventListener('click', () => {
+    handleRightButtonClick()
+})
+
+// setInterval(() => {
+//     handleAutoChangeTrendingList()
+// }, 5000);
+
+const handleLeftButtonClick = () => {
+    if(activeIndex === trendingList.length){
+        rightButton.removeAttribute("disabled")
+        rightButton.style.backgroundImage = "url('../../../arrow-right.svg')"
+    }
+    if(activeIndex === 2){
+        leftButton.setAttribute("disabled", true)
+        leftButton.style.backgroundImage = "url('../../../arrow-left-fade.svg')"
+    }
+    
+    activeIndex -= 1;
+    handleLastChangeFlag()
+    handleUpdateTrendingItem()
+}
+
+const handleRightButtonClick = () => {
+    if(activeIndex === 1){
+        leftButton.removeAttribute("disabled")
+        leftButton.style.backgroundImage = "url('../../../arrow-left.svg')"
+    }
+    if(activeIndex === trendingList.length-1){
+        rightButton.setAttribute("disabled", true)
+        rightButton.style.backgroundImage = "url('../../../arrow-right-fade.svg')"
+    }
+    
+    activeIndex += 1;
+    handleLastChangeFlag()
+    handleUpdateTrendingItem()
+}
+
+// Function for updating content in trending list
+const handleUpdateTrendingItem = () => {
+    const trendingItemContent = trendingList[activeIndex-1]
+
+    // Dom manipulation
+    trendingItem.classList.add('fade-out');
+    trendingListPagination.innerHTML = `${activeIndex}/${trendingList.length}`
+    setTimeout(() => {
+        trendingItem.classList.remove('fade-out')
+        trendingItem.innerHTML = trendingItemContent.title
+        trendingItem.setAttribute("href", trendingItemContent.link)
+    }, 400);
+}
+
+const handleLastChangeFlag = () => {
+    lastChangeFlag = true
+    setTimeout(() => {
+        lastChangeFlag = false
+    }, 5000);
+}
+
+// Function for self changing 
+const handleAutoChangeTrendingList = () => {
+    console.log('inside auto change trending list')
+    if(!lastChangeFlag){
+        if(activeIndex === trendingList.length){
+            activeIndex = 1
+            leftButton.setAttribute("disabled", true)
+            leftButton.style.backgroundImage = "url('../../../arrow-left-fade.svg')"
+            rightButton.removeAttribute("disabled")
+            rightButton.style.backgroundImage = "url('../../../arrow-right.svg')"
+            handleUpdateTrendingItem()
+        }
+        else{
+            handleRightButtonClick()
+        }
+    }
+}
+
+
+
 //################################## Mobile Menu ############################################
 
 let mobileMenuButton = document.getElementById('mobile-menu-toggle')
