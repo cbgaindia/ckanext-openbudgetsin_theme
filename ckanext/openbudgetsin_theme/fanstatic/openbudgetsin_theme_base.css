@@ -2699,6 +2699,99 @@ h2.home-tagline{
         width: 24px;
         height: 24px;
     }
+    .mobile-menu-sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #0F1525;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 90px;
+      }
+      
+      .mobile-menu-sidebar a {
+        padding: 16px 8px 16px 32px;
+        text-decoration: underline;
+        font-size: 16px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        /* transition: 0.3s; */
+      }
+      
+      .mobile-menu-sidebar a:hover {
+        /* color: #f1f1f1; */
+      }
+      
+      .mobile-menu-sidebar .closebtn {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        font-size: 36px;
+        background-image: url("../../../x-small.svg");
+        margin-left: 24px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+      }
+      .mobile-menu-sidebar a>span{
+          display: inline-block;
+          min-width: 150px;
+          max-width: 210px;
+      }
+      .mobile-menu-sidebar .dropdown-right-arrow{
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+      }
+
+      #mobile-menu-content.fade-out{
+        opacity: 0;
+        transition: opacity 400ms;   
+      }
+
+      .menu-title-bar{
+          position: absolute;
+          top: 24px;
+          left: 0;
+          font-size: 24px;
+          font-weight: 600;
+          margin-left: 30px;
+          color: rgba(255, 255, 255, 0.7);
+          display: flex;
+          align-items: center;
+          width: 250px;
+      }
+
+      .mobile-menu-back-button{
+          display: inline-block;
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          background-image: url("../../../arrow/left-white.svg");
+          background-position: center;
+          margin-right: 15px;
+      }
+      .mobile-menu-sidebar .budget-basics-button-container{
+         border-top: 1px solid rgba(255, 255, 255, 0.7);
+         width: inherit;
+         position: absolute;
+         bottom: 9%;
+         padding: 24px 74px;
+      }
+      .mobile-menu-sidebar .budget-basics-button-container .budget-basics-btn{
+          width: 156px;
+          height: 48px;
+          padding: 0;
+      }
     @media(min-width: 1440px){
         .navbar .nav-container{
             max-width: 1312px;

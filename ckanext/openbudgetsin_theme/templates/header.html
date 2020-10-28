@@ -8,7 +8,29 @@
   {% endblock %}#}
   <div class="nav-container">
     <div class="d-flex align-center mobile-menu-navbar-content">
-      <button data-target=".nav-collapse" data-toggle="collapse" class="mobile-menu-btn" type="button" aria-hidden="true"  aria-label="Expand navigation bar" aria-controls="navbar">
+      <div id="mobile-menu-sidebar" class="mobile-menu-sidebar">
+        <div id="mobile-menu-content">
+          <div id="mobile-menu-home" class="mobile-menu-home">
+            <button id="mobile-menu-close-btn" class="closebtn"></button>
+            <a href="#" id="obiPlatform" class="mobile-menu-link">
+              <span>OBI Platform</span> 
+              <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+            </a>
+            <a href="#" id="dashboards" class="mobile-menu-link">
+              <span>Dashboards</span> 
+              <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+            </a>
+            <a href="#" id="budgetDatasets" class="mobile-menu-link">
+              <span>Budget Datasets</span>
+              <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="budget-basics-button-container">
+          <a class="home-primary-button budget-basics-btn">Budget Basics</a>
+        </div>
+      </div>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" type="button" aria-hidden="true"  aria-label="Expand navigation bar" aria-controls="navbar">
         <!-- <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> -->
