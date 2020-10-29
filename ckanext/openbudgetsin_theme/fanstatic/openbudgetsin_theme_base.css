@@ -3023,6 +3023,7 @@ h2.home-tagline{
         left: 0;
         font-size: 36px;
         background-image: url("../../../x-small.svg");
+        background-repeat: no-repeat;
         margin-left: 24px;
         width: 30px;
         height: 30px;
