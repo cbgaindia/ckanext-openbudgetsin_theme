@@ -2678,7 +2678,7 @@ h2.home-tagline{
     }
     .site-footer .attribution-container .attribution-logos .oss{
         width: 80px;
-        height: 24px;
+        height: 15px;
         /* background: #FFFFFF; */
         background-image: url("../../../open_data_logo.png");
         background-position: center;
