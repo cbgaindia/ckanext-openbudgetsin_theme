@@ -2950,6 +2950,7 @@ h2.home-tagline{
     .navbar .nav-pills .dropdown-menu li:hover{
         background: #F0F3F5;
         color: #4B4797;
+        cursor: pointer;
     }
     .dropdown:hover .dropdown-menu {
         display: block;
@@ -2969,14 +2970,19 @@ h2.home-tagline{
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
-        width: 160px;
-        text-decoration: underline;
+        width: 100%;
+        text-decoration: none;
         background-color: transparent !important;
         color: #4B4797;
         white-space: break-spaces;
+        display: flex;
+        align-items: center;
     }
-    .dropdown-menu li a{
-        /* max-width: 160px; */
+    .dropdown-menu>li>a>span{
+        display: inline-block;
+        width: 160px;
+        margin-right: 14px;
+        text-decoration: underline;
     }
     .masthead .navigation .dropdown-menu li a:hover,  .masthead .navigation .dropdown-menu li a:active,  .masthead .navigation .dropdown-menu li a:visited{
         color: #4B4797;
