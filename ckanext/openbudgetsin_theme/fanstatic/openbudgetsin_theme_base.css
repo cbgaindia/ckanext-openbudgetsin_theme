@@ -1683,18 +1683,33 @@ h2.home-tagline{
         background-image: url("../../../gifs/sequence-scatter.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.line-chart{
-        background-image: url("../../../gifs/sequence-line.gif");
+        background-image: url("../../../gifs/sequence-line.jpg");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.pie-chart{
-        background-image: url("../../../gifs/sequence-pie.gif");
+        background-image: url("../../../gifs/sequence-pie.jpg");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.area-chart{
-        background-image: url("../../../gifs/sequence-area.gif");
+        background-image: url("../../../gifs/sequence-area.jpg");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.square-chart{
-        background-image: url("../../../gifs/sequence-square.gif");
+        background-image: url("../../../gifs/sequence-square.jpg");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.bar-chart{
+        background-image: url("../../../gifs/sequence-bar.jpg");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.line-chart{
+        background-image: url("../../../gifs/sequence-line.gif");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.pie-chart{
+        background-image: url("../../../gifs/sequence-pie.gif");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.area-chart{
+        background-image: url("../../../gifs/sequence-area.gif");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.square-chart{
+        background-image: url("../../../gifs/sequence-square.gif");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bar-chart{
         background-image: url("../../../gifs/sequence-bar.gif");
     }
     .dashboards-button{
