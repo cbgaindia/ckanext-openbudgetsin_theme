@@ -3161,6 +3161,14 @@ h2.home-tagline{
         .nav-collapse {
             clear: both;
         }
+        .screen-reader-tooltip .dropdown-menu{
+            left: auto;
+            right: -14px;
+        }
+        .screen-reader-tooltip .dropdown-menu:after{
+            left: auto;
+            right: 10px;
+        }
     }
     @media(min-width: 360px) and (max-width: 767px){
 
