@@ -191,15 +191,12 @@ const mobileMenuContent = {
     </div>
     <a href="https://openbudgetsindia.org/pages/how-to-use-the-portal" target="_blank">
       <span>How to Use</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/pages/faqs" target="_blank">
       <span>FAQs</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/about" target="_blank">
       <span>About Us</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -231,15 +228,12 @@ const mobileMenuContent = {
     </div>
     <a href="https://openbudgetsindia.org/organization" target="_blank">
       <span>By Tiers of Government</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/group" target="_blank">
       <span>By Sectors</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/dataset" target="_blank">
       <span>All Datasets</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -251,19 +245,15 @@ const mobileMenuContent = {
     </div>
     <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2020-21</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2019-20</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2019-20(I)</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2018-19</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -275,19 +265,15 @@ const mobileMenuContent = {
     </div>
     <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2020-21</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2019-20</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://cbgaindia.github.io/story-generator/" target="_blank">
       <span>Story Generator</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -299,11 +285,9 @@ const mobileMenuContent = {
     </div>
     <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">
       <span>Balasore District Treasury Dashboard</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">
       <span>Krishna District Treasury Dashboard</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
   </div>`
 }
@@ -494,19 +478,15 @@ const dropdownMenuContent = {
     </div>
     <li>
         <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2020-21</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20(I)</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
     <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2018-19</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>`,
 
     stateDashboards: 
@@ -517,19 +497,15 @@ const dropdownMenuContent = {
     </div>
     <li>
         <a href="https://hp.openbudgetsindia.org/" target="_blank">Himachal Pradesh Fiscal Data Explorer</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2020-21</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2019-20</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://cbgaindia.github.io/story-generator/" target="_blank">Story Generator</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>`,
 
     districtDashboards:
@@ -540,11 +516,9 @@ const dropdownMenuContent = {
     </div>
     <li>
         <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">Balasore District Treasury Dashboard</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>
     <li>
         <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">Krishna District Treasury Dashboard</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
     </li>`,
 }
 
