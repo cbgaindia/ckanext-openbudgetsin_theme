@@ -2785,7 +2785,18 @@ h2.home-tagline{
             margin-left: 0px;
             margin-right: 35px;
         }
-
+        @media(max-width: 400px){
+            .site-footer .attribution-container .attribution-logos{
+                margin: auto;
+            }
+            .site-footer .attribution-container .logos-container{
+                flex-direction: column;
+                align-items: center;
+            }
+            .site-footer .attribution-container .social-media-links{
+                margin-top: 24px;
+            }
+        }
     }
 
     /********* Header Section *********/
