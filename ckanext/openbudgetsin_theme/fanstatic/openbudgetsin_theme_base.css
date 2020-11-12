@@ -2278,6 +2278,7 @@ h2.home-tagline{
     .budget-basics-section-mobile .budget-basics-card .image-container .link-button:hover, 
     .key-features-section .budget-basics-card .image-container .link-button:hover{
         border: 2px solid #A090FF;
+        text-decoration: none;
     }
     .key-features-section .hompepage-section-intro-text-container{
         box-sizing: border-box;
@@ -2836,6 +2837,15 @@ h2.home-tagline{
         align-items: center;
         margin-left: 44px;
     }
+    .navbar .nav-pills  li.dropdown{
+        box-sizing: border-box;
+        /* padding: 0 8px 0 8px; */
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .navbar .nav-pills  li.dropdown:hover{
+        background: #273051;
+    }
     .navbar .nav-pills  li.ml-0{
         margin-left: 0;
     }
@@ -2843,6 +2853,11 @@ h2.home-tagline{
         width: 24px;
         height: 24.2px;
         margin-left: 4px;
+    }
+    .navbar .nav-pills  li.dropdown a{
+        width: 100%;
+        height: 100%;
+        padding: 0 8px;
     }
 
     /** When dropdown is active - color or nav link **/
@@ -2965,6 +2980,8 @@ h2.home-tagline{
         max-width: 296px;
         box-shadow: none;
         border: none;
+        box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.04);
+
     }
     .dropdown-menu>li>a{
         padding: 0;
@@ -2972,20 +2989,26 @@ h2.home-tagline{
         font-size: 16px;
         line-height: 150%;
         width: 100%;
-        text-decoration: none;
+        text-decoration: underline;
         background-color: transparent !important;
         color: #4B4797;
         white-space: break-spaces;
         display: flex;
         align-items: center;
     }
-    .dropdown-menu>li>a>span{
+    .dropdown-menu .dropdown-menu-link a{
+        text-decoration: none;
+    }
+    .dropdown-menu .dropdown-menu-link a>span{
         display: inline-block;
         width: 160px;
         margin-right: 14px;
         text-decoration: underline;
     }
-    .masthead .navigation .dropdown-menu li a:hover,  .masthead .navigation .dropdown-menu li a:active,  .masthead .navigation .dropdown-menu li a:visited{
+    .masthead .navigation .dropdown-menu li a,
+    .masthead .navigation .dropdown-menu li a:hover,  
+    .masthead .navigation .dropdown-menu li a:active,  
+    .masthead .navigation .dropdown-menu li a:visited{
         color: #4B4797;
         text-decoration: underline;
     }
