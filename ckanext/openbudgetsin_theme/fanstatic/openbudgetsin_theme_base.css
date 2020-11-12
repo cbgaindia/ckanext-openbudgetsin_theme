@@ -2242,6 +2242,7 @@ h2.home-tagline{
         left: 0;
         right: 0;
         border: 2px solid transparent;
+        font-weight: 400;
     }
     .budget-basics-section-mobile .budget-basics-card{
         box-sizing: border-box;
