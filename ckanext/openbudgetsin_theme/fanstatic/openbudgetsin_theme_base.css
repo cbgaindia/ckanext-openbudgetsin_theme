@@ -1454,6 +1454,7 @@ h2.home-tagline{
 }
 .searchbar-container .quick-links a{
     color: #4B4797;
+    text-decoration: underline;
 }
 .link-color{
     color: #4B4797;
