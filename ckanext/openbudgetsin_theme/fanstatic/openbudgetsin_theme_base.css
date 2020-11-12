@@ -1606,9 +1606,9 @@ h2.home-tagline{
         border-radius: 12px;
         display: flex;
         justify-content: space-between;
-        -webkit-transition: transform 0.3s ease-in-out;
+        /* -webkit-transition: transform 0.3s ease-in-out;
         -moz-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; */
     }
     .dashboard-cards-container .dashboard-card .right-aligned {
         padding: 8px 16px 8px 8px;   
@@ -1627,12 +1627,12 @@ h2.home-tagline{
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
-        -moz-transform: scale(1.05);
+        /* -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05); */
         /* transition: scale(1.2); */
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container{
@@ -1970,21 +1970,21 @@ h2.home-tagline{
         border: 2px solid transparent;
         border-radius: 12px;
         text-align: center;
-        -webkit-transition: transform 0.3s ease-in-out;
+        /* -webkit-transition: transform 0.3s ease-in-out;
         -moz-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; */
     }
     .govt-tiers-cards-container .govt-tier-card:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
-        -moz-transform: scale(1.05);
+        /* -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05); */
     }
     .govt-tiers-cards-container .govt-tier-card .image-container{
         width: 184px;
@@ -2154,21 +2154,21 @@ h2.home-tagline{
         border: 2px solid transparent;
         flex-direction: column;
         align-items: center;
-        -webkit-transition: transform 0.3s ease-in-out;
+        /* -webkit-transition: transform 0.3s ease-in-out;
         -moz-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; */
     }
     .key-features-section .feature-container .feature:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
-        -moz-transform: scale(1.05);
+        /* -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05); */
     }
     .feature-container .feature .image-container{
         min-width: 144px;
@@ -2300,12 +2300,12 @@ h2.home-tagline{
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
-        -moz-transform: scale(1.05);
+        /* -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05); */
     }
     .ml-24{
         margin-left: 24px;
@@ -2445,21 +2445,21 @@ h2.home-tagline{
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
         border: 2px solid transparent;
         border-radius: 12px;
-        -webkit-transition: transform 0.3s ease-in-out;
+        /* -webkit-transition: transform 0.3s ease-in-out;
         -moz-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; */
     }
     .case-studies-card .right-aligned:hover{
         border: 2px solid #4B4797;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
         border-radius: 12px;
         cursor: pointer;
-        -moz-transform: scale(1.05);
+        /* -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05); */
     }
     .case-studies-card .right-aligned .card-link-container{
         position:absolute; 
