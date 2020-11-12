@@ -1375,15 +1375,10 @@ h2.home-tagline{
     margin-bottom: 0px;
 }
 .search-input{
-    background: #F0F3F5;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 8px 8px 8px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0px;
+    position: relative;
 }
-#home-search-input:focus .search-input{
+#home-search-input:focus{
     background: #FFFFFF;
     border: 1px solid #4B4797;
 }
@@ -1392,16 +1387,20 @@ h2.home-tagline{
     box-shadow: none;
 }
 .search-form .search-input.search-giant input{
-    padding: 0px;
-    background: none;
-    border: none;
+    padding: 8px 8px 8px 16px;
+    height: 64px;
+    background: #F0F3F5;
+    border: 1px solid transparent;
+    border-radius: 8px;
 }
 .search-form .search-input input{
-    width: 70%;
+    width: 100%;
 }
 .search-form .search-input.search-giant button{
     margin-top: 0px;
-    right: 0px;
+    position: absolute;
+    right: 16px;
+    top: 8px;
     height: 48px;
 }
 .search-form .search-input button{
