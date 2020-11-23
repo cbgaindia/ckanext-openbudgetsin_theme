@@ -2032,12 +2032,18 @@ h2.home-tagline{
         background-size: 130%;
     }
     .govt-tier-card .card-link-container{
-        position:absolute; 
+        /* position:absolute; 
         width:100%;
         height:100%;
         top:0;
         left: 0;
-        z-index: 1;
+        z-index: 1; */
+    }
+    .govt-tiers-cards-container .card-link-container:hover,
+    .govt-tiers-cards-container .card-link-container:focus,
+    .govt-tiers-cards-container .card-link-container:active,
+    .govt-tiers-cards-container .card-link-container:visited{
+        text-decoration: none;
     }
     .swipe-right-button{
         width: 75px;
@@ -2207,12 +2213,18 @@ h2.home-tagline{
         text-align: center;
     }
     .feature-container .feature .card-link-container{
-        position:absolute; 
+        /* position:absolute; 
         width:100%;
         height:100%;
         top:0;
         left: 0;
-        z-index: 1;
+        z-index: 1; */
+    }
+    .feature-container .card-link-container:hover,
+    .feature-container .card-link-container:focus,
+    .feature-container .card-link-container:active,
+    .feature-container .card-link-container:visited{
+        text-decoration: none;
     }
     .key-features-section .budget-basics-card{
         box-sizing: border-box;
@@ -2479,12 +2491,18 @@ h2.home-tagline{
         transform: scale(1.05); */
     }
     .case-studies-card .right-aligned .card-link-container{
-        position:absolute; 
+        /* position:absolute; 
         width:100%;
         height:100%;
         top:0;
         left: 0;
-        z-index: 1;
+        z-index: 1; */
+    }
+    .case-studies-card .card-link-container:hover,
+    .case-studies-card .card-link-container:focus,
+    .case-studies-card .card-link-container:active,
+    .case-studies-card .card-link-container:visited{
+        text-decoration: none;
     }
     .case-studies-card .card-container{
         position: relative;
