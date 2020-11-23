@@ -2149,7 +2149,8 @@ h2.home-tagline{
     .key-features-section .feature-container .feature{
         box-sizing: border-box;
         position: relative;
-        padding: 8px 8px 16px;
+        padding: 0px;
+        padding-bottom: 16px;
         display: flex;
         border: 2px solid transparent;
         flex-direction: column;
@@ -2171,8 +2172,8 @@ h2.home-tagline{
         transform: scale(1.05); */
     }
     .feature-container .feature .image-container{
-        min-width: 144px;
-        height: 104px;
+        width: 160px;
+        height: 112px;
         background: #F0F3F5;
         border-radius: 8px;
     }
@@ -2287,6 +2288,7 @@ h2.home-tagline{
     }
     .key-features-section .hompepage-section-intro-text-container:last-child{
         padding-left: 20px;
+        margin-left: 32px;
     }
     .key-features-section .budget-basics-card .image-container, .budget-basics-section-mobile .budget-basics-card .image-container{
         background-color: #FCDAD1;
@@ -2324,8 +2326,8 @@ h2.home-tagline{
             max-width: 640px;
         }
         .feature-container .feature .image-container{
-            width: 184px;
-            height: 136px;
+            width: 200px;
+            height: 144px;
         }
         .key-features-section .feature-container .feature.ml-24{
             margin-left: 12px;
@@ -2358,8 +2360,16 @@ h2.home-tagline{
         .key-features-section .feature-container .feature.ml-24{
             margin-left: 0;
         }
+        .feature-container .feature .image-container{
+            width: 144px;
+            height: 104px;
+        }
         .feature-container .feature .text-container{
             margin-left: 8px;
+            width: 100%;
+            width: -moz-available;          /* WebKit-based browsers will ignore this. */
+            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+            width: fill-available;
         }
         .features-banner .key-features-section.ml-2{
             margin-left: 16px;
@@ -2422,7 +2432,7 @@ h2.home-tagline{
             flex: 1 auto;
         }
         .feature-container .feature .text-container{
-            width: 152px;
+            /* width: 152px; */
             text-align: center;
         }
         .key-features-section .hompepage-section-intro-text-container{
