@@ -1962,7 +1962,7 @@ h2.home-tagline{
     .govt-tiers-cards-container .govt-tier-card{
         box-sizing: border-box;
         position: relative;
-        width: 200px;
+        width: 204px;
         height: 224px;
         padding: 8px 8px 16px;
         background: #FFFFFF;
@@ -2095,7 +2095,7 @@ h2.home-tagline{
             padding-right: 56px;
         }
         .govt-tiers-cards-container .govt-tier-card{
-            width: 208px;
+            width: 212px;
         }
         .govt-tiers-cards-container .govt-tier-card.ml-30{
             margin-left: 16px;
