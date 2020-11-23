@@ -1727,12 +1727,19 @@ h2.home-tagline{
         outline: none;
     }
     .dashboard-cards-container .card-link-container{
-        position:absolute; 
+        /* position:absolute; 
         width:100%;
         height:100%;
         top:0;
         left: 0;
-        z-index: 1;
+        z-index: 1; */
+    }
+
+    .dashboard-cards-container .card-link-container:hover,
+    .dashboard-cards-container .card-link-container:focus,
+    .dashboard-cards-container .card-link-container:active,
+    .dashboard-cards-container .card-link-container:visited{
+        text-decoration: none;
     }
     .button-arrow-right{
         width: 15px;
