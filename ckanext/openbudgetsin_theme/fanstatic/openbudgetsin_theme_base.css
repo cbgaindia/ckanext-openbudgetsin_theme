@@ -2614,10 +2614,17 @@ h2.home-tagline{
     .footer-links-container .footer-links{
         display: flex;
     }
-    .footer-links-container h4{
+    .footer-links-container .links-container h4{
         margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .footer-links-container .links-container .dashboard-links h4{
+        margin: 0;
+        margin-top: 24px;
         font-size: 16px;
         font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
     }
     .footer-links-container .footer-links .links{
         display: flex;
