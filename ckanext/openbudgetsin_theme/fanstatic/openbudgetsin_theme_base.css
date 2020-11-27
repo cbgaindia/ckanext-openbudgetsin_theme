@@ -2080,10 +2080,13 @@ h2.home-tagline{
             max-width: 1312px;
             width: 74.54%;
         }
+        .govt-tiers-cards-container .card-link-container{
+            width: 17.7%;
+        }
         .govt-tiers-cards-container .govt-tier-card{
             min-width: 200px;
             max-width: 232px;
-            width: 17.7%;
+            width: 100%;
         }
         .govt-tiers-cards-container .govt-tier-card .image-container{
             width: auto;
@@ -2346,11 +2349,17 @@ h2.home-tagline{
             max-width: 640px;
         }
         .feature-container .feature .image-container{
-            width: 200px;
-            height: 144px;
+            width: 192px;
+            height: 138px;
         }
         .key-features-section .feature-container .feature.ml-24{
             margin-left: 12px;
+        }
+    }
+    @media (min-width: 1480px){
+        .feature-container .feature .image-container{
+            width: 200px;
+            height: 144px;
         }
     }
     @media (min-width: 1280px) and (max-width: 1439px){
@@ -2499,10 +2508,10 @@ h2.home-tagline{
         left: 0;
         z-index: 1; */
     }
-    .case-studies-card .card-link-container:hover,
-    .case-studies-card .card-link-container:focus,
-    .case-studies-card .card-link-container:active,
-    .case-studies-card .card-link-container:visited{
+    .case-studies-cards-container .card-link-container:hover,
+    .case-studies-cards-container .card-link-container:focus,
+    .case-studies-cards-container .card-link-container:active,
+    .case-studies-cards-container .card-link-container:visited{
         text-decoration: none;
     }
     .case-studies-card .card-container{
