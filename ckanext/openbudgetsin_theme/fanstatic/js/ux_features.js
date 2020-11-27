@@ -538,6 +538,7 @@ scrollableContainer.addEventListener('scroll', () => {
 
 let inputBox = document.getElementById('home-search-input')
 let searchButton = document.getElementById('home-search-button')
+let searchButtonMobile = document.getElementById('home-search-button-mobile')
 if(inputBox){
     inputBox.addEventListener('keyup', (e) => {
         console.log('testing input', e.target.value)
@@ -546,10 +547,12 @@ if(inputBox){
         if(searchText.length){
             // Active button - remove disable class
             searchButton.classList.add('active')
+            searchButtonMobile.getElementsByTagName('img')[0].src = "home-search-icon-blue.svg"
         }
         else{
             // Disable button - add disable class
             searchButton.classList.remove('active')
+            searchButtonMobile.getElementsByTagName('img')[0].src = "home-search-icon-grey.svg"
         }
     })
 }

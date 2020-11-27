@@ -1523,10 +1523,10 @@ h2.home-tagline{
         margin-top: 32px;
     }
     .search-input{
-        padding: 8px 16px;
+        /* padding: 8px 16px; */
     }
     .search-form .search-input input{
-        width: 80%;
+        /* width: 80%; */
     }
     .search-form .search-input .search-button-desktop{
         display: none;
