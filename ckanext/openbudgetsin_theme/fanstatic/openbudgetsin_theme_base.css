@@ -2520,7 +2520,7 @@ h2.home-tagline{
     }
     .case-studies-card .card-container{
         position: relative;
-        display: flex;
+        display: flex;  
     }
     .case-studies-card .right-aligned .image-container{
         min-width: 208px;
@@ -2608,7 +2608,7 @@ h2.home-tagline{
             .case-studies-cards-container .case-studies-card .card-container{
                 height: 436px;
             }
-    }
+        }
     }
     @media(min-width: 320px) and (max-width: 767px){
         .case-studies-section{
@@ -2920,7 +2920,9 @@ h2.home-tagline{
         cursor: pointer;
         border-radius: 4px;
     }
-    .navbar .nav-pills  li.dropdown:hover{
+    .navbar .nav-pills  li.dropdown:hover,
+    .navbar .nav-pills  li.dropdown:focus,
+    .navbar .nav-pills  li.dropdown:active{
         background: #273051;
     }
     .navbar .nav-pills  li.ml-0{
@@ -3045,9 +3047,12 @@ h2.home-tagline{
         color: #4B4797;
         cursor: pointer;
     }
+    .navbar .nav>li>.dropdown-menu:before{
+        display: none;
+    }
     .dropdown:hover .dropdown-menu {
         display: block;
-        margin-top: 0; 
+        /* margin-top: 0; */
      }
     
     .dropdown-menu{
@@ -3073,6 +3078,11 @@ h2.home-tagline{
         display: flex;
         align-items: center;
         padding: 12px 24px !important;
+    }
+    .dropdown-menu .dashboards-span{
+        width: max-content;
+        max-width: 174px;
+        margin-left: 0;
     }
     .dropdown-menu .dropdown-menu-link a{
         text-decoration: none;
@@ -3230,6 +3240,11 @@ h2.home-tagline{
         text-decoration-line: underline;
         color: rgba(13, 16, 24, 0.64);
         padding: 12px 20px 20px 17px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      .dropdown-title-bar:hover{
+         background-color:  #f3f3f3;
       }
       .dropdown-menu-back-button{
         display: inline-block;
