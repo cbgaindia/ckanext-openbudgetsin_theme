@@ -1,5 +1,6 @@
 {% set tags = h.get_facet_items_dict('tags', limit=3) %}
-{% set placeholder = _('Search from 11000 datasets') %}
+{% set stats = h.get_site_statistics() %}
+{% set placeholder = 'Search from {count} datasets'.format(count=(stats.dataset_count)) %}
 
 <div class="searchbar-container">
 <!-- <h2 class="home-tagline"> Making India's Budgets open, usable and easy to comprehend</h2> -->
