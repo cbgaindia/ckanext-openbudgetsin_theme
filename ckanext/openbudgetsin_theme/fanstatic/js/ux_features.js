@@ -191,15 +191,12 @@ const mobileMenuContent = {
     </div>
     <a href="https://openbudgetsindia.org/pages/how-to-use-the-portal" target="_blank">
       <span>How to Use</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/pages/faqs" target="_blank">
       <span>FAQs</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/about" target="_blank">
       <span>About Us</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -231,15 +228,12 @@ const mobileMenuContent = {
     </div>
     <a href="https://openbudgetsindia.org/organization" target="_blank">
       <span>By Tiers of Government</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/group" target="_blank">
       <span>By Sectors</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://openbudgetsindia.org/dataset" target="_blank">
       <span>All Datasets</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -251,19 +245,15 @@ const mobileMenuContent = {
     </div>
     <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2020-21</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2019-20</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2019-20(I)</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2018-19</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -275,19 +265,15 @@ const mobileMenuContent = {
     </div>
     <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2020-21</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2019-20</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://cbgaindia.github.io/story-generator/" target="_blank">
       <span>Story Generator</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -299,11 +285,9 @@ const mobileMenuContent = {
     </div>
     <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">
       <span>Balasore District Treasury Dashboard</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">
       <span>Krishna District Treasury Dashboard</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
   </div>`
 }
@@ -435,7 +419,7 @@ const dropdownElement = document.getElementById('dashboard-dropdown')
 const dropdownContent = document.getElementById('dropdown-menu-content')
 
 dropdownElement.addEventListener('click', (e) => {
-    console.log('testing e target for dropdown', e.target.classList, e)
+    // console.log('testing e target for dropdown', e.target.classList, e)
     if(e.target.className.includes('dropdown-menu-link')){
         e.stopPropagation()
     }
@@ -452,7 +436,7 @@ const handleUpdateDropdownContent = (id) => {
     // }, 400);
 }
 const handleBackButtonForDropdown = () => {
-    let dropdownBackButton = document.querySelector('.dropdown-menu-back-button')
+    let dropdownBackButton = document.querySelector('.dropdown-title-bar')
     if(dropdownBackButton){
         dropdownBackButton.addEventListener('click', () => {
             handleUpdateDropdownContent(dropdownBackButton.id)
@@ -467,84 +451,94 @@ const handleAddEventListenerForDropdown = () => {
 }
 
 handleAddEventListenerForDropdown()
-
+let elem = document.getElementById('dashboard-dropdown-toggle')
+elem.addEventListener('click', function (event) {
+    elem.classList.toggle('open')
+});
+let body = document.getElementsByTagName('body')[0]
+body.addEventListener('click', (e) => {
+    if(e.target.getAttribute("name") === "dashboard-dropdown-toggle"){
+    }
+    else if(!(e.target.getAttribute("name") === "dashboard-dropdown-element")){
+        elem.classList.remove('open')
+    }
+    else{
+        elem.classList.add('open')
+    }
+})
 
 
 
 const dropdownMenuContent = {
     dashboards: 
-    `<li class="dropdown-menu-link" id="unionDashboards">
-        <a href="#" class="dropdown-menu-link">Union Dashboards</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    `<li class="dropdown-menu-link" id="unionDashboards" name="dashboard-dropdown-element">
+        <a href="#" class="dropdown-menu-link" name="dashboard-dropdown-element">
+          <span name="dashboard-dropdown-element">Union Dashboards</span>
+          <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>
+        </a>
     </li>
-    <li class="dropdown-menu-link" id="stateDashboards">
-        <a href="#" class="dropdown-menu-link">State Dashboards</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    <li class="dropdown-menu-link" id="stateDashboards" name="dashboard-dropdown-element">
+        <a href="#" class="dropdown-menu-link" name="dashboard-dropdown-element">
+            <span name="dashboard-dropdown-element">State Dashboards</span>
+            <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>                    
+        </a>
     </li>
-    <li class="dropdown-menu-link" id="districtDashboards">
-        <a href="#" class="dropdown-menu-link">District Dashboards</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" />
+    <li class="dropdown-menu-link" id="districtDashboards" name="dashboard-dropdown-element">
+        <a href="#" class="dropdown-menu-link" name="dashboard-dropdown-element">
+            <span name="dashboard-dropdown-element">District Dashboards</span>
+            <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>                    
+        </a>
     </li>`,
 
     unionDashboards: 
     `
-    <div class="dropdown-title-bar">
-        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
-        <span>Union Dashboards</span>
+    <div class="dropdown-title-bar" id="dashboards" name="dashboard-dropdown-element">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
+        <span name="dashboard-dropdown-element">Union Dashboards</span>
     </div>
     <li>
-        <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2020-21</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://union2020.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2020-21</span></a>
     </li>
     <li>
-        <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://union2019.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2019-20</span></a>
     </li>
     <li>
-        <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20(I)</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2019-20(I)</span></a>
     </li>
     <li>
-    <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2018-19</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+    <a href="https://union2018.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2018-19</span></a>
     </li>`,
 
     stateDashboards: 
     `
-    <div class="dropdown-title-bar">
-        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
-        <span>State Dashboards</span>
+    <div class="dropdown-title-bar" id="dashboards" name="dashboard-dropdown-element">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
+        <span name="dashboard-dropdown-element">State Dashboards</span>
     </div>
     <li>
-        <a href="https://hp.openbudgetsindia.org/" target="_blank">Himachal Pradesh Fiscal Data Explorer</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://hp.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Himachal Pradesh Fiscal Data Explorer</span></a>
     </li>
     <li>
-        <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2020-21</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Assam Budget Explorer 2020-21</span></a>
     </li>
     <li>
-        <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2019-20</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Assam Budget Explorer 2019-20</span></a>
     </li>
     <li>
-        <a href="https://cbgaindia.github.io/story-generator/" target="_blank">Story Generator</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://cbgaindia.github.io/story-generator/" target="_blank"><span class="dashboards-span">Story Generator</span></a>
     </li>`,
 
     districtDashboards:
     `
-    <div class="dropdown-title-bar">
-        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link"></button>
-        <span>District Dashboards</span>
+    <div class="dropdown-title-bar" id="dashboards" name="dashboard-dropdown-element"">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
+        <span name="dashboard-dropdown-element">District Dashboards</span>
     </div>
     <li>
-        <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">Balasore District Treasury Dashboard</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank"><span class="dashboards-span">Balasore District Treasury Dashboard</span></a>
     </li>
     <li>
-        <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">Krishna District Treasury Dashboard</a>
-        <img src="./arrow/right.svg" class="dropdown-right-arrow" />
+        <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank"><span class="dashboards-span">Krishna District Treasury Dashboard</span></a>
     </li>`,
 }
 
@@ -564,6 +558,7 @@ scrollableContainer.addEventListener('scroll', () => {
 
 let inputBox = document.getElementById('home-search-input')
 let searchButton = document.getElementById('home-search-button')
+let searchButtonMobile = document.getElementById('home-search-button-mobile')
 if(inputBox){
     inputBox.addEventListener('keyup', (e) => {
         console.log('testing input', e.target.value)
@@ -572,10 +567,12 @@ if(inputBox){
         if(searchText.length){
             // Active button - remove disable class
             searchButton.classList.add('active')
+            searchButtonMobile.getElementsByTagName('img')[0].src = "home-search-icon-blue.svg"
         }
         else{
             // Disable button - add disable class
             searchButton.classList.remove('active')
+            searchButtonMobile.getElementsByTagName('img')[0].src = "home-search-icon-grey.svg"
         }
     })
 }
