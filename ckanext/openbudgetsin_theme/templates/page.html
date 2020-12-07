@@ -130,11 +130,10 @@
 {%- endblock -%}
 
   
-
 {%- block scripts %}
     {% resource 'base/main' %}
-  
     {% resource 'base/ckan' %}
+    {% resource 'openbudgetsin_theme/js/ux_features.js' %}
     {% if g.tracking_enabled %}
       {% resource 'base/tracking.js' %}
     {% endif %}

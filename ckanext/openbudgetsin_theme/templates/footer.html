@@ -1,9 +1,47 @@
 <footer class="site-footer">
-  <div class="container">
+  <!-- <div class="container"> -->
     {% block footer_content %}
-    <div class="row footer-row">
-      <div class="span4 footer-links">
-        {% block footer_nav %}
+    <div class="footer-links-container">
+      <div class="site-logo">
+        <a href="https://openbudgetsindia.org/en/" target="_blank"><span class="logo-link-container"></span></a>
+      </div>
+      
+      <div class="footer-links">
+        <div class="links-container">
+          <h4>Dashboards</h4>
+          <div class="links dashboard-links">
+            <h4>Union Dashboards</h4>
+            <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2020-21</a>
+            <a href="https://union2019.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20</a>
+            <a href="https://union2019i.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2019-20 (I)</a>
+            <a href="https://union2018.openbudgetsindia.org/en/" target="_blank">Union Budget Explorer 2018-19</a>
+            <h4>State Dashboards</h4>
+            <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2020-21</a>
+            <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">Assam Budget Explorer 2019-20</a>
+            <h4>District Dashboards</h4>
+            <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">Balasore District Treasury</a>
+            <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">Krishna District Treasury</a>
+            <h4>Story Generator</h4>
+            <a href="https://cbgaindia.github.io/story-generator/" target="_blank">Story Generator</a>
+          </div>
+        </div>
+        <div class="links-container ml-2">
+          <h4>Budget Datasets</h4>
+          <div class="links dataset-links">
+            <a href="https://openbudgetsindia.org/organization" target="_blank">Government-wise Budget Data</a>
+            <a href = "https://openbudgetsindia.org/group" target="_blank">Sector-wise Budget Data</a>
+            <a href="https://openbudgetsindia.org/dataset" target="_blank">All Datasets</a>
+          </div>
+        </div>
+        <div class="links-container ml-2">
+          <h4>OBI Platform</h4>
+          <div class="links platform-links">
+            <a href="https://openbudgetsindia.org/pages/how-to-use-the-portal" target="_blank">How to use the OBI Platform</a>
+            <a href="https://openbudgetsindia.org/pages/faqs" target="_blank">FAQs on the Platform</a>
+            <a href="https://openbudgetsindia.org/about" target="_blank">About OBI Platform</a>
+          </div>
+        </div>
+        <!-- {% block footer_nav %}
           <ul class="unstyled">
             {% block footer_links %}
               <li><a href="{{ h.url_for(controller='home', action='about') }}" >{{ _('About {0}').format(g.site_title) }}</a></li>
@@ -13,12 +51,13 @@
             {% block footer_links_ckan %}
               {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
               <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
-              <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data License Logo"></a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="{{h.url_for_static('/base/images/od_80x15_blue.png')}}" alt="Open Data License Logo"></a></li>
             {% endblock %}
           </ul>
-        {% endblock %}
+        {% endblock %} -->
+
       </div>
-      <div class="span4 social-media-links">
+      <!-- <div class="span4 social-media-links">
         <div class="row-fluid">
         Connect with Us
         </div>
@@ -30,9 +69,9 @@
           <li class="nav-item"><a href="https://github.com/cbgaindia" alt="Open Budgets India's Official Github handle" aria-label="Open Budgets India's Official Github handle" title="Official Github Handle" aria-hidden="true" role="link" target="_blank"><i class="icon-github-sign"></i></a></li>
           
         </ul>
-        </div>
-      </div>
-      <div class="span4 attribution">
+        </div> -->
+      <!-- </div> -->
+      <!-- <div class="span4 attribution">
         {% block footer_attribution %}
          {#<p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>#}
          <ul class="footer-right-content">
@@ -46,10 +85,35 @@
         {% block footer_lang %}
           {#{% snippet "snippets/language_selector.html" %}#}
         {% endblock %}
+      </div> -->
+    </div>
+    <div class="attribution-container">
+      <div class="attribution-content">
+        <div class="links-container">
+          <a href="/pages/disclaimers" target="_blank">Disclaimer</a>
+          <a class="ml-24" href="/pages/license" target="_blank">License</a>
+          <a class="ml-24" href="/contact" target="_blank">Contact Us</a>
+          <a class="ml-24" href="https://docs.ckan.org/en/latest/api/" target="_blank">CKAN API</a>
+        </div>
+        <div class="logos-container">
+          <div class="attribution-logos">
+            <div class="logo cc">
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="card-link-container"></span></a>
+            </div>
+            <div class="logo oss ml-24">
+              <a href="https://opendefinition.org/od/2.1/en/" target="_blank"><span class="card-link-container"></span></a>
+            </div>
+            </div>
+          <div class="social-media-links">
+            <a class="link github" href="https://github.com/cbgaindia" target="_blank"></a>
+            <a class="link twitter ml-24" href="https://twitter.com/OpenBudgetsIn" target="_blank"></a>
+            <a class="link facebook ml-24" href="https://www.facebook.com/OpenBudgetsIndia" target="_blank"></a>
+          </div>
+        </div>
       </div>
     </div>
     {% endblock %}
-  </div>
+  <!-- </div> -->
 
   {% block footer_debug %}
     {% if g.debug %}
