@@ -2421,8 +2421,10 @@ h2.home-tagline{
             background-color: #FCDAD1;
             background-image: url("../../../budget-basics-card-background-mobile.svg");
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            /* background-position: center;
+            background-size: cover; */
+            background-position: bottom;
+            background-size: contain;
         }
     }
     @media(min-width: 767px){
