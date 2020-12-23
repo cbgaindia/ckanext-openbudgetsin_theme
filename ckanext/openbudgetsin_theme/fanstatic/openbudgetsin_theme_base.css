@@ -2563,9 +2563,9 @@ h2.home-tagline{
         /* white-space: nowrap; */
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
+        /* display: -webkit-box;
         -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: vertical; */
         /* max-width: 500ch; */
     }
     @media (min-width: 1440px){
@@ -2583,6 +2583,14 @@ h2.home-tagline{
             width: 1120px;
             margin-left: auto;
             margin-right: auto;
+        }
+        .case-studies-card .right-aligned .image-container{
+            height: 208px;
+        }
+    }
+    @media (min-width: 767px) and (max-width: 1439px){
+        .case-studies-card .right-aligned{
+            min-height: 94%;
         }
     }
     @media(max-width: 1279px){
