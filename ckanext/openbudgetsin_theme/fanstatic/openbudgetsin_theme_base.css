@@ -2911,6 +2911,7 @@ h2.home-tagline{
     .nav-container .header-image .logo img{
         margin-left: 0;
         height: 40px;
+        max-width: 295px;
     }
     nav.section.navigation{
         margin-right: 0;
@@ -3313,6 +3314,10 @@ h2.home-tagline{
             left: auto;
             right: 10px;
         }
+        .nav-container .header-image .logo img{
+            max-width: 242px;
+            height: 32px;
+        }
     }
     @media(min-width: 360px) and (max-width: 767px){
 
@@ -3337,6 +3342,10 @@ h2.home-tagline{
         }
         .navbar .nav-container .screen-reader-icon-seperator{
             display: none;
+        }
+        .nav-container .header-image .logo img{
+            max-width: 182px;
+            height: 24px;
         }
     }
 
