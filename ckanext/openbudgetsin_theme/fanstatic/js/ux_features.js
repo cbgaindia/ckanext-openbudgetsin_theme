@@ -32,16 +32,16 @@ const trendingItem = document.getElementById('trending-list-link')
 const trendingListPagination = document.getElementById('trending-list-pagination')
 
 // Event listeners for Trending Section
-leftButton.addEventListener('click', () => {
+leftButton && leftButton.addEventListener('click', () => {
     handleLeftButtonClick()
 })
 
-rightButton.addEventListener('click', () => {
+rightButton && rightButton.addEventListener('click', () => {
     handleRightButtonClick()
 })
 
 setInterval(() => {
-    handleAutoChangeTrendingList()
+    leftButton && handleAutoChangeTrendingList()
 }, 5000);
 
 const handleLeftButtonClick = () => {
@@ -169,15 +169,15 @@ const mobileMenuContent = {
     <button id="mobile-menu-close-btn" class="closebtn"></button>
     <a href="#" id="obiPlatform" class="mobile-menu-link">
       <span>OBI Platform</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="#" id="dashboards" class="mobile-menu-link">
       <span>Dashboards</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="#" id="budgetDatasets" class="mobile-menu-link">
       <span>Budget Datasets</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -187,13 +187,13 @@ const mobileMenuContent = {
       <button id="mobileMenuHome" class="mobile-menu-back-button"></button>
       <span>OBI Platform</span>
     </div>
-    <a href="https://openbudgetsindia.org/pages/how-to-use-the-portal" target="_blank">
+    <a href="/pages/how-to-use-the-portal" target="_blank">
       <span>How to Use</span> 
     </a>
-    <a href="https://openbudgetsindia.org/pages/faqs" target="_blank">
+    <a href="/pages/faqs" target="_blank">
       <span>FAQs</span> 
     </a>
-    <a href="https://openbudgetsindia.org/about" target="_blank">
+    <a href="/about" target="_blank">
       <span>About Us</span>
     </a>
     </div>`,
@@ -206,15 +206,15 @@ const mobileMenuContent = {
     </div>
     <a href="#" id="unionDashboards" class="mobile-menu-link">
       <span>Union Dashboards</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="#" id="stateDashboards" class="mobile-menu-link">
       <span>State Dashboards</span> 
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="#" id="districtDashboards" class="mobile-menu-link">
       <span>District Dashboards</span>
-      <img src="./arrow/right-white.svg" class="dropdown-right-arrow" />
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
 
@@ -544,7 +544,7 @@ const dropdownMenuContent = {
 
 let scrollableContainer = document.getElementById('govt-tiers-cards-container')
 
-scrollableContainer.addEventListener('scroll', () => {
+scrollableContainer && scrollableContainer.addEventListener('scroll', () => {
     let swipeButton = scrollableContainer.querySelector('.swipe-right-button')
     if(swipeButton){
         swipeButton.style.display = "none"
