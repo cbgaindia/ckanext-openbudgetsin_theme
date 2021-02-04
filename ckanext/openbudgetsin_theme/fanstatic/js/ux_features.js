@@ -141,9 +141,7 @@ const handleUpdateMenuContent = (id) => {
 
 const handleAddEventListener = () => {
     let links = document.querySelectorAll(".mobile-menu-link")
-    console.log('adding links', links)
     links.forEach(link => link.addEventListener('click', (e) => {
-        console.log('inside click on link', link, e, link.id)
         handleUpdateMenuContent(link.id)
     }));
 }
@@ -561,7 +559,6 @@ let searchButton = document.getElementById('home-search-button')
 let searchButtonMobile = document.getElementById('home-search-button-mobile')
 if(inputBox){
     inputBox.addEventListener('keyup', (e) => {
-        console.log('testing input', e.target.value)
         let searchText = e.target.value.trim()
     
         if(searchText.length){
