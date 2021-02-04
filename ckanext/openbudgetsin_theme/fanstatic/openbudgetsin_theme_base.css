@@ -1679,8 +1679,11 @@ h2.home-tagline{
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .dashboard-cards-container .dashboard-card .card-container .image-container.graphic-chart{
+        background-image: url("../../../gifs/graphic.png");
+    }
     .dashboard-cards-container .dashboard-card .card-container .image-container.bubble-chart{
-        background-image: url("../../../gifs/sequence-scatter.gif");
+        background-image: url("../../../gifs/sequence-scatter.png");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.line-chart{
         background-image: url("../../../gifs/sequence-line.jpg");
@@ -1695,7 +1698,10 @@ h2.home-tagline{
         background-image: url("../../../gifs/sequence-square.jpg");
     }
     .dashboard-cards-container .dashboard-card .card-container .image-container.bar-chart{
-        background-image: url("../../../gifs/sequence-bar.jpg");
+        background-image: url("../../../gifs/sequence-bar.gif");
+    }
+    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bubble-chart{
+        background-image: url("../../../gifs/sequence-scatter.gif");
     }
     .dashboard-cards-container .dashboard-card .card-container:hover .image-container.line-chart{
         background-image: url("../../../gifs/sequence-line.gif");
@@ -1709,9 +1715,9 @@ h2.home-tagline{
     .dashboard-cards-container .dashboard-card .card-container:hover .image-container.square-chart{
         background-image: url("../../../gifs/sequence-square.gif");
     }
-    .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bar-chart{
+    /* .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bar-chart{
         background-image: url("../../../gifs/sequence-bar.gif");
-    }
+    } */
     .dashboards-button{
         width: 230px;
         height: 48px;
