@@ -4,8 +4,16 @@
 
 const trendingList = [
     {
-        title: "Get Union Budget 2020-21 data in CSV, XLSX & PDF formats",
-        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2020"
+        title: "Get Union Budget 2021-22 data in CSV, XLSX & PDF formats",
+        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2021"
+    },
+    {
+        title: "How to Guide: Make the most out of the OpenBudgetsIndia platform",
+        link: "https://youtu.be/xKjzH1ZB3c4"
+    },
+    {
+        title: "Want to know more about budgets? Watch this 5 min tutorial!",
+        link: "https://youtu.be/fGxNh5Xfn2I"
     },
     {
         title: "Access Assam Budget Data for FY 2020-21 in CSV, XLSX and PDF formats",
