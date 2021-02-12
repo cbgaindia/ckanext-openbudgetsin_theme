@@ -224,6 +224,10 @@ const mobileMenuContent = {
       <span>District Dashboards</span>
       <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
+    <a href="#" id="schemesDashboards" class="mobile-menu-link">
+      <span>Schemes Dashboards</span>
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
+    </a>
     </div>`,
 
     budgetDatasets :
@@ -249,6 +253,9 @@ const mobileMenuContent = {
         <button id="dashboards" class="mobile-menu-back-button"></button>
         <span>Union Dashboards</span>
     </div>
+    <a href="https://union.openbudgetsindia.org/en/" target="_blank">
+    <span>Union Budget Explorer 2021-22</span> 
+    </a>
     <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">
       <span>Union Budget Explorer 2020-21</span> 
     </a>
@@ -294,6 +301,17 @@ const mobileMenuContent = {
     </a>
     <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">
       <span>Krishna District Treasury Dashboard</span> 
+    </a>
+  </div>`,
+
+  schemesDashboards :
+    `<div id="mobile-menu-schemes-dashboards">
+    <div class="menu-title-bar">
+        <button id="dashboards" class="mobile-menu-back-button"></button>
+        <span>Schemes Dashboards</span>
+    </div>
+    <a href="http://52.30.188.232:3000/" target="_blank">
+      <span>Schemes Dashboard</span> 
     </a>
   </div>`
 }
@@ -494,6 +512,12 @@ const dropdownMenuContent = {
             <span name="dashboard-dropdown-element">District Dashboards</span>
             <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>                    
         </a>
+    </li>
+    <li class="dropdown-menu-link" id="schemesDashboards" name="dashboard-dropdown-element">
+        <a href="#" class="dropdown-menu-link" name="dashboard-dropdown-element">
+            <span name="dashboard-dropdown-element">Schemes Dashboards</span>
+            <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>                    
+        </a>
     </li>`,
 
     unionDashboards: 
@@ -502,6 +526,9 @@ const dropdownMenuContent = {
         <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
         <span name="dashboard-dropdown-element">Union Dashboards</span>
     </div>
+    <li>
+        <a href="https://union.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2021-22</span></a>
+    </li>
     <li>
         <a href="https://union2020.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2020-21</span></a>
     </li>
@@ -545,6 +572,16 @@ const dropdownMenuContent = {
     </li>
     <li>
         <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank"><span class="dashboards-span">Krishna District Treasury Dashboard</span></a>
+    </li>`,
+
+    schemesDashboards:
+    `
+    <div class="dropdown-title-bar" id="dashboards" name="dashboard-dropdown-element"">
+        <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
+        <span name="dashboard-dropdown-element">Schemes Dashboards</span>
+    </div>
+    <li>
+        <a href="http://52.30.188.232:3000/" target="_blank"><span class="dashboards-span">Schemes Dashboard</span></a>
     </li>`,
 }
 
