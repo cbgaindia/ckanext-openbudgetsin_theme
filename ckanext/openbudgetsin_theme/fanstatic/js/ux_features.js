@@ -302,8 +302,8 @@ const mobileMenuContent = {
         <button id="dashboards" class="mobile-menu-back-button"></button>
         <span>Schemes Dashboards</span>
     </div>
-    <a href="http://52.30.188.232:3000/" target="_blank">
-      <span>Schemes Dashboard</span> 
+    <a href="https://schemes.openbudgetsindia.org/" target="_blank">
+      <span>Schemes Dashboards</span> 
     </a>
   </div>`
 }
@@ -573,7 +573,7 @@ const dropdownMenuContent = {
         <span name="dashboard-dropdown-element">Schemes Dashboards</span>
     </div>
     <li>
-        <a href="http://52.30.188.232:3000/" target="_blank"><span class="dashboards-span">Schemes Dashboard</span></a>
+        <a href="https://schemes.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Schemes Dashboards</span></a>
     </li>`,
 }
 
