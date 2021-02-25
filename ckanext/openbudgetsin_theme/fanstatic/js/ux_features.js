@@ -8,7 +8,7 @@ const trendingList = [
         link: "https://openbudgetsindia.org/dataset?tags=union+budget+2021"
     },
     {
-        title: "How to Guide: Make the most out of the OpenBudgetsIndia platform",
+        title: "Watch: A guide to help you explore the Open Budgets India platform",
         link: "https://youtu.be/xKjzH1ZB3c4"
     },
     {
@@ -16,21 +16,13 @@ const trendingList = [
         link: "https://youtu.be/fGxNh5Xfn2I"
     },
     {
-        title: "Access Assam Budget Data for FY 2020-21 in CSV, XLSX and PDF formats",
-        link: "https://openbudgetsindia.org/organization/about/assam"
+        title: "Get all the latest union and state budget documents for FY 2021-22",
+        link: "https://openbudgetsindia.org/dataset?q=%222021-22%22&sort=title_string+asc"
     },
     {
-        title: "Download Maharashtra Budget Documents for FY 2020-21 and previous years",
-        link: "https://openbudgetsindia.org/organization/about/maharashtra"
+        title: "Access Union Budget at a Glance & Trends in Receipts as interactive visualizations",
+        link: "https://openbudgetsindia.org/dataset?res_format=JSON&tags=budget2021"
     },
-    {
-        title: "Get Odisha Budget Documents for FY 2020-21 and previous years",
-        link: "https://openbudgetsindia.org/organization/about/odisha"
-    },
-    {
-        title: "Access Rajasthan Budget Documents for FY 2020-21 and previous years",
-        link: "https://openbudgetsindia.org/organization/about/rajasthan"
-    }
 ]
 let activeIndex = 1
 let lastChangeFlag = false
