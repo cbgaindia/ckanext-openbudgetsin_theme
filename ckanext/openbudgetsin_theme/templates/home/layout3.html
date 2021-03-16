@@ -1,788 +1,439 @@
 {% block meta_description %}
-<meta name="description" content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India."> {% endblock %} {% set stats = h.get_site_statistics() %}
+<meta
+  name="description"
+  content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India."
+/>
+{% endblock %} {% set stats = h.get_site_statistics() %}
 <div class="homepage-container">
-    <!-- <div class=""> -->
-        <div class="row-fluid">
-            <div class="latest-highlights-container">
-                {% block latest_highlights %} {% snippet 'home/snippets/latest_highlights.html' %} {% endblock %}
-            </div>
+  <div class="row-fluid">
+    <div class="latest-highlights-container">
+      {% block latest_highlights %} {% snippet
+      'home/snippets/latest_highlights.html' %} {% endblock %}
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="top-container">
+      <div class="">
+        <div class="row-fluid text-align-center">
+          <h2 class="home-tagline">
+            Making India's Budgets open, usable and easy to comprehend
+          </h2>
         </div>
         <div class="row-fluid">
-            <div class="top-container">
-                <div class="">
-                    <div class="row-fluid text-align-center">
-                        <!-- <div class="span2"></div> -->
-                        <h2 class="home-tagline"> Making India's Budgets open, usable and easy to comprehend</h2>
-                        <!-- <div class="span2"></div> -->
-                        <!-- <img class="homepage-logo" alt="OpenBudgetsIndia's Logo" src="Logo_highres_text_original-26.png"> -->
-                    </div>
-                    <div class="row-fluid">
-                        <div class="text-center">
-                            {% block search %} {% snippet 'home/snippets/search.html' %} {% endblock %}
-                        </div>
-                    </div>
-                    <!-- <div class="row-fluid">
-                        <div class="dataset_count-banner">
-                            <a class="" href="/dataset">Explore <b>{{ h.SI_number_span(stats.dataset_count) }}</b> datasets from <b>{{ h.SI_number_span(stats.organization_count) }}</b> Budget Sources.</a>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
+          <div class="text-center">
+            {% block search %} {% snippet 'home/snippets/search.html' %} {%
+            endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="bg-curved intro-new-section">
+      <div class="hompepage-section-intro-text-container">
+        <div class="row-fluid">
+          <div class="introductory-text">
+            <h2 class="homepage-section-heading"><span>Dashboards</span></h2>
+          </div>
         </div>
         <div class="row-fluid">
-            <div class="bg-curved intro-new-section">
-                <!-- <img src="home-dashboard-curved-bg.svg" /> -->
-                <!-- <div class=""> -->
-                    <!-- <div class="row"> -->
-                        <!-- <div class=""> -->
-                            <div class="hompepage-section-intro-text-container">
-                                <div class="row-fluid">
-                                    <div class="introductory-text">
-                                        <!-- <h2 class="light-text">Introducing</h2> -->
-                                        <h2 class="homepage-section-heading"><span>Dashboards</span></h2>
-                                    </div>
-                                </div>
-                                <div class="row-fluid">
-                                    <div class="banner-description">
-                                       <h3 class="homepage-section-text">
-                                           Open Budgets India brings new dashboards for exploring Union, State 
-                                           and District level fiscal data. These dashboards help you navigate through 
-                                           data, visualizations and insights from various tiers of government.
-                                        </h3> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row-fluid">
-                            <div class="dashboard-cards-container">
-                                <!-- <div class="dashboard-card tall card-width"> -->
-                                    <a href="https://union.openbudgetsindia.org/en/" target="_blank" class="dashboard-card tall card-width card-link-container">
-                                        <div class="right-aligned card-container">
-                                            <!-- <a href="https://hp.openbudgetsindia.org/" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="image-container bar-chart">
-    
-                                            </div>
-                                            <div class="text-container">
-                                                <h4>
-                                                    Union Budget Explorer 2021 - 2022
-                                                </h4>
-                                                <p>Explore the comprehensive money flow data of the Union Budget 2021-22</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="https://schemes.openbudgetsindia.org/" target="_blank" class="dashboard-card tall card-width card-link-container ml-2">
-                                        <div class="right-aligned card-container">
-                                            <!-- <a href="https://hp.openbudgetsindia.org/" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="image-container area-chart">
-    
-                                            </div>
-                                            <div class="text-container">
-                                                <h4>
-                                                    Schemes Dashboards
-                                                </h4>
-                                                <p>Explore relevant fiscal indicators for select development schemes for various years</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                <!-- </div> -->
-                                <!-- <div class="cards-group-flex-column card-width ml-2"> -->
-                                    <!-- <div class="dashboard-card"> -->
-                                        <!-- <a href="https://union2020.openbudgetsindia.org/en/" target="_blank" class="dashboard-card card-link-container">
-                                            <div class="left-aligned card-container">
-                                                <div class="text-container">
-                                                    <h4>Union Budget Explorer 2020 - 2021</h4>
-                                                    <p>Explore the comprehensive money flow data of the Union Budget 2020-21</p>
-                                                </div>
-                                                <div class="image-container line-chart">
-    
-                                                </div>
-                                            </div>
-                                        </a> -->
-                                    <!-- </div> -->
-                                    <!-- <div class="dashboard-card"> -->
-                                        <!-- <a href="https://union2019.openbudgetsindia.org/en/" target="_blank" class="dashboard-card card-link-container">
-                                            <div class="left-aligned card-container">
-                                                <div class="text-container">
-                                                    <h4>Union Budget Explorer 2019 - 2020</h4>
-                                                    <p>Explore the comprehensive money flow data of the Union Budget 2019 - 20</p>
-                                                </div>
-                                                <div class="image-container pie-chart">
-    
-                                                </div>
-                                            </div>
-                                        </a> -->
-                                    <!-- </div> -->
-                                    
-                                <!-- </div> -->
-                            </div>
-                            <div class="dashboard-cards-container mt-2">
-                                <!-- <div class="dashboard-card card-width"> -->
-                                    <a href="https://hp.openbudgetsindia.org/" target="_blank" class="dashboard-card card-width card-link-container">
-                                        <div class="left-aligned card-container card-row-mobile">
-                                            <!-- <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="text-container">
-                                                <h4>Himachal Pradesh Fiscal Data Explorer</h4>
-                                                <p>A unique tool where citizens can explore budgets and spending data of state</p>
-                                            </div>
-                                            <div class="image-container bubble-chart">
-    
-                                            </div>
-                                        </div>
-                                    </a>
-                                <!-- </div> -->
-                                <div class="cards-group-flex-row ml-2">
-                                    <!-- <div class="dashboard-card card-width-small"> -->
-                                    <a href="https://union2020.openbudgetsindia.org/en/" target="_blank" class="dashboard-card card-width-small card-link-container">
-                                        <div class="left-aligned card-container">
-                                            <!-- <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="text-container">
-                                                <h4>Union Budget Explorer 2020-2021</h4>
-                                                <p></p>
-                                            </div>
-                                            <div class="image-container pie-chart">
+          <div class="banner-description">
+            <h3 class="homepage-section-text">
+              Find relevant budget and spending data at the union, state, and district levels in these dashboards, designed to help you navigate the labyrinth of fiscal data through visualizations and analytical insights.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="dashboard-cards-container">
+          <a
+            href="https://union.openbudgetsindia.org/en/"
+            target="_blank"
+            class="dashboard-card tall card-width card-link-container"
+          >
+            <div class="right-aligned card-container">
+              <div class="image-container bar-chart"></div>
+              <div class="text-container">
+                <h4>Union Budget Explorer 2021 - 2022</h4>
+                <p>
+                  Explore the Union Budget 2021-22 using visualisations or download the raw data for personal research.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://schemes.openbudgetsindia.org/"
+            target="_blank"
+            class="dashboard-card tall card-width card-link-container ml-2"
+          >
+            <div class="right-aligned card-container">
+              <div class="image-container area-chart"></div>
+              <div class="text-container">
+                <h4>Schemes Dashboards</h4>
+                <p>
+                  Find downloadable data and visualisations on some of the largest schemes run by the union and state governments. 
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="dashboard-cards-container mt-2">
+          <a
+            href="https://hp.openbudgetsindia.org/"
+            target="_blank"
+            class="dashboard-card card-width card-link-container"
+          >
+            <div class="left-aligned card-container card-row-mobile">
+              <div class="text-container">
+                <h4>Himachal Pradesh Fiscal Data Explorer</h4>
+                <p>
+                  Explore granular information on HP’s spending at state, district and DDO levels.
+                </p>
+              </div>
+              <div class="image-container bubble-chart"></div>
+            </div>
+          </a>
 
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- </div> -->
-                                    <!-- <div class="dashboard-card card-width-small ml-2"> -->
-                                    <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank" class="dashboard-card card-width-small ml-2 card-link-container">
-                                        <div class="left-aligned card-container">
-                                            <!-- <a href="https://union2018.openbudgetsindia.org/en/" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="text-container">
-                                                <h4>Assam Budget Explorer 2020 - 2021</h4>
-                                                <p></p>
-                                            </div>
-                                            <div class="image-container line-chart">
+          <div class="cards-group-flex-row ml-2">
+            <a
+              href="https://union2020.openbudgetsindia.org/en/"
+              target="_blank"
+              class="dashboard-card card-width-small card-link-container"
+            >
+              <div class="left-aligned card-container">
+                <div class="text-container">
+                  <h4>Union Budget Explorer 2020-2021</h4>
+                  <p></p>
+                </div>
+                <div class="image-container pie-chart"></div>
+              </div>
+            </a>
 
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!-- </div> -->
-                                </div>
-                                <!-- <div class="span3">
-                                    <h2>Union Budget Explorer</h2>
-                                    <h4>2020-21</h4>
-                                    <div class="btn-group" role="group" aria-label="Explore">
-                                        <a href="https://union2020.openbudgetsindia.org" target="_blank">
-                                            <button type="button" class="explore-button">Explore!</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <h2>Assam Budget Explorer</h2>
-                                    <h4>2019-20</h4>
-                                    <div class="btn-group" role="group" aria-label="Explore">
-                                        <a href="https://assam2019.openbudgetsindia.org" target="_blank">
-                                            <button type="button" class="explore-button">Explore!</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <h2>Balasore District Treasury</h2>
-                                    <h4>Odisha</h4>
-                                    <div class="btn-group" role="group" aria-label="Explore">
-                                        <a href="https://dash.openbudgetsindia.org/superset/dashboard/odisha_balasore_treasury_dashboard/?standalone=true" target="_blank">
-                                            <button type="button" class="explore-button">Explore!</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <h2>Krishna District Treasury</h2>
-                                    <h4>Andhra Pradesh</h4>
-                                    <div class="btn-group" role="group" aria-label="Explore">
-                                        <a href="https://dash.openbudgetsindia.org/superset/dashboard/ap_krishna_treasury_dashboard/?standalone=true" target="_blank">
-                                            <button type="button" class="explore-button">Explore!</button>
-                                        </a>
-                                    </div>  
-                                </div>
-                                 -->
-                            </div>
-                            </div>
-                            <!-- <div class="row-fluid mt-2 text-center">
-                                <button class="dashboards-button home-primary-button">View All Dashboards<img class="button-arrow-right" src="arrow-right-white.svg" /></button>
-                            </div> -->
-                       
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            </div>
+            <a
+              href="https://assam2020.openbudgetsindia.org/en/"
+              target="_blank"
+              class="dashboard-card card-width-small ml-2 card-link-container"
+            >
+              <div class="left-aligned card-container">
+                <div class="text-container">
+                  <h4>Assam Budget Explorer 2020 - 2021</h4>
+                  <p></p>
+                </div>
+                <div class="image-container line-chart"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid mt-2 text-center">
+        <a class="dashboards-button home-primary-button" href="/dashboards"
+          >View All Dashboards<img
+            class="button-arrow-right"
+            src="arrow-right-white.svg"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="bg-white level-of-governance">
+      <div class="hompepage-section-intro-text-container">
+        <div class="row-fluid">
+          <div class="levelgov-cont-header">
+            <h2 class="homepage-section-heading">
+              Government-wise Budget Data
+            </h2>
+          </div>
         </div>
         <div class="row-fluid">
-            <div class="bg-white level-of-governance">
-                <!-- <div class="container"> -->
-                    <div class="hompepage-section-intro-text-container">
-                        <div class="row-fluid">
-                            <div class="levelgov-cont-header">
-                                <h2 class="homepage-section-heading">Government-wise Budget Data</h2>
-                            </div>
-                        </div>
-                        <div class="row-fluid">
-                            <div class="levelgov-cont-descr banner-description">
-                                <h3 class="homepage-section-text">
-                                    Explore budget data for different levels of government. In India, the 
-                                    budget data is available for three levels of government: Union, State and Local, the 
-                                    latter being either urban or rural.
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <!-- <ul class="thumbnails"> -->
-                            <div id="govt-tiers-cards-container" class="govt-tiers-cards-container">
-                                <a href="https://openbudgetsindia.org/organization/about/combined-budget" target="_blank" class="govt-tier-card card-link-container">
-                                    <!-- <div class="govt-tier-card"> -->
-                                        <!-- <a href="https://openbudgetsindia.org/organization/about/combined-budget" target="_blank"><span class="card-link-container"></span></a> -->
-                                        <div class="image-container combined-budget">
-
-                                        </div>
-                                        <div class="text-container">
-                                            <h4>
-                                                Combined Budget
-                                            </h4>
-                                            <h4 class="homepage-section-text">(Union & States)</h4>
-                                        </div>
-                                    <!-- </div> -->
-                                </a>
-                                <a href="https://openbudgetsindia.org/organization/about/union-budget" target="_blank" class="govt-tier-card ml-30 card-link-container">
-                                    <!-- <div class="govt-tier-card ml-30"> -->
-                                        <!-- <a href="https://openbudgetsindia.org/organization/about/union-budget" target="_blank"><span class="card-link-container"></span></a> -->
-                                        <div class="image-container union-budget">
-    
-                                        </div>
-                                        <div class="text-container">
-                                            <h4>
-                                                Union Budget
-                                            </h4>
-                                        </div>
-                                    <!-- </div> -->
-                                </a>
-                                <a href="https://openbudgetsindia.org/organization/about/states-budget" target="_blank" class="govt-tier-card ml-30 card-link-container">
-                                    <!-- <div class="govt-tier-card ml-30"> -->
-                                        <!-- <a href="https://openbudgetsindia.org/organization/about/states-budget" target="_blank"><span class="card-link-container"></span></a> -->
-                                        <div class="image-container states-budget">
-    
-                                        </div>
-                                        <div class="text-container">
-                                            <h4>
-                                                State Budgets
-                                            </h4>
-                                        </div>
-                                    <!-- </div> -->
-                                </a>
-                                <a href="https://openbudgetsindia.org/organization/about/district-treasuries" target="_blank" class="govt-tier-card ml-30 card-link-container">
-                                    <!-- <div class="govt-tier-card ml-30"> -->
-                                        <!-- <a href="https://openbudgetsindia.org/organization/about/district-treasuries" target="_blank"><span class="card-link-container"></span></a> -->
-                                        <div class="image-container district-treasuries">
-    
-                                        </div>
-                                        <div class="text-container">
-                                            <h4>
-                                                District Treasury Flows
-                                            </h4>
-                                        </div>
-                                    <!-- </div> -->
-                                </a>
-                                <a href="https://openbudgetsindia.org/organization/about/municipal-budget" target="_blank" class="govt-tier-card ml-30 card-link-container">
-                                    <!-- <div class="govt-tier-card ml-30"> -->
-                                        <!-- <a href="https://openbudgetsindia.org/organization/about/municipal-budget" target="_blank"><span class="card-link-container"></span></a> -->
-                                        <div class="image-container municipal-budget">
-    
-                                        </div>
-                                        <div class="text-container">
-                                            <h4>
-                                                Municipal Corporation Budgets
-                                            </h4>
-                                        </div>
-                                    <!-- </div> -->
-                                </a>
-                                <button class="swipe-right-button">
-                                    <span>Swipe</span>
-                                    <img src="arrow-right.svg" />
-                                </button>
-                            </div>
-                            <!-- <li class="span2 offset1 ">
-                                <a href="/organization/about/combined-budget">
-                                    <div class="thumbnail">
-                                        <img src="CB-09.png" alt="Combined Budget (Union & States) Datasets">
-                                        <h3>Combined Budget <br>(Union & States)</h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="span2">
-                                <a href="/organization/about/union-budget">
-                                    <div class="thumbnail">
-                                        <img src="UB-09.png" alt="Union Budget Datasets">
-                                        <h3>Union Budget</h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="span2">
-                                <a href="organization/about/states-budget">
-                                    <div class="thumbnail">
-                                        <img src="SB-09.png" alt="State Budgets Datasets">
-                                        <h3>State Budgets</h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="span2">
-                                <a href="organization/about/municipal-budget">
-                                    <div class="thumbnail">
-                                        <img src="MB-09.png" alt="Municipal Corporation Budgets Datasets">
-                                        <h3>Municipal Corporation Budgets</h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="span2">
-                                <a href="organization/about/district-treasuries">
-                                    <div class="thumbnail">
-                                        <img src="Orissa_State.jpg" alt="District Treasury Datasets">
-                                        <h3>District Treasury</h3>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul> -->
-                    </div>
-                <!-- </div> -->
+          <div class="levelgov-cont-descr banner-description">
+            <h3 class="homepage-section-text">
+              The OBI platform provides budget datasets at the level of union, state and local (municipal) governments.  Explore online  or download them for personal research.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div id="govt-tiers-cards-container" class="govt-tiers-cards-container">
+          <a
+            href="https://openbudgetsindia.org/organization/about/combined-budget"
+            target="_blank"
+            class="govt-tier-card card-link-container"
+          >
+            <div class="image-container combined-budget"></div>
+            <div class="text-container">
+              <h4>Combined Budget</h4>
+              <h4 class="homepage-section-text">(Union & States)</h4>
             </div>
+          </a>
+          <a
+            href="https://openbudgetsindia.org/organization/about/union-budget"
+            target="_blank"
+            class="govt-tier-card ml-30 card-link-container"
+          >
+            <div class="image-container union-budget"></div>
+            <div class="text-container">
+              <h4>Union Budget</h4>
+            </div>
+          </a>
+          <a
+            href="https://openbudgetsindia.org/organization/about/states-budget"
+            target="_blank"
+            class="govt-tier-card ml-30 card-link-container"
+          >
+            <div class="image-container states-budget"></div>
+            <div class="text-container">
+              <h4>State Budgets</h4>
+            </div>
+          </a>
+          <a
+            href="https://openbudgetsindia.org/organization/about/district-treasuries"
+            target="_blank"
+            class="govt-tier-card ml-30 card-link-container"
+          >
+            <div class="image-container district-treasuries"></div>
+            <div class="text-container">
+              <h4>District Treasury Flows</h4>
+            </div>
+          </a>
+          <a
+            href="https://openbudgetsindia.org/organization/about/municipal-budget"
+            target="_blank"
+            class="govt-tier-card ml-30 card-link-container"
+          >
+            <div class="image-container municipal-budget"></div>
+            <div class="text-container">
+              <h4>Municipal Corporation Budgets</h4>
+            </div>
+          </a>
+          <button class="swipe-right-button">
+            <span>Swipe</span>
+            <img src="arrow-right.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="bg-grey features-banner">
+      <div class="key-features-section">
+        <div class="intro-section-row">
+          <div class="hompepage-section-intro-text-container budget-basics">
+            <div class="row-fluid">
+              <h2 class="homepage-section-heading">Budget Forum</h2>
+            </div>
+            <div class="row-fluid">
+              <div class="banner-description">
+                <h3 class="homepage-section-text">
+                  Discuss, debate, and decode India’s budgets! Engage with a community of budget enthusiasts from across the world. 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="hompepage-section-intro-text-container budget-basics">
+            <div class="row-fluid">
+              <h2 class="homepage-section-heading">Budget Basics</h2>
+            </div>
+            <div class="row-fluid">
+              <div class="banner-description">
+                <h3 class="homepage-section-text">
+                  We demystify the concepts and processes of government budgets in India, supplemented by short and crisp tutorial videos.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section-row">
+          <!-- <div class="feature-container">
+            <a
+              href="https://openbudgetsindia.org/dataset?res_format=PDF"
+              target="_blank"
+              class="feature card-link-container"
+            >
+              <div class="image-container pdf-icon"></div>
+              <div class="text-container mt-8">
+                <h4>Budget Documents</h4>
+              </div>
+            </a>
+            <a
+              href="https://openbudgetsindia.org/dataset?res_format=CSV"
+              target="_blank"
+              class="feature ml-24 card-link-container"
+            >
+              <div class="image-container dataset-icon"></div>
+              <div class="text-container mt-8">
+                <h4>Machine Readable Datasets</h4>
+              </div>
+            </a>
+            <a
+              href="https://openbudgetsindia.org/dataset?tags=Visualization"
+              target="_blank"
+              class="feature ml-24 card-link-container"
+            >
+              <div class="image-container visualisation-icon"></div>
+              <div class="text-container mt-8">
+                <h4>Data Visualizations</h4>
+              </div>
+            </a>
+          </div> -->
+          <a
+            href="https://forum.openbudgetsindia.org/"
+            target="_blank"
+            class="budget-basics-card card-link-container discourse"
+          >
+            <div class="image-container">
+              <p class="link-button">
+                Join Forum
+                <img class="button-arrow-right" src="arrow-right-purple.svg" />
+              </p>
+            </div>
+          </a>
+          <a
+            href="/budget-basics/"
+            target="_blank"
+            class="budget-basics-card card-link-container"
+          >
+            <div class="image-container">
+              <p class="link-button">
+                Get Started
+                <img class="button-arrow-right" src="arrow-right-purple.svg" />
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="budget-basics-section-mobile ml-2">
+        <div class="hompepage-section-intro-text-container">
+          <div class="row-fluid">
+            <h2 class="homepage-section-heading">Budget Forum</h2>
+          </div>
+          <div class="row-fluid">
+            <div class="banner-description">
+              <h3 class="homepage-section-text">
+                Discuss, debate, and decode India’s budgets! Engage with a community of budget enthusiasts from across the world. 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://forum.openbudgetsindia.org/"
+          target="_blank"
+          class="budget-basics-card card-link-container discourse"
+        >
+          <div class="image-container">
+            <p class="link-button">
+              Join Forum
+              <img class="button-arrow-right" src="arrow-right-purple.svg" />
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="budget-basics-section-mobile ml-2">
+        <div class="hompepage-section-intro-text-container">
+          <div class="row-fluid">
+            <h2 class="homepage-section-heading">Budget Basics</h2>
+          </div>
+          <div class="row-fluid">
+            <div class="banner-description">
+              <h3 class="homepage-section-text">
+                We demystify the concepts and processes of government budgets in India, supplemented by short and crisp tutorial videos.
+              </h3>
+            </div>
+          </div>
+        </div>
+        <a
+          href="/budget-basics/"
+          target="_blank"
+          class="budget-basics-card card-link-container"
+        >
+          <div class="image-container">
+            <p class="link-button">
+              Get Started
+              <img class="button-arrow-right" src="arrow-right-purple.svg" />
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="case-studies-section">
+      <div class="hompepage-section-intro-text-container">
+        <div class="row-fluid">
+          <h2 class="homepage-section-heading">
+            New Developments on Budget Transparency and Accountability
+          </h2>
         </div>
         <div class="row-fluid">
-            <div class="bg-grey features-banner">
-                <!-- <div class="container"> -->
-                    <!-- <div class=" row text-center"> -->
-                        <div class="key-features-section">
-                            <div class="intro-section-row">
-                                <div class="hompepage-section-intro-text-container">
-                                    <div class="row-fluid">
-                                            <h2 class="homepage-section-heading">Key Features</h2>
-                                    </div>
-                                    <div class="row-fluid">
-                                        <div class="banner-description">
-                                            <h3 class="homepage-section-text">
-                                                Budget Documents and much more!
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hompepage-section-intro-text-container budget-basics">
-                                    <div class="row-fluid">
-                                            <h2 class="homepage-section-heading">Budget Basics</h2>
-                                    </div>
-                                    <div class="row-fluid">
-                                        <div class="banner-description">
-                                            <h3 class="homepage-section-text">
-                                                Learn all about government budgets from our step-by-step guide!
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-section-row">
-                                <div class="feature-container">
-                                    <a href="https://openbudgetsindia.org/dataset?res_format=PDF" target="_blank" class="feature card-link-container">
-                                        <!-- <div class="feature"> -->
-                                            <!-- <a href="https://openbudgetsindia.org/dataset?res_format=PDF" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="image-container pdf-icon">
-                                                <!-- <img class="banner-image" alt="Explore Budget Documents (PDFs)" src="Budget_doc_icon-17.png"> -->
-                                            </div>
-                                            <div class="text-container mt-8">
-                                                <h4>
-                                                    <!-- <a href="/dataset?res_format=PDF" target="_blank"> -->
-                                                        Budget Documents
-                                                    <!-- </a> -->
-                                                </h4>
-                                            </div>
-                                            
-                                        <!-- </div> -->
-                                    </a>
-                                    <a href="https://openbudgetsindia.org/dataset?res_format=CSV" target="_blank" class="feature ml-24 card-link-container">
-                                        <!-- <div class="feature ml-24"> -->
-                                            <!-- <a href="https://openbudgetsindia.org/dataset?res_format=CSV" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="image-container dataset-icon">
-                                                <!-- <img class="banner-image" alt="Explore machine readable Datasets" src="Key_features_icon-22.png"> -->
-                                            </div>
-                                            <div class="text-container mt-8">
-                                                <h4>
-                                                    <!-- <a href="/dataset?res_format=CSV" target="_blank"> -->
-                                                        Machine Readable Datasets
-                                                    <!-- </a> -->
-                                                </h4>
-                                            </div>
-                                        <!-- </div> -->
-                                    </a>
-                                    <a href="https://openbudgetsindia.org/dataset?tags=Visualization" target="_blank" class="feature ml-24 card-link-container">
-                                        <!-- <div class="feature ml-24"> -->
-                                            <!-- <a href="https://openbudgetsindia.org/dataset?tags=Visualization" target="_blank"><span class="card-link-container"></span></a> -->
-                                            <div class="image-container visualisation-icon">
-                                                <!-- <img class="banner-image" alt="Explore Data Visualizations" src="Key_features_icon-23.png"> -->
-                                            </div>
-                                            <div class="text-container mt-8">
-                                                <h4>
-                                                    <!-- <a href="/dataset?tags=Visualization" target="_blank"> -->
-                                                        Data Visualizations
-                                                    <!-- </a> -->
-                                                </h4>
-                                            </div>
-                                        <!-- </div> -->
-                                    </a>
-                                </div>
-                                <a href="/budget-basics/" target="_blank" class="budget-basics-card card-link-container">
-                                    <!-- <div class="budget-basics-card"> -->
-                                    <div class="image-container">
-                                        <!-- <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png"> -->
-                                            <p class="link-button">Get Started <img class="button-arrow-right" src="arrow-right-purple.svg" /></p>
-                                    </div>
-                                    <!-- </div> -->
-                                </a>
-                                </div>
-                            </div>
-                        <div class="budget-basics-section-mobile ml-2">
-                            <div class="hompepage-section-intro-text-container">
-                                <div class="row-fluid">
-                                        <h2 class="homepage-section-heading">Budget Basics</h2>
-                                </div>
-                                <div class="row-fluid">
-                                    <div class="banner-description">
-                                        <h3 class="homepage-section-text">
-                                            Learn all about government budgets from our step-by-step guide!
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div> 
-                            <a href="/budget-basics/" target="_blank" class="budget-basics-card card-link-container">
-                                <!-- <div class="budget-basics-card"> -->
-                                <div class="image-container">
-                                        <!-- <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png"> -->
-                                        <p class="link-button">Get Started <img class="button-arrow-right" src="arrow-right-purple.svg" /></p>
-                            </div>
-                                <!-- </div> -->
-                            </a>
-                        </div>
-                        <!-- <a href="/dataset?res_format=PDF" target="_blank">
-                                <img class="banner-image" alt="Explore Budget Documents (PDFs)" src="Budget_doc_icon-17.png">
-                                <div class="icons_support_text">Budget Documents (PDFs)</div>
-                            </a>
-                            <a href="/dataset?res_format=CSV">
-                                <img class="banner-image" alt="Explore machine readable Datasets" src="Key_features_icon-22.png">
-                                <div class=" icons_support_text">
-                                    Machine Readable Datasets 
-                                </div>
-                            </a>
-                            <a href="/dataset?tags=Visualization">
-                                <img class="banner-image" alt="Explore Data Visualizations" src="Key_features_icon-23.png">
-                                <div class=" icons_support_text">
-                                    Data Visualizations
-                                </div>
-                            </a>
-                            <a href="/budget-basics/" target="_blank">
-                                <img class="banner-image" alt="Explore our Budget Basics guide" src="Key_features_icon-21.png">
-                                <div class=" icons_support_text">
-                                    Budget Basics
-                                </div>
-                            </a> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            </div>
+          <div class="banner-description">
+            <h3 class="homepage-section-text">
+              Explore new developments in the field of budget transparency and accountability.
+            </h3>
+          </div>
         </div>
-        <div class="row-fluid">
-            <div class="case-studies-section">
-                <div class="hompepage-section-intro-text-container">
-                    <div class="row-fluid">
-                            <h2 class="homepage-section-heading">New Developments on Budget Transparency and Accountability</h2>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="banner-description">
-                            <h3 class="homepage-section-text">
-                                Explore the world of Open Budgets and its role in advancing better advocacy
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-studies-cards-container">
-                    <!-- <div class="case-studies-card"> -->
-                        <a href="https://blog.openbudgetsindia.org/himachal-pradesh-fiscal-data-explorer-introductory-blog-5a3d344803ab" target="_blank" class="case-studies-card card-link-container">
-                            <div class="right-aligned card-container">
-                                <!-- <a href="#" target="_blank"><span class="card-link-container"></span></a> -->
-                                <div class="image-container first">
-    
-                                </div>
-                                <div class="text-container">
-                                    <h4>
-                                        Introducing the Himachal Pradesh Fiscal Data Explorer
-                                    </h4>
-                                    <p>
-                                        Fiscal Data Explorer is a unique tool where citizens can 
-                                        explore both budgets and spending data of Himachal Pradesh 
-                                        in an easy to comprehend and simple to use manner.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    <!-- </div> -->
-                    <!-- <div class="case-studies-card ml-2"> -->
-                        <a href="https://blog.openbudgetsindia.org/how-well-are-budget-2020-21-allocations-going-to-be-utilised-7d7ca3e372ed" target="_blank" class="case-studies-card ml-2 card-link-container">
-                            <div class="right-aligned card-container">
-                                <!-- <a href="" target="_blank"><span class="card-link-container"></span></a> -->
-                                <div class="image-container second">
-    
-                                </div>
-                                <div class="text-container">
-                                    <h4>
-                                        The Budget Trails: Tracking utilisation of funds at the district level
-                                    </h4>
-                                    <p>
+      </div>
+      <div class="case-studies-cards-container">
+        <a
+          href="https://blog.openbudgetsindia.org/himachal-pradesh-fiscal-data-explorer-introductory-blog-5a3d344803ab"
+          target="_blank"
+          class="case-studies-card card-link-container"
+        >
+          <div class="right-aligned card-container">
+            <div class="image-container first"></div>
+            <div class="text-container">
+              <h4>Introducing the Himachal Pradesh Fiscal Data Explorer</h4>
+              <p>
+                Fiscal Data Explorer is a unique tool where citizens can explore
+                both budgets and spending data of Himachal Pradesh in an easy to
+                comprehend and simple to use manner.
+              </p>
+            </div>
+          </div>
+        </a>
 
-                                        There is an urgent need to improve the budget and expenditure information architecture 
-                                        improve transparency and accountability in the social sectors, writes Subrat.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    <!-- </div> -->
-                </div>
+        <a
+          href="https://blog.openbudgetsindia.org/how-well-are-budget-2020-21-allocations-going-to-be-utilised-7d7ca3e372ed"
+          target="_blank"
+          class="case-studies-card ml-2 card-link-container"
+        >
+          <div class="right-aligned card-container">
+            <div class="image-container second"></div>
+            <div class="text-container">
+              <h4>
+                The Budget Trails: Tracking utilisation of funds at the district
+                level
+              </h4>
+              <p>
+                There is an urgent need to improve the budget and expenditure
+                information architecture improve transparency and accountability
+                in the social sectors, writes Subrat.
+              </p>
             </div>
-        </div>
-        
-        <!-- <div class="row-fluid">
-            <div class="bg-grey sectors-clusters-container">
-                <div class="container">
-                    <div class="row ">
-                        <div class="container">
-                            <div class="row-fluid">
-                                <div class="sectors-cont-header">
-                                    <h2>Sectors</h2>
-                                </div>
-                            </div>
-                            <div class="row-fluid">
-                                <div class="span8 offset2 sectors-cont-descr">
-                                    <p>
-                                        The portal includes twelve broad sectors as organised below. These sectors represent Union and State Budget expenditure on both Economic Services and Social Services.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class=" organization-icons">
-                                <div class="row-fluid">
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/agriculture">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="Agriculture.png" alt="Agriculture and Allied Activities">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Agriculture and Allied Activities</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/drinking-water-sanitation">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="Water.png" alt="drinking-water-sanitation">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Drinking Water &amp; Sanitation</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/education">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="edu.png" alt="Education">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Education</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-fluid">
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/environment-and-forests">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="Forest-11.png" alt="Environment and Forests">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Environment and Forests</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/food-civil-supplies-and-co-operation">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="food-11.png" alt="Food, Civil Supplies and Co-operation">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Food,<br> Civil Supplies and Co-operation</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/health">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="Health-11.png" alt="Health">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Health</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-fluid">
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/housing-urban-development">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="housing-11.png" alt="Urban Development and Housing">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Urban Development and Housing</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/power-and-energy">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="energy-11.png" alt="Power and Energy">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Power and Energy</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/public-work">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="public_Works-11.png" alt="Public Works">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Public Works</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-fluid">
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/rural-development-and-panchayati-raj-institutions">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="rural_dev-11.png" alt="Rural Development and Panchayati Raj Institutions">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Rural Development and Panchayati Raj Institutions</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/social-justice">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="Social_welfare.png" alt="Social Justice">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Social Justice</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="span4  home-group-item">
-                                        <div class="row-fluid">
-                                            <a class=" sector-module-image" href="/group/wat">
-                                                <div class="sectors-box">
-                                                    <section class="sector-list  module module-narrow module-shallow">
-                                                        <header class="sector-heading sector-module-heading">
-                                                            <img class="" src="water_resources.png" alt="Irrigation and Water Resources">
-                                                            <div class="sector-description">
-                                                                <h5 class="sector-media-heading">Irrigation and Water Resources</h5>
-                                                            </div>
-                                                        </header>
-                                                    </section>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- </div> -->
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 {#
 <div class="blog-banner">
-    <div class="row-fluid">
-        <div class="span2 offset1">
-            <img class="bottom-banner-image" src="icons_banner_without_text-18.png">
-        </div>
-        <div class="span6 bottom-banner-description">
-            Quisque efficitur lacinia porta. Etiam a tortor id nibh porttitor tempor. Maecenas at odio nec dolor fermentum elementum. Cras posuere malesuada justo et porttitor. Donec vitae arcu ex. Donec porta condimentum interdum. Fusce bibendum ultricies commodo. Vestibulum tristique eu sapien a mattis. Pellentesque ornare purus tortor, in sollicitudin ligula bibendum sed. Mauris vulputate blandit risus.
-            <div class="row-fluid">
-                <a class="btn btn-primary dataset-explore" href="/dataset"> Explore!</a>
-            </div>
-        </div>
-        <div class="span2">
-            <img class="bottom-banner-image" src="icons_banner_without_text-17.png">
-        </div>
+  <div class="row-fluid">
+    <div class="span2 offset1">
+      <img class="bottom-banner-image" src="icons_banner_without_text-18.png" />
     </div>
+    <div class="span6 bottom-banner-description">
+      Quisque efficitur lacinia porta. Etiam a tortor id nibh porttitor tempor.
+      Maecenas at odio nec dolor fermentum elementum. Cras posuere malesuada
+      justo et porttitor. Donec vitae arcu ex. Donec porta condimentum interdum.
+      Fusce bibendum ultricies commodo. Vestibulum tristique eu sapien a mattis.
+      Pellentesque ornare purus tortor, in sollicitudin ligula bibendum sed.
+      Mauris vulputate blandit risus.
+      <div class="row-fluid">
+        <a class="btn btn-primary dataset-explore" href="/dataset"> Explore!</a>
+      </div>
+    </div>
+    <div class="span2">
+      <img class="bottom-banner-image" src="icons_banner_without_text-17.png" />
+    </div>
+  </div>
 </div>
 #}
