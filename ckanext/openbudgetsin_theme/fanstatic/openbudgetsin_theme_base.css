@@ -1731,6 +1731,7 @@ h2.home-tagline{
         color: #FFFFFF; */
         border: none;
         outline: none;
+        cursor: pointer;
     }
     .dashboard-cards-container .card-link-container{
         /* position:absolute; 
@@ -2249,6 +2250,10 @@ h2.home-tagline{
         -webkit-transition: transform 0.5s ease-in-out;
         -moz-transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease-in-out;
+        height: 200px;
+    }
+    .key-features-section .budget-basics-card.discourse{
+        margin-left: 0;
     }
     .key-features-section .budget-basics-card .image-container{
         position: relative;
@@ -2326,6 +2331,10 @@ h2.home-tagline{
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+    }
+    .key-features-section .budget-basics-card.discourse .image-container, .budget-basics-section-mobile .budget-basics-card.discourse .image-container{
+        background-image: url("../../../obi-forum-card-background.svg");
+        background-color: #E7FCD1;
     }
     .budget-basics-card:hover{
         border: 2px solid #4B4797;
@@ -2996,7 +3005,7 @@ h2.home-tagline{
     }
     .dashboards-button.home-primary-button:hover{
         border: 2px solid #A090FF;
-        /* color: #4B4797; */
+        color: #FFFFFF;
         /* background: #FFFFFF; */
         /* background-color: transparent; */
     }
