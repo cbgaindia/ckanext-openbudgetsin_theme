@@ -1,0 +1,63 @@
+{% resource 'openbudgetsin_theme/dashboards.css' %}
+{% resource 'openbudgetsin_theme/js/dashboards.js' %}
+
+{% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '4' ) %}
+
+{% block subtitle %}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 700" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <div class="homepage layout-4">
+    <div class="container-fluid">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+      {% snippet "dashboards/snippets/listView.html".format(homepage_style) %}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block meta %}
+      {{ super() }}
+  <meta charset="utf-8">
+
+{% block meta_description %}
+    <meta name="description" content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India.">
+{% endblock %}
+{% block meta_abstract %}
+
+<meta name="abstract" content=""/>
+	<meta name="abstract" content="Open Budgets India - Making India's Budgets open, usable and easy to comprehend. Find budget datasets in CSV, Excel, PDF and gain inferences from Budget Data Visualizations" />
+{% endblock %}
+{% block meta_keyword %}
+	<meta name="keywords" content="Open Budgets India, Union Budget, State Budgets, Municipal Budgets, OBI, Data Portal India, Open Budgets Data Portal, Open Data, Free Data, Open Budgets Data India, Data Science, Data Visualization, RBI, IPFS, CSV, Budget Data" />
+{% endblock %}    
+    <meta name="application-name" content="openbudgetsindia.org">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@OpenBudgetsIn">
+    <meta name="twitter:title" content="Open Budgets India">
+    <meta name="twitter:description" content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India.">
+    <meta name="twitter:url" content="https://openbudgetsindia.org/">
+    <meta name="twitter:image:src" content="https://openbudgetsindia.org/metatags-29.png">
+
+{% block og_objs %}
+    <meta property="og:title" content="Open Budgets India" />
+    <meta property="og:description" content="Making India's Budgets Open, Usable and Easy to Comprehend. Find Union Budgets, State Budgets, RBI data and Municipal budgets across years. Gain inferences from Budget Data Visualizations. We are a comprehensive and user-friendly open data portal facilitating free, easy and timely access to relevant data on government budgets in India.">
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://openbudgetsindia.org/" >
+    <meta property="og:image" content="https://openbudgetsindia.org/metatags-28.png" >
+    <meta property="og:site_name" content="Open Budgets India" >
+{% endblock %}
+     
+    <meta name="apple-mobile-web-app-title" content="Open Budgets India">
+{% endblock %}
+
