@@ -25,6 +25,22 @@ class Openbudgetsin_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers, inherit=True)
     plugins.implements(plugins.IFacets)
+    plugins.implements(plugins.IRoutes, inherit=True)
+
+    # IRoute
+    def after_map(self, map):
+        map.connect('dashboard', '/dashboards',
+                    controller='ckanext.openbudgetsin_theme.controllers:SubscribeController',
+                    action='dashboard')
+
+        return map
+    
+    def before_map(self, map):
+        map.connect('dashboard', '/dashboards',
+                    controller='ckanext.openbudgetsin_theme.controllers:SubscribeController',
+                    action='dashboard')
+        return map
+
 
     # IConfigurer
 
