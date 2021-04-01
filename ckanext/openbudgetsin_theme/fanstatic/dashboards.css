@@ -102,6 +102,10 @@
   text-decoration: none;
 }
 
+.home-bg{
+  background-color: #F0F3F5;
+}
+
 
 @media (min-width: 360px) {
  .layout-wrapper{
