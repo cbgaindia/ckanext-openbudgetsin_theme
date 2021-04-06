@@ -217,7 +217,7 @@ const mobileMenuContent = {
       <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     <a href="#" id="schemesDashboards" class="mobile-menu-link">
-      <span>Schemes Dashboards</span>
+      <span>Schemes Dashboard</span>
       <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
     </a>
     </div>`,
@@ -300,10 +300,10 @@ const mobileMenuContent = {
     `<div id="mobile-menu-schemes-dashboards">
     <div class="menu-title-bar">
         <button id="dashboards" class="mobile-menu-back-button"></button>
-        <span>Schemes Dashboards</span>
+        <span>Schemes Dashboard</span>
     </div>
     <a href="https://schemes.openbudgetsindia.org/" target="_blank">
-      <span>Schemes Dashboards</span> 
+      <span>Schemes Dashboard</span> 
     </a>
   </div>`
 }
@@ -507,7 +507,7 @@ const dropdownMenuContent = {
     </li>
     <li class="dropdown-menu-link" id="schemesDashboards" name="dashboard-dropdown-element">
         <a href="#" class="dropdown-menu-link" name="dashboard-dropdown-element">
-            <span name="dashboard-dropdown-element">Schemes Dashboards</span>
+            <span name="dashboard-dropdown-element">Schemes Dashboard</span>
             <img src="./arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link"  name="dashboard-dropdown-element"/>                    
         </a>
     </li>`,
@@ -570,10 +570,10 @@ const dropdownMenuContent = {
     `
     <div class="dropdown-title-bar" id="dashboards" name="dashboard-dropdown-element"">
         <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
-        <span name="dashboard-dropdown-element">Schemes Dashboards</span>
+        <span name="dashboard-dropdown-element">Schemes Dashboard</span>
     </div>
     <li>
-        <a href="https://schemes.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Schemes Dashboards</span></a>
+        <a href="https://schemes.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Schemes Dashboard</span></a>
     </li>`,
 }
 
