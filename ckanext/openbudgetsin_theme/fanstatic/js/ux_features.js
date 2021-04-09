@@ -7,14 +7,14 @@ const trendingList = [
         title: "Get Union Budget 2021-22 data in CSV, XLSX & PDF formats",
         link: "https://openbudgetsindia.org/dataset?tags=union+budget+2021"
     },
-    {
-        title: "Watch: A guide to help you explore the Open Budgets India platform",
-        link: "https://youtu.be/xKjzH1ZB3c4"
-    },
-    {
-        title: "Want to know more about budgets? Watch this 5 min tutorial!",
-        link: "https://youtu.be/fGxNh5Xfn2I"
-    },
+    // {
+    //     title: "Watch: A guide to help you explore the Open Budgets India platform",
+    //     link: "https://youtu.be/xKjzH1ZB3c4"
+    // },
+    // {
+    //     title: "Want to know more about budgets? Watch this 5 min tutorial!",
+    //     link: "https://youtu.be/fGxNh5Xfn2I"
+    // },
     {
         title: "Get all the latest union and state budget documents for FY 2021-22",
         link: "https://openbudgetsindia.org/dataset?q=%222021-22%22&sort=title_string+asc"
