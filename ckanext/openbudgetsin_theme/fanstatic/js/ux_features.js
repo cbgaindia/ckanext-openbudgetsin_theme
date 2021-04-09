@@ -187,7 +187,7 @@ const mobileMenuContent = {
       <button id="mobileMenuHome" class="mobile-menu-back-button"></button>
       <span>OBI Platform</span>
     </div>
-    <a href="/pages/how-to-use-the-portal" target="_blank">
+    <a href="/pages/how-to-use-the-poevenrtal" target="_blank">
       <span>How to Use</span> 
     </a>
     <a href="/pages/faqs" target="_blank">
@@ -196,7 +196,25 @@ const mobileMenuContent = {
     <a href="/about" target="_blank">
       <span>About Us</span>
     </a>
+    <a href="#" id="obivideos" class="mobile-menu-link">
+      <span>OBI Videos</span>
+      <img src="/arrow/right-white.svg" class="dropdown-right-arrow" />
+    </a>
     </div>`,
+
+    obivideos : 
+    ` <div id="mobile-menu-obi-videos">
+    <div class="menu-title-bar">
+      <button id="obiPlatform" class="mobile-menu-back-button"></button>
+      <span>OBI Videos</span>
+    </div>
+    <a href="https://youtu.be/xKjzH1ZB3c4" target="_blank">
+      <span>Video: OBI Platform</span> 
+    </a>
+    <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank">
+      <span>Video: Budget Basics</span> 
+    </a>
+    `,
 
     dashboards : 
     `<div id="mobile-menu-dashboards">
@@ -428,6 +446,20 @@ const mobileMenuContent = {
 
 // ]
 
+const platformDropdownContainer = document.getElementById('platform-dropdown-toggle')
+const dashboardDropdownContainer = document.getElementById('dashboard-dropdown-toggle')
+
+// #################### Platform Dropdown Funtionality ###############
+
+const platformDropdownElement = document.getElementById('platform-dropdown')
+
+platformDropdownElement.addEventListener('click', (e) => {
+    // console.log('testing e target for dropdown', e.target.classList, e)
+    if(e.target.className.includes('dropdown-menu-link')){
+        e.stopPropagation()
+    }
+})
+
 
 //###################### Dropdown Functionality ########################
 
@@ -435,21 +467,23 @@ const dropdownElement = document.getElementById('dashboard-dropdown')
 const dropdownContent = document.getElementById('dropdown-menu-content')
 
 dropdownElement.addEventListener('click', (e) => {
-    // console.log('testing e target for dropdown', e.target.classList, e)
     if(e.target.className.includes('dropdown-menu-link')){
         e.stopPropagation()
     }
 })
 
 const handleUpdateDropdownContent = (id) => {
-    // dropdownContent.classList.add('fade-out');
-    // setTimeout(() => {
-        // dropdownContent.classList.remove('fade-out')
-        // dropdownContent.innerHTML = dropdownMenuContent[id]
-        dropdownElement.innerHTML = dropdownMenuContent[id]
+        if(platformDropdownContainer.classList.value.includes('open')){
+            console.log('platform classlist open')
+            platformDropdownElement.innerHTML = dropdownMenuContent[id]
+
+        }
+        else if(dashboardDropdownContainer.classList.value.includes('open')){
+            console.log('dashboard classlist open')
+            dropdownElement.innerHTML = dropdownMenuContent[id]
+        }
         handleAddEventListenerForDropdown()
         handleBackButtonForDropdown()
-    // }, 400);
 }
 const handleBackButtonForDropdown = () => {
     let dropdownBackButton = document.querySelector('.dropdown-title-bar')
@@ -469,18 +503,27 @@ const handleAddEventListenerForDropdown = () => {
 handleAddEventListenerForDropdown()
 let elem = document.getElementById('dashboard-dropdown-toggle')
 elem.addEventListener('click', function (event) {
+    elem2.classList.remove('open')
     elem.classList.toggle('open')
+});
+let elem2 = document.getElementById('platform-dropdown-toggle')
+elem2.addEventListener('click', function (event) {
+    elem.classList.remove('open')
+    elem2.classList.toggle('open')
 });
 let body = document.getElementsByTagName('body')[0]
 body.addEventListener('click', (e) => {
+    if(e.target.getAttribute("name") === "platform-dropdown-toggle"){
+    }
     if(e.target.getAttribute("name") === "dashboard-dropdown-toggle"){
     }
     else if(!(e.target.getAttribute("name") === "dashboard-dropdown-element")){
         elem.classList.remove('open')
     }
-    else{
-        elem.classList.add('open')
-    }
+    // else{
+    //     elem.classList.add('open')
+    //     // elem2.classList.add('open')
+    // }
 })
 
 
@@ -575,6 +618,41 @@ const dropdownMenuContent = {
     <li>
         <a href="https://schemes.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Schemes Dashboard</span></a>
     </li>`,
+
+    platform: 
+    `
+    <li>
+        <a href="/pages/how-to-use-the-portal" target="_blank">How to Use</a>
+        <!-- <img src="./arrow/right.svg" class="dropdown-right-arrow" /> -->
+    </li>
+    <li>
+        <a href="/pages/faqs" target="_blank">FAQs</a>
+        <!-- <img src="./arrow/right.svg" class="dropdown-right-arrow" /> -->
+    </li>
+    <li>
+        <a href="/about" target="_blank">About Us</a>
+        <!-- <img src="./arrow/right.svg" class="dropdown-right-arrow" /> -->
+    </li>
+    <li class="dropdown-menu-link" id="obivideos" name="platform-dropdown-element">
+        <a href="#" class="dropdown-menu-link" name="platform-dropdown-element">
+        <span name="platform-dropdown-element">OBI Videos</span>
+        <img src="/arrow/right.svg" class="dropdown-right-arrow dropdown-menu-link" name="platform-dropdown-element"/>
+        </a>
+    </li>`,
+
+    obivideos:
+    `
+    <div class="dropdown-title-bar" id="platform" name="platform-dropdown-element"">
+        <button id="platform" class="dropdown-menu-back-button dropdown-menu-link" name="platform-dropdown-element"></button>
+        <span name="platform-dropdown-element">OBI Videos</span>
+    </div>
+    <li>
+        <a href="https://youtu.be/xKjzH1ZB3c4" target="_blank"><span class="dashboards-span">Video: OBI Platform</span></a>
+    </li>
+    <li>
+        <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank"><span class="dashboards-span">Video: Budget Basics</span></a>
+    </li>`,
+
 }
 
 //########################### Swipe Right Button ########################
