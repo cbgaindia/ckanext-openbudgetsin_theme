@@ -998,6 +998,10 @@ span.banner-head {
     margin-top: 30px;
 }
 
+.row-fluid {
+    padding: 40px;
+}
+
 h2.banner-head {
     line-height: 0;
     font-size: 150%;
