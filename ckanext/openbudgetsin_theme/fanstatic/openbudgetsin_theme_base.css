@@ -1358,6 +1358,9 @@ h2.home-tagline{
     padding: 8px;
     margin-top: 40px;
 }
+.wrapper.no-nav .module-content {
+    margin: 20px;
+}
 .module-content{
     padding: 0px;
 }
