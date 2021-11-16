@@ -214,6 +214,9 @@ const mobileMenuContent = {
     <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank">
       <span>Video: Budget Basics</span> 
     </a>
+    <a href="https://www.youtube.com/watch?v=VLbr6gJ3cuw" target="_blank">
+      <span>Video: Schemes Dashboard</span> 
+    </a>
     `,
 
     dashboards : 
@@ -651,6 +654,9 @@ const dropdownMenuContent = {
     </li>
     <li>
         <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank"><span class="dashboards-span">Video: Budget Basics</span></a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=VLbr6gJ3cuw" target="_blank"><span class="dashboards-span">Video: Schemes Dashboard</span></a>
     </li>`,
 
 }
