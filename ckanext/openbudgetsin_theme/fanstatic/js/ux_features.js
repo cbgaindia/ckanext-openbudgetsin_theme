@@ -3,6 +3,10 @@
 // ######################### Trending Section functionalities ###################################
 
 const trendingList = [
+   {
+        title: "Assam Budget Explorer 2021-22 is now LIVE!",
+        link: "https://assam2021.openbudgetsindia.org/"
+    },
     {
         title: "Get Union Budget 2021-22 data in CSV, XLSX & PDF formats",
         link: "https://openbudgetsindia.org/dataset?tags=union+budget+2021"
@@ -291,6 +295,9 @@ const mobileMenuContent = {
     </div>
     <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
+    </a>
+    <a href="https://assam2021.openbudgetsindia.org/en/" target="_blank">
+      <span>Assam Budget Explorer 2021-22</span> 
     </a>
     <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2020-21</span> 
@@ -588,6 +595,9 @@ const dropdownMenuContent = {
     </div>
     <li>
         <a href="https://hp.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Himachal Pradesh Fiscal Data Explorer</span></a>
+    </li>
+    <li>
+        <a href="https://assam2021.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Assam Budget Explorer 2021-22</span></a>
     </li>
     <li>
         <a href="https://assam2020.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Assam Budget Explorer 2020-21</span></a>
