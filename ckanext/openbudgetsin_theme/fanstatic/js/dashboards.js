@@ -37,6 +37,12 @@ const dashboardList = [
     link: "https://hp.openbudgetsindia.org/en/",
   },
   {
+    title: "Assam Budget Explorer 2021-22",
+    class: "mt-4",
+    img: "../../gifs/sequence-area.jpg",
+    link: "https://assam2021.openbudgetsindia.org/en/",
+  },
+  {
     title: "Assam Budget Explorer 2020-21",
     class: "mt-4",
     img: "../../gifs/sequence-square.jpg",
@@ -70,7 +76,7 @@ const dashboardList = [
     title: "Schemes Dashboard",
     class: "mt-4",
     img: "../../gifs/sequence-line.jpg",
-    link: "https://schemes.openbudgetsindia.org/en/",
+    link: "https://schemes.openbudgetsindia.org",
   },
 ];
 

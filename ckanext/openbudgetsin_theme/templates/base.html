@@ -40,3 +40,24 @@
      
     <meta name="apple-mobile-web-app-title" content="Open Budgets India">
 {% endblock %}
+
+{%- block scripts %}
+  {{ super() }}
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNX72G1ZCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'G-WNX72G1ZCS');
+  </script>
+
+{% endblock -%}
+
+
+
+
+
+
+
