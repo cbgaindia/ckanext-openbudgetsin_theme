@@ -663,10 +663,25 @@ const dropdownMenuContent = {
         <a href="https://youtu.be/xKjzH1ZB3c4" target="_blank"><span class="dashboards-span">Video: OBI Platform</span></a>
     </li>
     <li>
+        <a href="https://youtu.be/m5KCwJXTBfI" target="_blank"><span class="dashboards-span">Video: OBI Platform (Hindi)</span></a>
+    </li>
+    <li>
         <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank"><span class="dashboards-span">Video: Budget Basics</span></a>
     </li>
     <li>
+        <a href="https://www.youtube.com/watch?v=TovrkaW5HZY" target="_blank"><span class="dashboards-span">Video: Budget Basics (Hindi)</span></a>
+    </li>
+    <li>
         <a href="https://www.youtube.com/watch?v=VLbr6gJ3cuw" target="_blank"><span class="dashboards-span">Video: Schemes Dashboard</span></a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=pkzmJJ5itHs" target="_blank"><span class="dashboards-span">Video: Budget Forum</span></a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=BQU2EG3zm-M" target="_blank"><span class="dashboards-span">Video: Budget Forum (Hindi)</span></a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=Kbp0r7oS578" target="_blank"><span class="dashboards-span">Video: Gender Responsive Budgeting</span></a>
     </li>`,
 
 }
