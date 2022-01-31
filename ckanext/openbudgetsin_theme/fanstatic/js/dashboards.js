@@ -55,10 +55,10 @@ const dashboardList = [
     link: "https://assam2019.openbudgetsindia.org/en/",
   },
   {
-    title: "Story Generator",
+    title: "Sector Dashboard",
     class: "mt-4",
     img: "../../gifs/sequence-bar.jpg",
-    link: "https://cbgaindia.github.io/story-generator/",
+    link: "https://sectors.openbudgetsindia.org/",
   },
   {
     title: "Balasore District Treasury",

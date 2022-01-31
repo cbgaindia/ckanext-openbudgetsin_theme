@@ -1238,6 +1238,19 @@ p.org-media-descrp {
 .trending-title:hover, .trending-title:focus{
     color: #FFFFFF;
 }
+
+.new_tag::before{
+   content: "NEW";
+   background: red;
+   color: white;
+   font-size: 12px;
+   border-radius: 4px;
+   width: 40px;
+   margin-bottom: 30px;
+   position: absolute;
+   text-align: center;
+   top: 0px;
+}
 .new-tag{
     width: 59px;
     height: 24px;
@@ -2330,7 +2343,7 @@ h2.home-tagline{
     }
     .key-features-section .budget-basics-card .image-container, .budget-basics-section-mobile .budget-basics-card .image-container{
         background-color: #FCDAD1;
-        background-image: url("../../../budget-basics-card-background-desktop.svg");
+        background-image: url("../../../budgetbasics-card-background-desktop.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -2437,7 +2450,7 @@ h2.home-tagline{
         }
         .key-features-section .budget-basics-card .image-container, .budget-basics-section-mobile .budget-basics-card .image-container{
             background-color: #FCDAD1;
-            background-image: url("../../../budget-basics-card-background-mobile.svg");
+            background-image: url("../../../budgetbasics-card-background-mobile.svg");
             background-repeat: no-repeat;
             /* background-position: center;
             background-size: cover; */

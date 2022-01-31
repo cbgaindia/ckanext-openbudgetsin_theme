@@ -305,8 +305,8 @@ const mobileMenuContent = {
     <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2019-20</span> 
     </a>
-    <a href="https://cbgaindia.github.io/story-generator/" target="_blank">
-      <span>Story Generator</span> 
+    <a href="https://sectors.openbudgetsindia.org/" target="_blank">
+      <span>Sector Dashboard</span> 
     </a>
     </div>`,
 
@@ -606,7 +606,7 @@ const dropdownMenuContent = {
         <a href="https://assam2019.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Assam Budget Explorer 2019-20</span></a>
     </li>
     <li>
-        <a href="https://cbgaindia.github.io/story-generator/" target="_blank"><span class="dashboards-span">Story Generator</span></a>
+        <a href="https://sectors.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Sector Dashboard</span></a>
     </li>`,
 
     districtDashboards:
