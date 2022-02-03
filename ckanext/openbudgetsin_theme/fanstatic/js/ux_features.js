@@ -3,13 +3,17 @@
 // ######################### Trending Section functionalities ###################################
 
 const trendingList = [
-   {
-        title: "Assam Budget Explorer 2021-22 is now LIVE!",
-        link: "https://assam2021.openbudgetsindia.org/"
+    {
+        title: "Get Union Budget 2022-23 data in CSV, XLSX & PDF formats",
+        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2022"
     },
     {
-        title: "Get Union Budget 2021-22 data in CSV, XLSX & PDF formats",
-        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2021"
+        title: "Access Union Budget at a Glance & Trends in Receipts as interactive visualizations",
+        link: "https://openbudgetsindia.org/dataset?res_format=JSON&tags=budget2022"
+    },
+    {
+        title: "Assam Budget Explorer 2021-22 is now LIVE!",
+        link: "https://assam2021.openbudgetsindia.org/"
     },
     // {
     //     title: "Watch: A guide to help you explore the Open Budgets India platform",
@@ -22,10 +26,6 @@ const trendingList = [
     {
         title: "Get all the latest union and state budget documents for FY 2021-22",
         link: "https://openbudgetsindia.org/dataset?q=%222021-22%22&sort=title_string+asc"
-    },
-    {
-        title: "Access Union Budget at a Glance & Trends in Receipts as interactive visualizations",
-        link: "https://openbudgetsindia.org/dataset?res_format=JSON&tags=budget2021"
     },
 ]
 let activeIndex = 1

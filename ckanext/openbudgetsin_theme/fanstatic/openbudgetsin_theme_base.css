@@ -1250,6 +1250,7 @@ p.org-media-descrp {
    position: absolute;
    text-align: center;
    top: 0px;
+   left: 0px;
 }
 .new-tag{
     width: 59px;
