@@ -4,6 +4,10 @@
 
 const trendingList = [
     {
+        title: "Union Budget Explorer 2022-23 is NOW LIVE!",
+        link: "https://union.openbudgetsindia.org"
+    },
+    {
         title: "Get Union Budget 2022-23 data in CSV, XLSX & PDF formats",
         link: "https://openbudgetsindia.org/dataset?tags=union+budget+2022"
     },
@@ -286,6 +290,9 @@ const mobileMenuContent = {
         <span>Union Dashboards</span>
     </div>
     <a href="https://union.openbudgetsindia.org/en/" target="_blank">
+    <span>Union Budget Explorer 2022-23</span> 
+    </a>
+    <a href="https://union2021.openbudgetsindia.org/en/" target="_blank">
     <span>Union Budget Explorer 2021-22</span> 
     </a>
     <a href="https://union2020.openbudgetsindia.org/en/" target="_blank">
@@ -587,7 +594,10 @@ const dropdownMenuContent = {
         <span name="dashboard-dropdown-element">Union Dashboards</span>
     </div>
     <li>
-        <a href="https://union.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2021-22</span></a>
+        <a href="https://union.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2022-23</span></a>
+    </li>
+    <li>
+        <a href="https://union2021.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2021-22</span></a>
     </li>
     <li>
         <a href="https://union2020.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2020-21</span></a>
