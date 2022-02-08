@@ -1252,6 +1252,21 @@ p.org-media-descrp {
    top: 0px;
    left: 0px;
 }
+
+.updated_tag::before{
+   content: "UPDATED";
+   background: green;
+   color: white;
+   font-size: 12px;
+   border-radius: 4px;
+   width: 70px;
+   margin-bottom: 30px;
+   position: absolute;
+   text-align: center;
+   top: 0px;
+   left: 0px;
+}
+
 .new-tag{
     width: 59px;
     height: 24px;
