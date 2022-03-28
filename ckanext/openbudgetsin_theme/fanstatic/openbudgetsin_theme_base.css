@@ -1765,6 +1765,10 @@ h2.home-tagline{
         outline: none;
         cursor: pointer;
     }
+    .dashboards-blog-button{
+        float: right;
+        margin-bottom: 20px !important;
+    }
     .dashboard-cards-container .card-link-container{
         /* position:absolute; 
         width:100%;
@@ -2522,7 +2526,7 @@ h2.home-tagline{
 
     /**** Case Studies Section ****/
     .case-studies-section{
-        padding: 80px 80px 104px;
+        padding: 0px 80px 104px;
     }
     .case-studies-cards-container{
         display: flex;
