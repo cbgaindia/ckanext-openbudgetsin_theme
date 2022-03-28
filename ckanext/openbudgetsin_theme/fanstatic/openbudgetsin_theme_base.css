@@ -1765,10 +1765,6 @@ h2.home-tagline{
         outline: none;
         cursor: pointer;
     }
-    .dashboards-blog-button{
-        float: right;
-        margin-bottom: 20px !important;
-    }
     .dashboard-cards-container .card-link-container{
         /* position:absolute; 
         width:100%;
@@ -3369,6 +3365,13 @@ h2.home-tagline{
             max-width: 242px;
             height: 32px;
         }
+    }
+    @media(min-width: 1279px){
+        .dashboards-blog-button{
+            margin-bottom: 20px !important;
+            float: right;
+       }
+
     }
     @media(min-width: 360px) and (max-width: 767px){
 
