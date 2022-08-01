@@ -4,6 +4,10 @@
 
 const trendingList = [
     {
+        title: "Assam Budget Explorer 2022-23 is now LIVE!",
+        link: "https://assam2022.openbudgetsindia.org/"
+    },
+    {
         title: "Union Budget Explorer 2022-23 is NOW LIVE!",
         link: "https://union.openbudgetsindia.org"
     },
@@ -14,10 +18,6 @@ const trendingList = [
     {
         title: "Access Union Budget at a Glance & Trends in Receipts as interactive visualizations",
         link: "https://openbudgetsindia.org/dataset?res_format=JSON&tags=budget2022"
-    },
-    {
-        title: "Assam Budget Explorer 2021-22 is now LIVE!",
-        link: "https://assam2021.openbudgetsindia.org/"
     },
     // {
     //     title: "Watch: A guide to help you explore the Open Budgets India platform",
