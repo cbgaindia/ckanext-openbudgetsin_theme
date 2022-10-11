@@ -318,6 +318,9 @@ const mobileMenuContent = {
     <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
     </a>
+    <a href="https://assam2022.openbudgetsindia.org/en/" target="_blank">
+    <span>Assam Budget Explorer 2022-23</span> 
+    </a>
     <a href="https://assam2021.openbudgetsindia.org/en/" target="_blank">
       <span>Assam Budget Explorer 2021-22</span> 
     </a>
