@@ -43,6 +43,12 @@ const dashboardList = [
     link: "https://hp.openbudgetsindia.org/en/",
   },
   {
+    title: "Assam Budget Explorer 2022-23",
+    class: "mt-4",
+    img: "../../gifs/sequence-area.jpg",
+    link: "https://assam2022.openbudgetsindia.org/en/",
+  },
+  {
     title: "Assam Budget Explorer 2021-22",
     class: "mt-4",
     img: "../../gifs/sequence-area.jpg",
