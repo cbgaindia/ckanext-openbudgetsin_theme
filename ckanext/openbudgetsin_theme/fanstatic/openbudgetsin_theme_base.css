@@ -317,6 +317,8 @@ i.icon-download-alt.icon-large {
 
 .ckanext-datapreview {
     padding-top: 0px;
+    height: 550px;
+    overflow: scroll;
 }
 
 .dataset-detail-container {
