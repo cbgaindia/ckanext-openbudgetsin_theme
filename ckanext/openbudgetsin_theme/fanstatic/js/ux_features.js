@@ -315,6 +315,9 @@ const mobileMenuContent = {
         <button id="dashboards" class="mobile-menu-back-button"></button>
         <span>State Dashboards</span>
     </div>
+    <a href="https://odisha2022.openbudgetsindia.org/" target="_blank">
+      <span>Odisha Budget Explorer 2022-23</span>
+    </a>    
     <a href="https://hp.openbudgetsindia.org/" target="_blank">
       <span>Himachal Pradesh Fiscal Data Explorer</span>
     </a>
@@ -621,6 +624,9 @@ const dropdownMenuContent = {
         <button id="dashboards" class="dropdown-menu-back-button dropdown-menu-link" name="dashboard-dropdown-element"></button>
         <span name="dashboard-dropdown-element">State Dashboards</span>
     </div>
+    <li>
+        <a href="https://odisha2022.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Odisha Budget Explorer 2022-23</span></a>
+    </li>    
     <li>
         <a href="https://hp.openbudgetsindia.org/" target="_blank"><span class="dashboards-span">Himachal Pradesh Fiscal Data Explorer</span></a>
     </li>
