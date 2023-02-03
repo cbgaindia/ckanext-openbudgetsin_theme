@@ -1,9 +1,15 @@
 const dashboardList = [
   {
-    title: "Union Budget Explorer 2022-23",
+    title: "Union Budget Explorer 2023-24",
     class: "mt-4",
     img: "../../gifs/sequence-scatter.png",
     link: "https://union.openbudgetsindia.org/en/",
+  },  
+  {
+    title: "Union Budget Explorer 2022-23",
+    class: "mt-4",
+    img: "../../gifs/sequence-scatter.png",
+    link: "https://union2022.openbudgetsindia.org/en/",
   },
   {
     title: "Union Budget Explorer 2021-22",
