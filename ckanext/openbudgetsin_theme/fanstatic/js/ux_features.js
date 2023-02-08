@@ -8,12 +8,12 @@ const trendingList = [
         link: "https://union.openbudgetsindia.org"
     },    
     {
+        title: "Get Union Budget 2023-24 data in CSV, XLSX & PDF formats",
+        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2023"
+    },    
+    {
         title: "Assam Budget Explorer 2022-23 is now LIVE!",
         link: "https://assam2022.openbudgetsindia.org/"
-    },
-    {
-        title: "Get Union Budget 2022-23 data in CSV, XLSX & PDF formats",
-        link: "https://openbudgetsindia.org/dataset?tags=union+budget+2022"
     },
     {
         title: "Access Union Budget at a Glance & Trends in Receipts as interactive visualizations",
