@@ -1900,6 +1900,9 @@ h2.home-tagline {
     background-image: url("../../../gifs/sequence-square.gif");
 }
 
+.dashboard-cards-container .dashboard-card .card-container:hover .image-container.district-chart {
+    background-image: url("../../../gifs/district.gif");
+}
 /* .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bar-chart{
         background-image: url("../../../gifs/sequence-bar.gif");
     } */
