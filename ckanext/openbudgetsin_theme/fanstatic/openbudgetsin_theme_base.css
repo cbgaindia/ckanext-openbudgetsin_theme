@@ -1876,6 +1876,14 @@ h2.home-tagline {
     background-image: url("../../../gifs/sequence-square.jpg");
 }
 
+.dashboard-cards-container .dashboard-card .card-container .image-container.district-chart {
+    background-image: url("../../../gifs/district.jpg");   
+}
+
+.dashboard-cards-container .dashboard-card .card-container .image-container.constituency-chart {
+    background-image: url("../../../gifs/constituency.jpg");
+}
+
 .dashboard-cards-container .dashboard-card .card-container .image-container.bar-chart {
     background-image: url("../../../gifs/sequence-bar.gif");
 }
@@ -1902,6 +1910,10 @@ h2.home-tagline {
 
 .dashboard-cards-container .dashboard-card .card-container:hover .image-container.district-chart {
     background-image: url("../../../gifs/district.gif");
+}
+
+.dashboard-cards-container .dashboard-card .card-container:hover .image-container.constituency-chart {
+    background-image: url("../../../gifs/constituency.gif");
 }
 /* .dashboard-cards-container .dashboard-card .card-container:hover .image-container.bar-chart{
         background-image: url("../../../gifs/sequence-bar.gif");
