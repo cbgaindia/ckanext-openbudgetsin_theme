@@ -2133,8 +2133,22 @@ h2.home-tagline {
         /* overflow: scroll; */
     }
 
+    .dashboard-cards-container .dashboard-card .left-aligned.card-container.card-row-mobile .text-container p {
+        line-height: 156%;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+
     .dashboard-cards-container .dashboard-card .left-aligned.card-container {
-        flex-direction: column;
+        flex-direction: column;line-height: 156%;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
     }
 
     .dashboard-cards-container .dashboard-card .left-aligned {
