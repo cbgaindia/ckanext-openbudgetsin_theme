@@ -3583,6 +3583,7 @@ nav.section.navigation {
 }
 
 .dropdown-menu .dropdown-menu-link a>span {
+    pointer-events: none;
     display: inline-block;
     width: 160px;
     margin-right: 14px;
