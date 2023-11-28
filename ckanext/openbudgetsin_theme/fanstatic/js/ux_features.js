@@ -222,7 +222,7 @@ const mobileMenuContent = {
     <a href="https://youtu.be/m5KCwJXTBfI" target="_blank">
       <span>Video: OBI Platform (Hindi)</span> 
     </a>
-    <a href="https://youtu.be/fGxNh5Xfn2I" target="_blank">
+    <a href="https://youtu.be/--_Z6T4_gf8" target="_blank">
       <span>Video: Budget Basics</span> 
     </a>
     <a href="https://www.youtube.com/watch?v=TovrkaW5HZY" target="_blank">
