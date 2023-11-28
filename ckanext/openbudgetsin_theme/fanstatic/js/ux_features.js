@@ -216,7 +216,7 @@ const mobileMenuContent = {
       <button id="obiPlatform" class="mobile-menu-back-button"></button>
       <span>OBI Videos</span>
     </div>
-    <a href="https://youtu.be/xKjzH1ZB3c4" target="_blank">
+    <a href="https://youtu.be/PyolFXWARsI" target="_blank">
       <span>Video: OBI Platform</span> 
     </a>
     <a href="https://youtu.be/m5KCwJXTBfI" target="_blank">
@@ -228,7 +228,7 @@ const mobileMenuContent = {
     <a href="https://www.youtube.com/watch?v=TovrkaW5HZY" target="_blank">
       <span>Video: Budget Basics (Hindi)</span> 
     </a>
-    <a href="https://www.youtube.com/watch?v=VLbr6gJ3cuw" target="_blank">
+    <a href="https://youtu.be/N7HPuZa9q6I" target="_blank">
       <span>Video: Schemes Dashboard</span> 
     </a>
     <a href="https://www.youtube.com/watch?v=pkzmJJ5itHs" target="_blank">
@@ -237,8 +237,14 @@ const mobileMenuContent = {
     <a href="https://www.youtube.com/watch?v=BQU2EG3zm-M" target="_blank">
       <span>Video: Budget Forum (Hindi)</span> 
     </a>
-    <a href="https://www.youtube.com/watch?v=Kbp0r7oS578" target="_blank">
+    <a href="https://youtu.be/WOcxmRwSO9U" target="_blank">
       <span>Video: Gender Responsive Budgeting</span> 
+    </a>
+    <a href="https://youtu.be/1O_4jh-jnUs" target="_blank">
+      <span>Video: Child Responsive Budgeting</span> 
+    </a>
+    <a href="https://youtu.be/VgALx59WlIQ" target="_blank">
+      <span>Video: How revenue collection from GST has fared in the first 5 years</span> 
     </a>
     `,
 
