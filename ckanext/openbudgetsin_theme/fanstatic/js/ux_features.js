@@ -296,8 +296,11 @@ const mobileMenuContent = {
         <span>Union Dashboards</span>
     </div>
     <a href="https://union.openbudgetsindia.org/en/" target="_blank">
+    <span>Union Budget Explorer 2024-25(I)</span> 
+    </a> 
+    <a href="https://union2023.openbudgetsindia.org/en/" target="_blank">
     <span>Union Budget Explorer 2023-24</span> 
-    </a>    
+    </a>       
     <a href="https://union2022.openbudgetsindia.org/en/" target="_blank">
     <span>Union Budget Explorer 2022-23</span> 
     </a>
@@ -612,8 +615,11 @@ const dropdownMenuContent = {
         <span name="dashboard-dropdown-element">Union Dashboards</span>
     </div>
     <li>
-        <a href="https://union.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2023-24</span></a>
+        <a href="https://union.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2024-25(I)</span></a>
     </li>    
+    <li>
+        <a href="https://union2023.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2023-24</span></a>
+    </li>      
     <li>
         <a href="https://union2022.openbudgetsindia.org/en/" target="_blank"><span class="dashboards-span">Union Budget Explorer 2022-23</span></a>
     </li>
